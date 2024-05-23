@@ -1,0 +1,5 @@
+biot-savart
+plotly
+sympy
+nbformat>=4.2.0 
+svgpathtools

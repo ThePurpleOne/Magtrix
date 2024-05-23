@@ -1,0 +1,26 @@
+{VERSION=2.14}
+{UNITS=ENGLISH LENGTH}
+
+{BOARD "/home/jonas/documents/bachelor/src/mcu/motor/driving/driving.kicad_pcb"
+{STACKUP
+  (SIGNAL T=0.00137795 P=0 C=1.724e-08 L="F.Cu" M=COPPER)
+  (DIELECTRIC T=0.0594488 C=4.5 L="DE_F.Cu" M="FR4")
+  (SIGNAL T=0.00137795 P=0 C=1.724e-08 L="B.Cu" M=COPPER)
+}
+
+{DEVICES
+  (? REF="REF**" L="F.Cu")
+}
+
+{PADSTACK=0, 0.019685039
+  ("MDEF", 0, 0.035433071, 0.035433071, 180.0, M)
+}
+
+{NET="EmptyNet0"
+  (PIN X=6.7037940945 Y=3.9114173228 R="REF**.1" P=0)
+}
+
+{NET="EmptyNet1"
+  (PIN X=6.7037940945 Y=3.9625984252 R="REF**.2" P=0)
+}
+
