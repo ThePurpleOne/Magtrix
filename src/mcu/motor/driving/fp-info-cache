@@ -1,4 +1,4 @@
-23159180701413236
+23160897170863568
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -94751,3 +94751,10 @@ Single coil, single layer
 0
 2
 2
+coils
+coil_2
+
+
+0
+0
+0
