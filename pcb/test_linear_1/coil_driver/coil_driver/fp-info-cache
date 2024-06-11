@@ -1,4 +1,4 @@
-23162613641075694
+23164331959971662
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -67295,7 +67295,7 @@ coil_test
 
 
 0
-3
+5
 2
 Package_BGA
 Alliance_TFBGA-54_8x8mm_Layout9x9_P0.8mm
@@ -94745,13 +94745,6 @@ Varistor VF
 2
 2
 coils
-Coil based on ID
-
-
-0
-3
-3
-coils
 Single coil, single layer
 
 
@@ -94765,3 +94758,17 @@ coil_2
 0
 0
 0
+coils
+coil_30_0.3_0.2
+
+
+0
+3
+3
+coils
+coil_50_0.15_0.15
+
+
+0
+3
+3

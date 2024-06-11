@@ -42,6 +42,8 @@ With the help of `kiutils` library, we can export the points forming the footpri
 > ![Image of points](../coils_points.png)
 
 
+![](../3d_plot_field.png)
+
 ## Helmholtz coils
 
 [https://en.wikipedia.org/wiki/Helmholtz_coil](https://en.wikipedia.org/wiki/Helmholtz_coil)

@@ -6,3 +6,6 @@
 **/build
 chessgame
 **/*-backup*
+**/*-back*
+**/*.zip
+**/*.lck

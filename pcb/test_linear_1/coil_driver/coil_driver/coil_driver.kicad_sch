@@ -1,0 +1,77 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "eb089fd7-f16c-48bd-95dc-4137f3d1782e")
+	(paper "A3")
+	(title_block
+		(title "Testing circular coils")
+		(date "2024-05-30")
+		(rev "0.1")
+		(comment 1 "Jonas Stirnemann")
+	)
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 43.18 34.29) (xy 50.8 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3dc00a6-b950-4acd-beba-9f0f468d4892")
+	)
+	(sheet
+		(at 50.8 30.48)
+		(size 25.4 7.62)
+		(stroke
+			(width 0.2)
+			(type solid)
+			(color 135 73 255 1)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b17c726f-7b53-47e2-a6c8-1e358e5d56e5")
+		(property "Sheetname" "coil"
+			(at 61.722 29.972 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "single_coil.kicad_sch"
+			(at 51.054 38.862 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "gpio" input
+			(at 50.8 34.29 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "c8d5fd79-74a5-47c4-85fe-d172df1dc5a0")
+		)
+		(instances
+			(project "coil_driver"
+				(path "/eb089fd7-f16c-48bd-95dc-4137f3d1782e"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
