@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -109,7 +115,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.127,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_hole_clearance": 0.25,
@@ -121,8 +127,8 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
-        "min_via_annular_width": 0.1,
+        "min_track_width": 0.127,
+        "min_via_annular_width": 0.2,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -170,7 +176,14 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.3048,
+        0.381,
+        0.4572,
+        0.635,
+        1.27
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -197,7 +210,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.15,
+          "drill": 0.3
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -525,11 +547,35 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MFR",
+          "name": "MFR",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MOUSER",
+          "name": "MOUSER",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -580,6 +626,42 @@
     [
       "b17c726f-7b53-47e2-a6c8-1e358e5d56e5",
       "coil_driver"
+    ],
+    [
+      "4dc9b987-d83f-4cbf-a121-64ff2216854f",
+      "coil_driver1"
+    ],
+    [
+      "b273b510-72b8-4232-9144-3cdb97ce5514",
+      "coil_driver2"
+    ],
+    [
+      "f16b60b9-b779-4116-b4ae-8d6179d40a5b",
+      "coil_driver3"
+    ],
+    [
+      "d37e055e-0484-4b19-9fab-37b9c7527250",
+      "coil_driver4"
+    ],
+    [
+      "767af2de-8eba-4ba6-a42c-b89e1b19b684",
+      "coil_driver5"
+    ],
+    [
+      "5186e662-6325-4492-bf71-c817c76d6178",
+      "coil_module1"
+    ],
+    [
+      "f87fd310-ddb4-405e-a6d2-a13b25ba60b4",
+      "coil_module2"
+    ],
+    [
+      "57b2368f-9972-435a-ad8e-bccc108dd791",
+      "coil_module3"
+    ],
+    [
+      "f7eb2a33-fc4c-41e3-a475-b40713150dd8",
+      "coil_module4"
     ]
   ],
   "text_variables": {}

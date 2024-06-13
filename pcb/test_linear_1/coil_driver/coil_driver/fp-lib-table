@@ -1,4 +1,6 @@
 (fp_lib_table
   (version 7)
   (lib (name "PCB Coils")(type "KiCad")(uri "${KIPRJMOD}/pcb_coils/")(options "")(descr "auto-generated coil footprints"))
+  (lib (name "TRANSISTOR")(type "KiCad")(uri "${KIPRJMOD}/libs/TRANSISTOR")(options "")(descr ""))
+  (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KIPRJMOD}/libs/RASPBERRY_PICO/MCU_RaspberryPi_and_Boards.pretty")(options "")(descr ""))
 )
