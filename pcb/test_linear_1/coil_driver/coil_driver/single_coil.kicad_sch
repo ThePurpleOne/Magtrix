@@ -612,8 +612,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+			(property "Reference" "Q1"
+				(at 4.572 2.032 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -621,8 +621,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
+			(property "Value" "BUK6D120"
+				(at 4.572 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -630,8 +630,8 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
+			(property "Footprint" "TRANSISTOR:TRANS_BUK9D23-40EX"
+				(at 5.842 17.78 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -639,8 +639,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-				(at 0 -12.7 0)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2305191651_MDD-Microdiode-Electronics-MDD50N03D_C5357578.pdf"
+				(at -0.508 17.78 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -648,7 +648,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -657,8 +657,8 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Device" "NMOS"
-				(at 0 -17.145 0)
+			(property "MOUSER" " 771-BUK6D120-40EX "
+				(at 12.954 17.272 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -666,17 +666,8 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Type" "VDMOS"
-				(at 0 -19.05 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=D 2=G 3=S"
-				(at 0 -15.24 0)
+			(property "MFR" " BUK6D120-40EX "
+				(at 1.016 17.78 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -879,6 +870,24 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54) hide
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -889,7 +898,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -907,7 +916,79 @@
 							)
 						)
 					)
-					(number "3"
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54) hide
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54) hide
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54) hide
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54) hide
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1547,7 +1628,7 @@
 			)
 		)
 		(property "Footprint" "TRANSISTOR:TRANS_BUK9D23-40EX"
-			(at 110.49 59.69 0)
+			(at 111.252 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1556,7 +1637,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2305191651_MDD-Microdiode-Electronics-MDD50N03D_C5357578.pdf"
-			(at 105.41 74.93 0)
+			(at 104.902 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1574,7 +1655,7 @@
 			)
 		)
 		(property "MOUSER" " 771-BUK6D120-40EX "
-			(at 120.904 64.516 0)
+			(at 118.364 44.958 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1583,7 +1664,7 @@
 			)
 		)
 		(property "MFR" " BUK6D120-40EX "
-			(at 105.41 62.23 0)
+			(at 106.426 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1599,6 +1680,21 @@
 		)
 		(pin "1"
 			(uuid "935a2ea1-0696-419b-8d52-218ac4ed2f3a")
+		)
+		(pin "4"
+			(uuid "06b8b3dd-ac0c-418c-9ce5-fac9242ce175")
+		)
+		(pin "8"
+			(uuid "4364ecaa-db47-4ed0-a76a-4bac11a8ccc6")
+		)
+		(pin "5"
+			(uuid "c819532d-43ac-4ecb-8bf7-88b4aca13ea2")
+		)
+		(pin "7"
+			(uuid "8abf6471-f4dd-496b-90e7-9a18f82d59cc")
+		)
+		(pin "6"
+			(uuid "106b3206-f330-4ad5-92b4-e5f2406a6bcc")
 		)
 		(instances
 			(project "coil_driver"
