@@ -11,19 +11,9 @@
 		(comment 1 "Jonas Stirnemann")
 	)
 	(lib_symbols)
-	(wire
-		(pts
-			(xy 43.18 34.29) (xy 50.8 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3dc00a6-b950-4acd-beba-9f0f468d4892")
-	)
 	(sheet
-		(at 50.8 30.48)
-		(size 25.4 7.62)
+		(at 177.8 58.42)
+		(size 25.4 12.7)
 		(stroke
 			(width 0.2)
 			(type solid)
@@ -33,8 +23,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "b17c726f-7b53-47e2-a6c8-1e358e5d56e5")
-		(property "Sheetname" "coil"
-			(at 61.722 29.972 0)
+		(property "Sheetname" "coil_driver"
+			(at 186.182 57.912 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -43,7 +33,7 @@
 			)
 		)
 		(property "Sheetfile" "single_coil.kicad_sch"
-			(at 51.054 38.862 0)
+			(at 178.054 71.374 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52,7 +42,7 @@
 			)
 		)
 		(pin "gpio" input
-			(at 50.8 34.29 180)
+			(at 177.8 64.77 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60,6 +50,26 @@
 				(justify left)
 			)
 			(uuid "c8d5fd79-74a5-47c4-85fe-d172df1dc5a0")
+		)
+		(pin "IN1" input
+			(at 203.2 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7e62a961-4310-4e81-9ce3-7ee454d3d8c9")
+		)
+		(pin "IN2" input
+			(at 203.2 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "39a24ed6-461a-4974-981e-6c506fb2d639")
 		)
 		(instances
 			(project "coil_driver"

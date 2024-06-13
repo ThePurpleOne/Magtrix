@@ -1,0 +1,74 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "5cf2dcf7-5ec2-4e1e-b447-3274d291aabc")
+	(paper "A4")
+	(lib_symbols)
+	(text "# PCB Specifications\n\n- 2 or 4 layer board depending on possible thickness\n- 6 driver transistors\n- 4 different coil designs for testing\n- Each design can access the 6 transistors\n- 10x10mm coil areas\n\n## Coil design 1\n- Only 2 different coils per layer (A and B for layer 1 and C, D for layer 2 same as bobricius)\n- **10** mils gaps and **20** mils traces (same as bobricius)\n\n## Coil design 2\n- 3 different coils per layer (A, B, C for layer 1 and D, E, F for layer 2)\n- **10** mils gaps and **20** mils traces (same as bobricius)\n\n## Coil design 3\n- Only 2 different coils per layer (A and B for layer 1 and C, D for layer 2 same as bobricius)\n- **10** mils gaps and **40** mils traces (same as bobricius)\n\n## Coil design 4\n- Only 2 different coils per layer (A and B for layer 1 and C, D for layer 2 same as bobricius)\n- **40** mils gaps and **40** mils traces (same as bobricius)"
+		(exclude_from_sim no)
+		(at 15.24 15.748 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "1fcd9aab-98f2-4245-9e7d-e7de652d1d56")
+	)
+	(sheet
+		(at 193.04 86.36)
+		(size 12.7 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "27363450-2a5f-4a38-9aab-ecd0d33a8670")
+		(property "Sheetname" "coil_driver"
+			(at 193.04 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "coil_driver.kicad_sch"
+			(at 193.04 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "gpio" input
+			(at 193.04 91.44 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1aefcde1-9f57-496a-9c2c-56de6d48a017")
+		)
+		(instances
+			(project "linears"
+				(path "/5cf2dcf7-5ec2-4e1e-b447-3274d291aabc"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
