@@ -10,496 +10,383 @@
 		(rev "0.1")
 		(comment 1 "Jonas Stirnemann")
 	)
-	(lib_symbols)
-	(wire
-		(pts
-			(xy 152.4 82.55) (xy 152.4 54.61)
+	(lib_symbols
+		(symbol "Device:ElectromagneticActor"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.0254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at 1.27 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "ElectromagneticActor"
+				(at 1.27 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -0.635 2.54 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at -0.635 2.54 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Electromagnetic actor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "electromagnet coil inductor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Inductor_* L_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ElectromagneticActor_0_1"
+				(rectangle
+					(start -2.54 2.54)
+					(end 2.54 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "ElectromagneticActor_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00332f48-b658-420d-8364-6d3931605fbd")
 	)
 	(wire
 		(pts
-			(xy 114.3 82.55) (xy 116.84 82.55)
+			(xy 110.49 85.09) (xy 110.49 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0943a499-9fe5-4c90-93bc-938f5a40c13c")
+		(uuid "18b5687f-4187-4cb7-a5e8-509534578172")
 	)
 	(wire
 		(pts
-			(xy 144.78 82.55) (xy 147.32 82.55)
+			(xy 105.41 58.42) (xy 110.49 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "10f75bb4-8f67-4b6a-a51a-739991c8044d")
+		(uuid "1ecdfff7-238f-41c9-9d03-87846a073c38")
 	)
 	(wire
 		(pts
-			(xy 142.24 54.61) (xy 144.78 54.61)
+			(xy 80.01 54.61) (xy 74.93 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "12a37494-4c58-42e1-b8c5-678526d92b12")
+		(uuid "219f6af2-80fd-412a-9e7c-456826c5915e")
 	)
 	(wire
 		(pts
-			(xy 81.28 63.5) (xy 81.28 60.96)
+			(xy 110.49 68.58) (xy 110.49 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1f24d005-5ae9-41ee-8c4c-e36e7ffabc1c")
+		(uuid "2253934e-e82b-403a-85ec-a792d4fe4024")
 	)
 	(wire
 		(pts
-			(xy 124.46 54.61) (xy 124.46 82.55)
+			(xy 110.49 52.07) (xy 110.49 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "236e2144-f173-4b9f-86d3-102c0b7a2669")
+		(uuid "225a71c1-d418-4806-8cea-98b0e7c0082a")
 	)
 	(wire
 		(pts
-			(xy 121.92 54.61) (xy 124.46 54.61)
+			(xy 80.01 71.12) (xy 74.93 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "31f56482-028a-4d36-b91e-67da579f8087")
+		(uuid "2caa4564-1688-423d-9929-876f9991c45a")
 	)
 	(wire
 		(pts
-			(xy 127 82.55) (xy 127 54.61)
+			(xy 80.01 87.63) (xy 74.93 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "39748beb-2a50-4416-811a-aabfa240def9")
+		(uuid "2e6c7426-9b10-40f5-bbfb-8189b8318f73")
 	)
 	(wire
 		(pts
-			(xy 81.28 83.82) (xy 81.28 81.28)
+			(xy 80.01 74.93) (xy 80.01 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3d6f0fb1-ab72-4f50-8078-a7fd5d72354b")
+		(uuid "3abfa356-76af-46dd-82a3-d781a305945b")
 	)
 	(wire
 		(pts
-			(xy 149.86 82.55) (xy 152.4 82.55)
+			(xy 110.49 58.42) (xy 110.49 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4b746177-9f8e-4329-a684-5e3010c4d04c")
+		(uuid "49e6d546-d04d-469a-b28c-bdf6c105bbcc")
 	)
 	(wire
 		(pts
-			(xy 81.28 55.88) (xy 53.34 55.88)
+			(xy 110.49 54.61) (xy 105.41 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4b9bb55f-f6b4-4a96-b754-5c0add5d13a3")
+		(uuid "4f65db7c-fc9f-4b57-9513-a13c2b8f8f84")
 	)
 	(wire
 		(pts
-			(xy 139.7 54.61) (xy 139.7 82.55)
+			(xy 80.01 68.58) (xy 80.01 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "54ffae10-319c-49bd-9a5e-272c74625257")
+		(uuid "5632e72a-689a-461e-88af-af447b6fb8cc")
 	)
 	(wire
 		(pts
-			(xy 116.84 54.61) (xy 119.38 54.61)
+			(xy 110.49 87.63) (xy 105.41 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "56e2f8c7-949f-4e32-ad54-b12e9be6da34")
+		(uuid "638dd5f4-86f1-4684-8af6-57878d4e5eeb")
 	)
 	(wire
 		(pts
-			(xy 53.34 63.5) (xy 81.28 63.5)
+			(xy 74.93 41.91) (xy 80.01 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a613dfa-3f36-4651-a04c-02734b672147")
+		(uuid "7b1ba9a0-9503-4680-b2ff-99a830a0f74c")
 	)
 	(wire
 		(pts
-			(xy 53.34 78.74) (xy 81.28 78.74)
+			(xy 110.49 71.12) (xy 105.41 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7372984c-6573-43e6-8d2d-09d64ac19e20")
+		(uuid "a175438c-2f59-49c3-b738-ca027033fe66")
 	)
 	(wire
 		(pts
-			(xy 53.34 86.36) (xy 53.34 83.82)
+			(xy 74.93 74.93) (xy 80.01 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "799ff36f-a04c-4d10-92e7-75e6bd257435")
+		(uuid "ad899a70-7b27-4749-94fb-742cb30618de")
 	)
 	(wire
 		(pts
-			(xy 53.34 88.9) (xy 81.28 88.9)
+			(xy 80.01 52.07) (xy 80.01 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "805f1adf-0a9f-420d-8cf4-ae2bab8f73db")
+		(uuid "b8ceac37-40d0-485c-a258-c7f75adeaf77")
 	)
 	(wire
 		(pts
-			(xy 53.34 60.96) (xy 53.34 58.42)
+			(xy 105.41 74.93) (xy 110.49 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "80cb7ba0-1f8f-447f-b777-611663a9b8b9")
+		(uuid "c34834e2-e1c9-43ab-8b3a-10d5fee8bbc1")
 	)
 	(wire
 		(pts
-			(xy 81.28 86.36) (xy 53.34 86.36)
+			(xy 80.01 41.91) (xy 80.01 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "81314160-9cff-46a4-b874-5ffa8a6c7782")
+		(uuid "d75c5c16-a0e6-44d8-875c-4727bc07c345")
 	)
 	(wire
 		(pts
-			(xy 119.38 82.55) (xy 121.92 82.55)
+			(xy 80.01 58.42) (xy 80.01 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "83bf6913-ee4d-43e4-93c8-59a5dcc3b5d8")
+		(uuid "de2b2fd6-0f7e-41a6-a76c-9d8780a3bda2")
 	)
 	(wire
 		(pts
-			(xy 53.34 55.88) (xy 53.34 53.34)
+			(xy 110.49 41.91) (xy 110.49 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "89e2aafd-f82e-40a1-810c-a3a688dc5027")
+		(uuid "e77d9a85-9113-4266-a693-98c28b8749e9")
 	)
 	(wire
 		(pts
-			(xy 81.28 78.74) (xy 81.28 76.2)
+			(xy 80.01 85.09) (xy 80.01 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8c35189a-0985-4497-82e2-50e79e165264")
+		(uuid "ed3a98c8-c8e1-4b15-a218-2d70b05a9554")
 	)
 	(wire
 		(pts
-			(xy 81.28 53.34) (xy 81.28 50.8)
+			(xy 74.93 58.42) (xy 80.01 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8c48a62e-6117-434c-a17c-7843e8b6a258")
+		(uuid "edc0b81d-10e9-4ff6-802a-82a84cb575a2")
 	)
 	(wire
 		(pts
-			(xy 147.32 54.61) (xy 149.86 54.61)
+			(xy 105.41 41.91) (xy 110.49 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "93055fc6-e7e9-4c32-be58-c465b705c6d5")
+		(uuid "f5d486fe-f5e6-4217-a56b-4c39129c7e78")
 	)
 	(wire
 		(pts
-			(xy 53.34 53.34) (xy 81.28 53.34)
+			(xy 110.49 74.93) (xy 110.49 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9322270e-2b15-4703-8bb1-b299fd3a33d5")
+		(uuid "fb1ffa42-e9e9-431d-ab3a-e01b1a969b77")
 	)
-	(wire
-		(pts
-			(xy 139.7 82.55) (xy 142.24 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9dc9af32-ab5a-4f52-8eec-f5db01b13770")
-	)
-	(wire
-		(pts
-			(xy 53.34 83.82) (xy 81.28 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a60462b4-9a53-4a0e-a719-0cdf4a084968")
-	)
-	(wire
-		(pts
-			(xy 116.84 82.55) (xy 116.84 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9490653-a3c3-440e-85c4-8927fa9f6024")
-	)
-	(wire
-		(pts
-			(xy 149.86 54.61) (xy 149.86 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdbb595c-563c-49cb-a40c-3bbe6dbe522c")
-	)
-	(wire
-		(pts
-			(xy 81.28 58.42) (xy 81.28 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3abe4c4-9fd4-4743-9240-19cea6afe06d")
-	)
-	(wire
-		(pts
-			(xy 142.24 82.55) (xy 142.24 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c527bae7-d5e8-4dfc-bf4c-49795137221c")
-	)
-	(wire
-		(pts
-			(xy 81.28 50.8) (xy 53.34 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c57e58f3-0088-4020-9c85-cba82110a45b")
-	)
-	(wire
-		(pts
-			(xy 144.78 54.61) (xy 144.78 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca09ed1a-0853-4887-9fde-42116de251cc")
-	)
-	(wire
-		(pts
-			(xy 114.3 54.61) (xy 114.3 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca7f6091-1880-4007-a530-229bed7e23bf")
-	)
-	(wire
-		(pts
-			(xy 53.34 81.28) (xy 53.34 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cad77495-8d7c-4662-a700-f3faf83b95ba")
-	)
-	(wire
-		(pts
-			(xy 147.32 82.55) (xy 147.32 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4257750-5dfd-4240-a6fa-3d9590de6862")
-	)
-	(wire
-		(pts
-			(xy 53.34 58.42) (xy 81.28 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d57d7b53-fbd4-479d-ad01-4bca8460d9b1")
-	)
-	(wire
-		(pts
-			(xy 124.46 82.55) (xy 127 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d753bb85-3ebe-41fe-8f18-c0174225ce38")
-	)
-	(wire
-		(pts
-			(xy 81.28 76.2) (xy 53.34 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1fd72a1-5fcb-4fe5-94c0-d27fcb9a034f")
-	)
-	(wire
-		(pts
-			(xy 81.28 81.28) (xy 53.34 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2835570-dbeb-41ff-b56c-3f45214a296a")
-	)
-	(wire
-		(pts
-			(xy 119.38 54.61) (xy 119.38 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2bd4430-3cad-4e43-a106-f8352422cf74")
-	)
-	(wire
-		(pts
-			(xy 81.28 60.96) (xy 53.34 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6ba2e8d-e2ae-4174-a670-78003dfe93a9")
-	)
-	(wire
-		(pts
-			(xy 81.28 88.9) (xy 81.28 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2a06df3-303f-4b70-a5a5-5c2f12e3d45e")
-	)
-	(wire
-		(pts
-			(xy 121.92 82.55) (xy 121.92 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5dba54c-1fb5-4c34-95eb-6399a9db79d3")
-	)
-	(rectangle
-		(start 134.62 45.72)
-		(end 157.48 86.36)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 73d2f71a-cd69-4db2-9552-d2c5e0898202)
-	)
-	(rectangle
-		(start 109.22 45.72)
-		(end 132.08 86.36)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 78399ebc-c048-4ae3-952c-8466c980b4f5)
-	)
-	(rectangle
-		(start 45.72 71.12)
-		(end 86.36 93.98)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid a09d5109-cce9-4d5d-ba6f-8ffa793b1ea2)
-	)
-	(rectangle
-		(start 45.72 45.72)
-		(end 86.36 68.58)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid a90e4331-4a7a-4539-bbcf-07f1135d6f59)
-	)
-	(text "Only 2 different coils per layer (A and B for layer 1 and C, D for layer 2)\n40 mils gaps and 40 mils traces"
+	(text "2 layers Round coils \n3.5 mils width\n3.5 mils gap\n"
 		(exclude_from_sim no)
 		(at 14.224 19.812 0)
 		(effects
@@ -512,47 +399,9 @@
 		)
 		(uuid "037e1c6b-f397-4961-89bc-bfaf01a8ea8f")
 	)
-	(text "BOT LAYER"
-		(exclude_from_sim no)
-		(at 109.22 43.18 0)
-		(effects
-			(font
-				(size 3.81 3.81)
-				(thickness 0.762)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "52244980-6eca-4b77-9714-aa419ebfb3fb")
-	)
-	(text "TOP LAYER"
-		(exclude_from_sim no)
-		(at 46.736 43.18 0)
-		(effects
-			(font
-				(size 3.81 3.81)
-				(thickness 0.762)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "9b7fdef7-72c2-4e02-879e-a97e74631f32")
-	)
-	(hierarchical_label "A4"
-		(shape input)
-		(at 53.34 63.5 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "358877ad-dcb8-47b8-91d2-4279dddb58ed")
-	)
 	(hierarchical_label "PWR"
 		(shape input)
-		(at 53.34 76.2 180)
+		(at 74.93 74.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -560,59 +409,11 @@
 			)
 			(justify right)
 		)
-		(uuid "55b1f0bc-cb5a-4e6d-a2e6-d0bb7faadf53")
-	)
-	(hierarchical_label "D4"
-		(shape input)
-		(at 139.7 54.61 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "59a9e13e-c218-42ac-bfc1-bff51ecd0f2d")
-	)
-	(hierarchical_label "PWR"
-		(shape input)
-		(at 53.34 50.8 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5c0f1914-ccd4-4d49-9884-64d38482ad45")
+		(uuid "06d26d6b-9214-4b4b-bcf2-9a10e024894a")
 	)
 	(hierarchical_label "C4"
 		(shape input)
-		(at 114.3 54.61 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "64c28a8c-c21c-43f4-a3e7-f33ecc0dbd82")
-	)
-	(hierarchical_label "PWR"
-		(shape input)
-		(at 127 54.61 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "adb54a52-2949-44d5-a8e9-ec88024d997a")
-	)
-	(hierarchical_label "B4"
-		(shape input)
-		(at 53.34 88.9 180)
+		(at 74.93 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -620,18 +421,546 @@
 			)
 			(justify right)
 		)
-		(uuid "ca08d30f-35be-45a0-97ce-00c4ddb01be0")
+		(uuid "086dc6b7-0123-41fe-9841-3395841e69b4")
 	)
-	(hierarchical_label "PWR"
+	(hierarchical_label "E4"
 		(shape input)
-		(at 152.4 54.61 90)
+		(at 105.41 71.12 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "de177e9c-a50d-4081-98b5-cc2c8f668c30")
+		(uuid "1da2da2e-8e19-4ef2-bcaf-6f31aff4d136")
+	)
+	(hierarchical_label "PWR"
+		(shape input)
+		(at 105.41 41.91 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "31713583-7c9e-4bd9-84b1-9dd817766468")
+	)
+	(hierarchical_label "PWR"
+		(shape input)
+		(at 74.93 41.91 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4cf222b8-cf52-4674-9d9e-ec631f61e200")
+	)
+	(hierarchical_label "B4"
+		(shape input)
+		(at 74.93 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4e225146-160c-4ca6-a2af-d2858c40ce4f")
+	)
+	(hierarchical_label "F4"
+		(shape input)
+		(at 105.41 87.63 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6d7244f2-6140-4407-becd-808df612d4b8")
+	)
+	(hierarchical_label "A4"
+		(shape input)
+		(at 74.93 54.61 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9208f1eb-acef-4115-b649-94bbc05c745d")
+	)
+	(hierarchical_label "D4"
+		(shape input)
+		(at 105.41 54.61 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9f160e74-bfd3-4c03-9595-51f9e3a93168")
+	)
+	(hierarchical_label "PWR"
+		(shape input)
+		(at 74.93 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b1e5d21a-6a77-4c95-b05b-034057eac53a")
+	)
+	(hierarchical_label "PWR"
+		(shape input)
+		(at 105.41 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d3904374-6435-4038-b77f-7d5819e94359")
+	)
+	(hierarchical_label "PWR"
+		(shape input)
+		(at 105.41 74.93 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dc9a45da-e6c3-4512-8791-05ed5c03745c")
+	)
+	(symbol
+		(lib_id "Device:ElectromagneticActor")
+		(at 110.49 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ff4f2a8-ee35-4713-9aed-6b9c1ceb8513")
+		(property "Reference" "L5"
+			(at 114.3 63.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "rounded_coil"
+			(at 114.3 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCB Coils:rounded_thin"
+			(at 109.855 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.855 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Electromagnetic actor"
+			(at 110.49 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2482ca77-86c8-468f-88c5-44d3d6dbfb95")
+		)
+		(pin "2"
+			(uuid "5270ceca-6879-4603-b56d-a7d46f8ccd0d")
+		)
+		(instances
+			(project "coil_driver"
+				(path "/eb089fd7-f16c-48bd-95dc-4137f3d1782e/f7eb2a33-fc4c-41e3-a475-b40713150dd8"
+					(reference "L5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:ElectromagneticActor")
+		(at 110.49 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81dff3f6-bfe8-4454-9d1e-3b2b5282d38d")
+		(property "Reference" "L6"
+			(at 114.3 80.0099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "rounded_coil"
+			(at 114.3 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCB Coils:rounded_thin"
+			(at 109.855 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.855 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Electromagnetic actor"
+			(at 110.49 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2a531e7-7fdc-4123-be55-e621b3e4b9c9")
+		)
+		(pin "2"
+			(uuid "958d0611-bf9a-4d3a-b5b1-36cb6a17606a")
+		)
+		(instances
+			(project "coil_driver"
+				(path "/eb089fd7-f16c-48bd-95dc-4137f3d1782e/f7eb2a33-fc4c-41e3-a475-b40713150dd8"
+					(reference "L6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:ElectromagneticActor")
+		(at 80.01 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4017fe4-7219-4013-908e-7e6398891b55")
+		(property "Reference" "L3"
+			(at 83.82 80.0099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "rounded_coil"
+			(at 83.82 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCB Coils:rounded_thin"
+			(at 79.375 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 79.375 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Electromagnetic actor"
+			(at 80.01 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f4c622e-c33b-4eba-b08c-a87a8fceb50f")
+		)
+		(pin "2"
+			(uuid "63ac7318-83e2-46d0-a517-a95cbd3ccab8")
+		)
+		(instances
+			(project "coil_driver"
+				(path "/eb089fd7-f16c-48bd-95dc-4137f3d1782e/f7eb2a33-fc4c-41e3-a475-b40713150dd8"
+					(reference "L3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:ElectromagneticActor")
+		(at 80.01 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4a2febf-7578-417c-98e4-84d5b572b2ba")
+		(property "Reference" "L1"
+			(at 83.82 46.9899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "rounded_coil"
+			(at 83.82 49.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCB Coils:rounded_thin"
+			(at 79.375 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 79.375 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Electromagnetic actor"
+			(at 80.01 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "702dabcc-488a-4a70-b160-4b4b2583854a")
+		)
+		(pin "2"
+			(uuid "a37c18ad-252d-45df-9a15-4378763937c0")
+		)
+		(instances
+			(project "coil_driver"
+				(path "/eb089fd7-f16c-48bd-95dc-4137f3d1782e/f7eb2a33-fc4c-41e3-a475-b40713150dd8"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:ElectromagneticActor")
+		(at 110.49 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea2d7394-476f-4026-82ab-9e0f5c58dafa")
+		(property "Reference" "L4"
+			(at 114.3 46.9899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "rounded_coil"
+			(at 114.3 49.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCB Coils:rounded_thin"
+			(at 109.855 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.855 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Electromagnetic actor"
+			(at 110.49 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f5dc888-95fc-4bc2-9f41-a1bae41d4b03")
+		)
+		(pin "2"
+			(uuid "8bbf2602-5ac9-473c-a996-d90c4a1fdb13")
+		)
+		(instances
+			(project "coil_driver"
+				(path "/eb089fd7-f16c-48bd-95dc-4137f3d1782e/f7eb2a33-fc4c-41e3-a475-b40713150dd8"
+					(reference "L4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:ElectromagneticActor")
+		(at 80.01 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f849e41e-de4c-44cc-99fa-ffc06a8fcfa2")
+		(property "Reference" "L2"
+			(at 83.82 63.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "rounded_coil"
+			(at 83.82 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCB Coils:rounded_thin"
+			(at 79.375 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 79.375 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Electromagnetic actor"
+			(at 80.01 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54622294-8f97-4e07-92c0-41f2a8ac0eea")
+		)
+		(pin "2"
+			(uuid "bdb24d9d-86e5-49dd-a637-08cfec2cc667")
+		)
+		(instances
+			(project "coil_driver"
+				(path "/eb089fd7-f16c-48bd-95dc-4137f3d1782e/f7eb2a33-fc4c-41e3-a475-b40713150dd8"
+					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
 	)
 )
