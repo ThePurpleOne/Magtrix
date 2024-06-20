@@ -1,0 +1,19 @@
+{
+  "name": "chess_2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "chess": "^1.2.2",
+    "chessground": "^9.1.1",
+    "chessjs": "^0.0.1"
+  }
+}

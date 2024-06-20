@@ -1,3 +1,9 @@
 [submodule "kicad-coil-plugins"]
 	path = kicad-coil-plugins
 	url = https://github.com/atomic14/kicad-coil-plugins.git
+[submodule "chessground-examples"]
+	path = chessground-examples
+	url = https://github.com/lichess-org/chessground-examples.git
+[submodule "svelte-chess"]
+	path = svelte-chess
+	url = https://github.com/gtim/svelte-chess.git
