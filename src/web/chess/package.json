@@ -12,8 +12,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "chess": "^1.2.2",
-    "chessground": "^9.1.1",
-    "chessjs": "^0.0.1"
+    "chess.js": "^1.0.0-beta.8",
+    "chessground": "^9.1.1"
   }
 }

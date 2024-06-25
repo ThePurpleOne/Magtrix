@@ -1565,6 +1565,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "RCV1206120KFKEA "
+			(at 99.06 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" " 71-RCV1206120KFKEA "
+			(at 99.06 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "98a30f25-97aa-413c-8469-a916f1062e25")
 		)
@@ -2026,6 +2044,24 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 83.82 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" " ERJ-S08F1001V "
+			(at 83.82 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" " 667-ERJ-S08F1001V "
 			(at 83.82 72.39 0)
 			(effects
 				(font

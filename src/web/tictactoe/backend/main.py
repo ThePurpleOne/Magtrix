@@ -1,6 +1,7 @@
 import asyncio
 import websockets
 import json
+import time
 
 async def handler_receive(websocket, path):
     async for message in websocket:
@@ -10,8 +11,9 @@ async def handler_receive(websocket, path):
 
         print(f"Received message: {parsed}")
         
+        time.sleep(5)
 
-        await websocket.send(f"Received message: {message}")
+        await websocket.send(f"ACK")
 
 start_server = websockets.serve(handler_receive, "localhost", 6789)
 
