@@ -6,12 +6,11 @@ import { hourglass } from 'ldrs'
 
 
 const GAME_STATES = {
-	X_TURN: 'CURRENT PLAYER',
-	O_TURN: 'CURRENT PLAYER',
+	X_TURN: 'CURRENT PLAYER X',
+	O_TURN: 'CURRENT PLAYER O',
 	X_WON: 'PLAYER X WON',
 	O_WON: 'PLAYER O WON',
 	DRAW: 'DRAW',
-	WAITING : 'WAITING',
 };
 
 const Board = () => {
@@ -20,9 +19,10 @@ const Board = () => {
 	const [is_x_next, set_is_next] = useState(true);
 	const [ws, set_ws] = useState(null);
 	const [game_state, set_game_state] = useState(GAME_STATES.X_TURN);
+
+	// This is set when the player clicks on a square
+	// and is reset when the server sends an ACK, so when we receive a message "ACK"
 	const [is_waiting, set_is_waiting] = useState(false);
-
-
 
 	useEffect(() => {
 		const websocket = new WebSocket('ws://localhost:6789');
@@ -30,11 +30,13 @@ const Board = () => {
 
 		websocket.onmessage = (event) => {
 			// If the message contains an 'ACK'
-			//if (event.data === 'ACK') {
-			//	set_game_state(GAME_STATES.WAITING);
-			//	return;
-			//}
-			//console.log("Received message: ", event.data);
+			console.log("DEBUG event.data: ", event.data)
+			if (event.data === 'ACK') {
+				console.log("Received ACK");
+				set_is_waiting(false);
+				return;
+			}
+			console.log("Received message: ", event.data);
 		};
 		
 		websocket.onopen = () => {
@@ -56,6 +58,12 @@ const Board = () => {
 
 	const handle_click = (index) => {
 
+		// If waiting for ACK
+		if (is_waiting === true) {
+			console.log("Waiting for ACK");
+			return;
+		}
+
 		// If game already finished
 		if(game_state !== GAME_STATES.X_TURN && game_state !== GAME_STATES.O_TURN){
 			console.log("Player %s already won !!", game_state === GAME_STATES.X_WON ? "X" : "O");
@@ -65,6 +73,9 @@ const Board = () => {
 		{
 			console.log("Square already filled !!");
 			return;
+		}
+		else {
+			set_is_waiting(true);
 		}
 
 
@@ -100,6 +111,7 @@ const Board = () => {
 		set_is_next(true);
 
 		set_game_state(GAME_STATES.X_TURN);
+		set_is_waiting(false);
 	}
 
 
@@ -137,60 +149,80 @@ const Board = () => {
 	let status;    
 
 	const result = compute_game_state(squares);
+	
+	// There is a winner or draw
 	if (result) {
 		status = result;
 	}
-	else {
+	else { // No winner or draw
 		status = game_state;
 	}
 
-	return (
-		<div>
-			<div className="status">{status}
-				{/*<l-leapfrog
-				size="35"
-				speed="2.5" 
-				color="white" 
-				></l-leapfrog>
-
-				<l-jelly-triangle
-				size="35"
-				speed="1.75" 
-				color="white" 
-				></l-jelly-triangle>*/}
-
-				<l-hourglass
-				size="35"
-				bg-opacity="0.1"
-				speed="1.75" 
-				color="white" 
-				></l-hourglass>
-			</div>
-			<div className="board-row">
-				{render_square(0)}
-				{render_square(1)}
-				{render_square(2)}
-			</div>
-			<div className="board-row">
-				{render_square(3)}
-				{render_square(4)}
-				{render_square(5)}
-			</div>
-			<div className="board-row">
-				{render_square(6)}
-				{render_square(7)}
-				{render_square(8)}
-			</div>
+	if (is_waiting) {
+		status = "Waiting for move on the board...";
+	}
+	
+	// return with the hourglass if waiting for ACK
+	if (is_waiting) {
+		return (
 			<div>
-				<button className="resetButton" onClick={reset}>RESET GAME</button>
+				<div className="status">{status}
+
+					<l-hourglass
+						size="35"
+						bg-opacity="0.1"
+						speed="1.75"
+						color="white"
+					></l-hourglass>
+
+				</div>
+				<div className="board-row">
+					{render_square(0)}
+					{render_square(1)}
+					{render_square(2)}
+				</div>
+				<div className="board-row">
+					{render_square(3)}
+					{render_square(4)}
+					{render_square(5)}
+				</div>
+				<div className="board-row">
+					{render_square(6)}
+					{render_square(7)}
+					{render_square(8)}
+				</div>
+				<div>
+					<button className="resetButton" onClick={reset}>RESET GAME</button>
+				</div>
 			</div>
-
-
-
-
-		</div>
-		// Add jelly triangle animation
-	);
+		);
+	}
+	else
+	{
+		return (
+			<div>
+				<div className="status">{status}</div>
+				<div className="board-row">
+					{render_square(0)}
+					{render_square(1)}
+					{render_square(2)}
+				</div>
+				<div className="board-row">
+					{render_square(3)}
+					{render_square(4)}
+					{render_square(5)}
+				</div>
+				<div className="board-row">
+					{render_square(6)}
+					{render_square(7)}
+					{render_square(8)}
+				</div>
+				<div>
+					<button className="resetButton" onClick={reset}>RESET GAME</button>
+				</div>
+			</div>
+		);
+	}
 
 	function render_square(i)
 	{
