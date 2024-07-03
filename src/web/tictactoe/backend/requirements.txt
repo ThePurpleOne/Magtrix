@@ -1,1 +1,2 @@
-websockets
+cobs
+websocket-client==0.44.0

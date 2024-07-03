@@ -14,9 +14,9 @@ for coil in coils:
     coil.duty_cycle = 0
 
 while True:
-    for i in range(3):
+    for i in range(len(coils)):
         coils[i].duty_cycle = 65000
         print(f"Coil {i} ON")
-        time.sleep(0.3)
+        time.sleep(0.1)
         coils[i].duty_cycle = 0
         print(f"Coil {i} OFF")
