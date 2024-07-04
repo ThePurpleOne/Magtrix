@@ -6,8 +6,6 @@
 
 
 if __name__ == "__main__":
-    
-
 
     rdson_at_3V3 = 0.3 # Ohms
     coil_ohm = 0.7 # Ohms
