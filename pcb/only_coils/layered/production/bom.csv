@@ -1,0 +1,4 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+J2,PinHeader_1x06_P2.54mm_Vertical,1,Conn_01x06_Pin,
+J4,PinHeader_1x03_P2.54mm_Vertical,1,Conn_01x03_Pin,
+"L10, L11, L12, L7, L8, L9",4layer_coil,6,coil_4_layers,

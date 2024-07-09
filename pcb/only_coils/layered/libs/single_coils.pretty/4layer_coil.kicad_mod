@@ -65,8 +65,8 @@
 	)
 	(attr smd)
 	(fp_line
-		(start 7.7 -0.5)
-		(end 8.2 -0.5)
+		(start 7.7 -1)
+		(end 8.2 -1)
 		(stroke
 			(width 0.3)
 			(type solid)
@@ -76,7 +76,7 @@
 	)
 	(fp_line
 		(start 7.7 0)
-		(end 7.7 -0.5)
+		(end 7.7 -1)
 		(stroke
 			(width 0.3)
 			(type solid)
@@ -206,9 +206,9 @@
 		(uuid "c226b328-0fe8-4bb8-811c-164b610c962a")
 	)
 	(fp_arc
-		(start -1.7 0)
-		(mid -0.6 -1.4)
-		(end 1.1 0)
+		(start -1.700084 -0.003442)
+		(mid -0.448278 -1.282555)
+		(end 0.8 0)
 		(stroke
 			(width 0.3)
 			(type solid)
@@ -481,8 +481,8 @@
 		(uuid "26fe194a-af6c-4c66-931a-1c1f2a4483b6")
 	)
 	(fp_arc
-		(start 1.1 0)
-		(mid -0.6 1.4)
+		(start 0.800084 -0.003442)
+		(mid -0.448194 1.279113)
 		(end -1.7 0)
 		(stroke
 			(width 0.3)
@@ -888,8 +888,18 @@
 		(uuid "e462c00a-9cba-4570-8d5c-9f266a750a2c")
 	)
 	(fp_line
+		(start -1.1 0)
+		(end -0.9 0)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "B.Cu")
+		(uuid "453d71bd-84fa-4501-9b40-d819f3a226d5")
+	)
+	(fp_line
 		(start 7.7 0)
-		(end 7.7 0.5)
+		(end 7.7 1)
 		(stroke
 			(width 0.3)
 			(type solid)
@@ -898,8 +908,8 @@
 		(uuid "2d114371-c644-4cc2-b98f-3f81d660c873")
 	)
 	(fp_line
-		(start 7.7 0.5)
-		(end 8.2 0.5)
+		(start 7.7 1)
+		(end 8.2 1)
 		(stroke
 			(width 0.3)
 			(type solid)
@@ -1195,7 +1205,7 @@
 		)
 	)
 	(pad "" thru_hole circle
-		(at -1.1 0)
+		(at -1 0.1)
 		(size 0.6 0.6)
 		(drill 0.3)
 		(layers "*.Cu" "*.Mask")
@@ -1203,7 +1213,7 @@
 		(uuid "267e6b60-ccb4-4bdf-8153-20e03180e6af")
 	)
 	(pad "" thru_hole circle
-		(at 1.1 0)
+		(at 0.8 0)
 		(size 0.6 0.6)
 		(drill 0.3)
 		(layers "*.Cu" "*.Mask")
@@ -1219,14 +1229,14 @@
 		(uuid "c7b9867f-2515-4934-8200-3aff56f3b4ce")
 	)
 	(pad "1" smd roundrect
-		(at 9 -0.5)
+		(at 9 -1)
 		(size 2.4 0.3)
 		(layers "F.Cu")
 		(roundrect_rratio 0.25)
 		(uuid "e6cec8c8-e61a-4ec9-9049-95c81bb22b30")
 	)
 	(pad "2" smd roundrect
-		(at 9 0.5)
+		(at 9 1)
 		(size 2.4 0.3)
 		(layers "B.Cu")
 		(roundrect_rratio 0.25)
