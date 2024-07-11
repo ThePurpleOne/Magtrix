@@ -1,0 +1,4 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+J3,PinHeader_1x06_P2.54mm_Vertical,1,Conn_01x06_Pin,
+J4,PinHeader_1x03_P2.54mm_Vertical,1,Conn_01x03_Pin,
+"TP1, TP10, TP11, TP12, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9",pads_dual,12,TestPoint_2Pole,

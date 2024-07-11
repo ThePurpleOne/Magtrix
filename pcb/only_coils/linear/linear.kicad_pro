@@ -131,7 +131,7 @@
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -182,6 +182,7 @@
         0.127,
         0.254,
         0.635,
+        0.8,
         1.27
       ],
       "tuning_pattern_settings": {
@@ -448,7 +449,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "only_coils.kicad_pro",
+    "filename": "linear.kicad_pro",
     "version": 1
   },
   "net_settings": {
