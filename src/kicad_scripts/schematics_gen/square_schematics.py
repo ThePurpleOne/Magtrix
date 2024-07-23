@@ -20,8 +20,8 @@ class ComponentMatrixMaker:
         self.setup_logger()
         self.logger = logging.getLogger("logger")
 
-        self.grid_origin = (0, 0)  # Origin
         self.unitspace = 1.27  # 50 mils
+        self.grid_origin = (self.unitspace * 40, self.unitspace * 30)  # Origin
 
         self.schematics = self.get_schematics(schematics_filename)
         self.og_component1 = self.get_component(component_prefix1)
@@ -40,11 +40,6 @@ class ComponentMatrixMaker:
             size=self.size,
             component_matrix=self.component_matrix,
         )
-
-        # self.__create_final_matrix(
-        #    sch=self.schematics,
-        #    full_matrix=self.components_n_wires,
-        # )
 
     def get_schematics(self, schematics_filename: str):
         if schematics_filename is not None and len(schematics_filename):
@@ -144,7 +139,7 @@ class ComponentMatrixMaker:
         for row in range(size[0]):
             column_component = []
             for col in range(size[1]):
-                if col % 2 == 0:
+                if (col % 2 == 0 and row % 2 == 0) or (col % 2 == 1 and row % 2 == 1):
                     new_component = c1.clone()
 
                     # move this component where we want it, on the grid
@@ -243,167 +238,6 @@ class ComponentMatrixMaker:
             lbl.move(row_wire.end.value[0], row_wire.end.value[1])
             lbl.value = f"ROW_{row_idx}"
 
-        ## ! Create row wires from the the first A pin
-        # a_wire_row = sch.wire.new()
-        # start = component_matrix[0][0].pin.A._base_coords
-
-        # start[0] -= self.unitspace * -20  # X
-        # start[1] -= self.unitspace * -2  # Y
-        # a_wire_row.start_at(start)
-
-        # stop = component_matrix[0][-1].pin.A._base_coords
-        ## stop[0] += self.unitspace * 20  # X
-        # stop[1] -= self.unitspace * -2  # Y
-        # a_wire_row.delta_x = stop[0] - start[0]
-        # a_wire_row.delta_y = stop[1] - start[1]
-
-        # for a_row in component_matrix:
-        #    pu_wires = []
-
-        #    cathode_wires = []
-        #    for a_component in a_row:
-        #        if a_component is None:
-        #            pu_wires.append(None)
-        #            cathode_wires.append(None)
-        #            continue
-        #        # depending on left or right orientation, we'll want to
-        #        # draw our wires ou
-        #        awire_direction = -1 if a_component.at.value[2] == 180 else 1
-        #        kwire_direction = -1 if awire_direction == 1 else 1
-
-        #        # create a wire for the B pin
-        #        # this wire has some random position/orientation, will set
-        #        kwire = sch.wire.new()
-
-        #        # start it on the location of the K pin, using named attribs here
-        #        kwire.start_at(a_component.pin.A)
-
-        #        # we want it horizontal
-        #        kwire.delta_y = 0
-        #        # we want it one grid space out, in the right direction
-        #        kwire.delta_x = kwire_direction * self.unitspace
-        #        # stash the wire
-        #        cathode_wires.append(kwire)
-
-        #        # for the anode, we'll make two wires, one straight out,
-        #        # one upward
-
-        #        # from the pin
-        #        awire = sch.wire.new()
-        #        awire.start_at(a_component.pin.B)
-        #        awire.delta_y = 0  # keep it horizontal
-        #        awire.delta_x = awire_direction * self.unitspace
-
-        #        # from the end of that first wire, up by 3
-        #        atorow = sch.wire.new()
-        #        atorow.start_at(awire.end.value)
-        #        atorow.delta_x = 0  # vertical
-        #        atorow.delta_y = self.units_to_mm(-3)
-
-        #        # remember these wires that pull up to the row
-        #        pu_wires.append(atorow)
-
-        #    # keep all the wires in lists, by row
-        #    a_pin_wires.append(pu_wires)
-        #    b_pin_wires.append(cathode_wires)
-
-        ## now we want a big wire joining each row together
-        # row_count = 0
-        # for rw in a_pin_wires:
-        #    # create a wire from last "pu" wire of the row, going past first
-        #    join_wire = sch.wire.new()
-
-        #    endwire_idx = -1
-        #    while rw[endwire_idx] is None:
-        #        endwire_idx -= 1
-
-        #    join_wire.start_at(
-        #        rw[endwire_idx].end.value
-        #    )  # starts on end point of last up wire in row
-
-        #    # end it a bit past the first of those pull-up wires
-        #    firstwireidx = 0
-        #    while rw[firstwireidx] is None:
-        #        firstwireidx += 1
-        #    first_wire_conn_point = rw[firstwireidx].end.value
-        #    join_wire.end_at(
-        #        [
-        #            first_wire_conn_point[0] - self.units_to_mm(4),
-        #            first_wire_conn_point[1],
-        #        ]
-        #    )
-        #    # lets add some junctions
-        #    for w in rw:
-        #        if w is None:
-        #            continue
-        #        junc = sch.junction.new()
-        #        junc.move(w.end.value[0], w.end.value[1])
-
-        #    # and finally, a global label attached to the end of our row joining wire
-        #    row_count += 1
-        #    lbl = sch.global_label.new()
-        #    lbl.move(join_wire.end.value[0], join_wire.end.value[1])
-        #    lbl.value = f"{row_label_prefix}_{row_count}"
-
-        ## this is what we'll return, the wires that form the columns,
-        ## unlabeled
-        # column_wires = []
-        ## ok, wire up the columns
-        # for col in range(size[1]):
-        #    # end it a bit past the first of those pull-up wires
-        #    firstwireidx = 0
-        #    first_wire = b_pin_wires[firstwireidx][col]
-        #    while first_wire is None:
-        #        firstwireidx += 1
-        #        first_wire = b_pin_wires[firstwireidx][col]
-
-        #    lastwireidx = -1
-
-        #    last_wire = b_pin_wires[lastwireidx][col]
-        #    while last_wire is None:
-        #        lastwireidx -= 1
-        #        last_wire = b_pin_wires[lastwireidx][col]
-
-        #    # we want a wire that goes down from first to past the bottom one
-        #    join_wire = sch.wire.new()
-        #    join_wire.start_at(first_wire.end.value)
-        #    join_wire.delta_x = 0
-        #    join_wire.delta_y = (
-        #        last_wire.end.value[1] - first_wire.end.value[1]
-        #    ) + self.units_to_mm(4)
-
-        #    # make it visible by playing with the width and style a bit
-        #    join_wire.stroke.width.value = 0.4
-        #    join_wire.stroke.type.value = "dot"
-
-        #    column_wires.append(join_wire)
-        #    # add some junctions
-        #    for rowidx in range(1, size[0]):
-        #        if b_pin_wires[rowidx][col] is None:
-        #            continue
-        #        end_coords = b_pin_wires[rowidx][col].end.value
-        #        junc = sch.junction.new()
-        #        junc.move(end_coords[0], end_coords[1])
-
-        # self.logger.info(f"Created matrix with components and wires {self.size}")
-
-        # return column_wires
-
-    def __create_final_matrix(
-        self,
-        sch: Schematic,
-        full_matrix: List,
-    ):
-        col_count = 0
-        for join_wire in full_matrix:
-            # add a global label
-            lbl = sch.global_label.new()
-            lbl.move(join_wire.end.value[0], join_wire.end.value[1])
-            lbl.value = f"COL_{col_count+1}"
-            col_count += 1
-
-        self.logger.info(f"Finished and created final matrix {self.size}")
-
     def save_to_schematics(self, save_to: str):
         if save_to is not None and len(save_to):
             if not save_to.endswith(".kicad_sch"):
@@ -461,7 +295,7 @@ if __name__ == "__main__":
         schematics_filename=in_file,
         component_prefix1="TOP",
         component_prefix2="SUB",
-        size=(10, 10),
+        size=(16, 16),
     )
 
     cmm.save_to_schematics(save_to=out_file)  # Save to original
