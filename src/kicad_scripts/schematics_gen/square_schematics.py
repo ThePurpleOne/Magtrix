@@ -13,7 +13,8 @@ class ComponentMatrixMaker:
     def __init__(
         self,
         schematics_filename: str,
-        component_prefix: str,
+        component_prefix1: str,
+        component_prefix2: str,
         size: Tuple[int, int],
     ) -> None:
         self.setup_logger()
@@ -23,16 +24,18 @@ class ComponentMatrixMaker:
         self.unitspace = 2.54  # 100 mils
 
         self.schematics = self.get_schematics(schematics_filename)
-        self.og_component = self.get_component(component_prefix)
+        self.og_component1 = self.get_component(component_prefix1)
+        self.og_component2 = self.get_component(component_prefix2)
         self.size = self.get_size(size)
 
         self.component_matrix = self.__create_component_matrix(
-            based_on=self.og_component,
+            based_on=(self.og_component1, self.og_component2),
+            prefixes=(component_prefix1, component_prefix2),
             size=self.size,
             start_ref_count=1,
         )
 
-        self.components_n_wires = self.__create_full_matrix(
+        self.components_n_wires = self.__add_wires_to_components(
             sch=self.schematics,
             size=self.size,
             component_matrix=self.component_matrix,
@@ -73,7 +76,7 @@ class ComponentMatrixMaker:
             exit(-1)
         else:
             self.logger.info(
-                f"Using component {components[0].property.Reference.value}"
+                f"Using component {components[0].property.Reference.value} as base"
             )
             return components[0]
 
@@ -117,6 +120,7 @@ class ComponentMatrixMaker:
     def __create_component_matrix(
         self,
         based_on: Symbol,
+        prefixes: Tuple[str, str],
         size: Tuple[int, int],
         start_ref_count: int,
     ):
@@ -131,35 +135,50 @@ class ComponentMatrixMaker:
         returns
                 table          : [list]   - 2D list of cloned components
         """
-        component_count = start_ref_count
+        component_count1 = start_ref_count
+        component_count2 = start_ref_count
+        c1, c2 = based_on
+        pf1, pf2 = prefixes
         matrix = []
 
         for row in range(size[0]):
             column_component = []
             for col in range(size[1]):
-                new_component = based_on.clone()
+                if col % 2 == 0:
+                    new_component = c1.clone()
 
-                # move this component where we want it, on the grid
-                coords = self.to_grid(col * 7, row * 6)
-                new_component.move(coords[0] - 1.27, coords[1])
-                new_component.setAllReferences(f"D{component_count}")
+                    # move this component where we want it, on the grid
+                    coords = self.to_grid(col * 10, row * 10)
+                    new_component.move(coords[0] - 1.27, coords[1])
+                    new_component.setAllReferences(f"{pf1}{component_count1}")
 
-                column_component.append(new_component)
-                component_count += 1
+                    column_component.append(new_component)
+                    component_count1 += 1
+                else:
+                    new_component = c2.clone()
+
+                    # move this component where we want it, on the grid
+                    coords = self.to_grid(col * 10, row * 10)
+                    new_component.move(coords[0] - 1.27, coords[1])
+                    new_component.setAllReferences(f"{pf2}{component_count2}")
+
+                    column_component.append(new_component)
+                    component_count2 += 1
 
             matrix.append(column_component)
 
+        self.logger.info(f"Created component matrix {size}")
+
         return matrix
 
-    def __create_full_matrix(
+    def __add_wires_to_components(
         self,
         sch: Schematic,
         size: tuple,
         component_matrix,
     ):
         """
-        Get the grid of cloned components, and wire them up, with junctions and labels.
-
+        Add wires to the components in the matrix
         """
 
         row_label_prefix = "ROW"
@@ -167,7 +186,7 @@ class ComponentMatrixMaker:
         an_wires = []
         cath_wires = []
         # for every component, we're going to pull out the A pin and make row
-        # we'll pull out K pin vertically and make columns
+        # we'll pull out B pin vertically and make columns
         for a_row in component_matrix:
             pu_wires = []
 
@@ -187,7 +206,7 @@ class ComponentMatrixMaker:
                 kwire = sch.wire.new()
 
                 # start it on the location of the K pin, using named attribs here
-                kwire.start_at(a_component.pin.K)
+                kwire.start_at(a_component.pin.A)
 
                 # we want it horizontal
                 kwire.delta_y = 0
@@ -201,7 +220,7 @@ class ComponentMatrixMaker:
 
                 # from the pin
                 awire = sch.wire.new()
-                awire.start_at(a_component.pin.A)
+                awire.start_at(a_component.pin.B)
                 awire.delta_y = 0  # keep it horizontal
                 awire.delta_x = awire_direction * self.unitspace
 
@@ -296,6 +315,8 @@ class ComponentMatrixMaker:
                 junc = sch.junction.new()
                 junc.move(end_coords[0], end_coords[1])
 
+        self.logger.info(f"Created matrix with components and wires {self.size}")
+
         return column_wires
 
     def __create_final_matrix(
@@ -311,7 +332,7 @@ class ComponentMatrixMaker:
             lbl.value = f"COL_{col_count+1}"
             col_count += 1
 
-        self.logger.info(f"Created final matrix {self.size}")
+        self.logger.info(f"Finished and created final matrix {self.size}")
 
     def save_to_schematics(self, save_to: str):
         if save_to is not None and len(save_to):
@@ -368,7 +389,8 @@ if __name__ == "__main__":
 
     cmm = ComponentMatrixMaker(
         schematics_filename=in_file,
-        component_prefix="D",
+        component_prefix1="TOP",
+        component_prefix2="SUB",
         size=(10, 10),
     )
 

@@ -1,286 +1,3661 @@
-(kicad_sch
-	(version 20231120)
-	(generator "eeschema")
-	(generator_version "8.0")
-	(uuid "11af7b42-8094-4ca6-9444-8e07a1921bec")
-	(paper "A3")
-	(lib_symbols
-		(symbol "Device:ElectromagneticActor"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.0254) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "L"
-				(at 1.27 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "ElectromagneticActor"
-				(at 1.27 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at -0.635 2.54 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at -0.635 2.54 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Electromagnetic actor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "electromagnet coil inductor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Inductor_* L_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "ElectromagneticActor_0_1"
-				(rectangle
-					(start -2.54 2.54)
-					(end 2.54 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy 1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "ElectromagneticActor_1_1"
-				(pin passive line
-					(at 0 5.08 270)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:ElectromagneticActor")
-		(at -25.4 -17.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "04c26323-822b-4095-b720-010b1bdbff5d")
-		(property "Reference" "SUB2"
-			(at -24.384 -21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "sub_coil"
-			(at -24.638 -16.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "sub_coils:sub_coil"
-			(at -26.035 -20.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at -26.035 -20.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Electromagnetic actor"
-			(at -25.4 -17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "44071734-0c03-438b-89f2-ce7910d69f1e")
-		)
-		(pin "1"
-			(uuid "8f2012d2-6d1b-4e3b-ac39-4a93a4295f84")
-		)
-		(instances
-			(project "test_project"
-				(path "/11af7b42-8094-4ca6-9444-8e07a1921bec"
-					(reference "SUB2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:ElectromagneticActor")
-		(at -50.8 -17.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d623eb95-f91f-4b8c-bdfe-992fbcef2284")
-		(property "Reference" "TOP1"
-			(at -49.784 -21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "top_coil"
-			(at -50.038 -16.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "sub_coils:top_coil"
-			(at -51.435 -20.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at -51.435 -20.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Electromagnetic actor"
-			(at -50.8 -17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c79c996a-309c-4810-924e-a9163a41a754")
-		)
-		(pin "1"
-			(uuid "02c5e4e8-8439-4ba9-9d1f-7e9b40b975e7")
-		)
-		(instances
-			(project "test_project"
-				(path "/11af7b42-8094-4ca6-9444-8e07a1921bec"
-					(reference "TOP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(sheet_instances
-		(path "/"
-			(page "1")
-		)
-	)
-)
+(kicad_sch (version 20231120) (generator "eeschema") (generator_version "8.0") (uuid "11af7b42-8094-4ca6-9444-8e07a1921bec") (paper "A3") (lib_symbols 
+
+(symbol "square_coils:sub_coil" (pin_numbers hide) (pin_names (offset 0.0254) hide) (exclude_from_sim no) (in_bom yes) (on_board yes) 
+
+(property "Reference" "SUB1" (at 1.016 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 0.762 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -6.858 1.778 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -0.635 1.27 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 0 -1.27 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_keywords" "electromagnet coil inductor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_fp_filters" "Inductor_* L_*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(symbol "sub_coil_0_1" 
+
+(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0.254) (type default)) (fill (type none))) 
+
+(polyline (pts 
+
+(xy -1.27 1.27) 
+
+(xy 1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))) 
+
+(symbol "sub_coil_1_1" (pin passive line (at 0 3.81 270) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.54) (name "B" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))))) 
+
+(symbol "square_coils:top_coil" (pin_numbers hide) (pin_names (offset 0.0254) hide) (exclude_from_sim no) (in_bom yes) (on_board yes) 
+
+(property "Reference" "TOP1" (at 1.016 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 0.762 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -6.858 1.778 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -0.635 1.27 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 0 -1.27 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_keywords" "electromagnet coil inductor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_fp_filters" "Inductor_* L_*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(symbol "top_coil_0_1" 
+
+(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0.254) (type default)) (fill (type none))) 
+
+(polyline (pts 
+
+(xy -1.27 1.27) 
+
+(xy 1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))) 
+
+(symbol "top_coil_1_1" (pin passive line (at 0 3.81 270) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.54) (name "B" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at -34.29 -16.51 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4001309c-6ece-403c-bd17-934e18cc5a6c") 
+
+(property "Reference" "SUB51" (at -34.036 -19.05 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at -34.036 -14.224 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -41.148 -18.288 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -34.925 -17.78 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -34.29 -15.24 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "47ef3543-2a8c-4eff-b0dd-1cb08f857745")) (pin "2" (uuid "b9dc2448-dc67-467e-ab48-9442535ee887")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB51") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -49.53 -16.51 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d111b557-9d15-470e-9e31-3230c5018fb8") 
+
+(property "Reference" "TOP1" (at -49.276 -19.05 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -49.276 -13.97 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -56.388 -19.558 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -50.165 -19.05 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -49.53 -16.51 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "ec4d45a4-6b7f-4403-82a3-3ed528e9134c")) (pin "1" (uuid "73585d49-b088-4532-8a19-c36d15558d4b")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP1") (unit 1))))) (sheet_instances (path "/" (page "1"))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8dc9e420-0d83-4fc3-8e47-911fcd878e50") 
+
+(property "Reference" "TOP1" (at -1.016 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 -3.048 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 -2.54 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 0.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "a9d7b97b-df93-4fae-af1f-72936967f9b2")) (pin "1" (uuid "a0d43f9b-390d-46f7-9738-51c7ce93ee27")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP1") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "859eaaff-c04e-4b17-aeb0-b53433fa27ca") 
+
+(property "Reference" "SUB1" (at 24.384 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 2.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 -1.778 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 -1.27 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 1.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "85281b09-a620-47ac-a3af-b867e6399ce7")) (pin "2" (uuid "a12b237c-388b-47d7-ac51-163321e14889")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB1") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f0c8af7a-65d3-4097-a644-b55f21f306f4") 
+
+(property "Reference" "TOP2" (at 49.784 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 -3.048 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 -2.54 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 0.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "cf67253c-7370-4da3-8c49-a26e405f2b95")) (pin "1" (uuid "ea3c3544-53ca-4cfd-8c6a-577697347864")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP2") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b6f15529-7147-4527-99cd-dc2be4f73cd1") 
+
+(property "Reference" "SUB2" (at 75.184 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 2.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 -1.778 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 -1.27 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 1.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "0587a492-a15b-4a89-8c38-6caf9eb39058")) (pin "2" (uuid "11419c23-9757-4a92-b184-2094e2d1a1c7")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB2") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c44ca789-7f6e-470d-968f-b73b55d04918") 
+
+(property "Reference" "TOP3" (at 100.584 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 -3.048 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 -2.54 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 0.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "c0019198-4769-407b-b0cd-3b02dec32f15")) (pin "1" (uuid "01e2ce4e-6263-44f2-9195-e7505acc8fca")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP3") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5eea1ebe-b31e-4c56-a39d-857ebe221f6f") 
+
+(property "Reference" "SUB3" (at 125.984 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 2.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 -1.778 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 -1.27 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 1.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "68fba843-8a73-457b-8f8e-da93534f17a0")) (pin "2" (uuid "ecacb790-335d-417f-b996-d2cc92d6e1ce")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB3") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3abb2e87-5e44-4d00-84ae-c65665b88e8d") 
+
+(property "Reference" "TOP4" (at 151.384 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 -3.048 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 -2.54 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 0.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "5f85195a-bea3-4761-9ca5-b95e021c9fe6")) (pin "1" (uuid "45fe8c80-eb1d-4856-a3f7-aff255586de7")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP4") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3cf6ad97-4acd-4502-b3fe-91615baf92ff") 
+
+(property "Reference" "SUB4" (at 176.784 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 2.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 -1.778 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 -1.27 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 1.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "261d9df7-fce7-4287-a51c-ec4ef1a9a9d1")) (pin "2" (uuid "5878e7ca-811e-432c-a70f-42e3d1dd5696")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB4") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "811365d9-a72e-46c7-b2bb-abfb74df4c59") 
+
+(property "Reference" "TOP5" (at 202.184 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 -3.048 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 -2.54 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 0.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "00e9239d-2fec-4882-9e8e-8e1ab4e84779")) (pin "1" (uuid "accf09b8-0172-4d39-a6ef-3c076dcd2670")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP5") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 0.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b6fc2026-281b-4140-b77d-3ecdcae78363") 
+
+(property "Reference" "SUB5" (at 227.584 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 2.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 -1.778 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 -1.27 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 1.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "f00bcb4c-0c6a-45e5-9d20-8c81efee339d")) (pin "2" (uuid "6cd42d36-7bdb-4a87-a208-cb164a6a3a3e")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB5") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d7d6ae8a-bb8c-4cb3-88b4-f1be37067221") 
+
+(property "Reference" "TOP6" (at -1.016 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 27.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 22.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 22.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 25.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "0c6a694f-9b81-4a51-b727-b7a4ef3b7054")) (pin "1" (uuid "658977f8-8de4-4ebc-929f-4880f77305c2")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP6") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "67bd2e84-e5f0-4870-82c3-14c1c74a6887") 
+
+(property "Reference" "SUB6" (at 24.384 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 27.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 23.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 24.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 26.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "04e16f54-1582-4ad9-b734-817a3a15edb6")) (pin "2" (uuid "b14a5ff7-d6bf-4943-86b5-1dcaa7217b77")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB6") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ec7079e4-f597-48fd-ba8c-0e4ae26864a9") 
+
+(property "Reference" "TOP7" (at 49.784 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 27.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 22.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 22.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 25.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "990f97a4-d06f-4e2e-b1cd-c4e6390eb837")) (pin "1" (uuid "e7ff8c14-5922-45dd-8773-363c605fc8d0")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP7") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8c83ff36-060b-4940-928b-80a6fe35c3c2") 
+
+(property "Reference" "SUB7" (at 75.184 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 27.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 23.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 24.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 26.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "53cfa922-e397-4c37-ab67-6d4bfac4955e")) (pin "2" (uuid "5af518da-f0de-49d7-a318-028353ff00c6")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB7") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f2d0c642-df5e-40b8-8e99-1f9c82712e99") 
+
+(property "Reference" "TOP8" (at 100.584 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 27.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 22.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 22.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 25.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "0b84feee-0c11-41e1-8925-0810190bf686")) (pin "1" (uuid "f13740de-b4f8-48c7-9832-2b93ff486217")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP8") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f75179a3-a6a8-4152-bc67-f91b3fa54df9") 
+
+(property "Reference" "SUB8" (at 125.984 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 27.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 23.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 24.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 26.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ca2a7d3c-2135-4b77-bbae-964e541862a4")) (pin "2" (uuid "86e3cc33-e3f6-4f0d-bb3c-14d5b1adbb29")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB8") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e1c250f0-0513-46a2-bdd7-00679833c688") 
+
+(property "Reference" "TOP9" (at 151.384 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 27.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 22.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 22.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 25.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "14ae301d-56f1-4f0b-a5d4-e0230d2f271d")) (pin "1" (uuid "ba86a8cf-2ea9-43d6-bc51-29ba250e3689")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP9") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "044a34a5-9b42-4e8c-9676-39517cfe3899") 
+
+(property "Reference" "SUB9" (at 176.784 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 27.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 23.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 24.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 26.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "f5826d66-235f-4614-ae0f-fe8e3dbcd25e")) (pin "2" (uuid "54f77c3d-17c3-4962-b59d-78c6e3fc95a0")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB9") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1de4d81c-8386-41b0-98a7-4420820428fe") 
+
+(property "Reference" "TOP10" (at 202.184 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 27.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 22.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 22.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 25.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "2b1d50aa-0c54-4ed3-a584-3d90313fcb89")) (pin "1" (uuid "fff8e599-eb66-4070-b13c-d0e8bbdca22b")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP10") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 25.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "70e049a5-a252-4ff0-9dc0-74ba674e78a3") 
+
+(property "Reference" "SUB10" (at 227.584 22.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 27.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 23.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 24.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 26.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "361c1bb4-0369-41a0-bd38-a0377bf0bcbb")) (pin "2" (uuid "ea1143c9-1336-4681-9ceb-a44c2fbcd6de")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB10") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a2813a48-59b0-4994-bafd-c3348b020b7f") 
+
+(property "Reference" "TOP11" (at -1.016 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 53.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 47.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 48.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 50.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "ebf7dfe8-ec8a-4f33-96a4-7d158c06eb66")) (pin "1" (uuid "d4296247-a43e-4287-9a50-7a8225ff95d6")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP11") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fdb5888c-03ad-48ef-9d7b-8c26416c9ac0") 
+
+(property "Reference" "SUB11" (at 24.384 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 53.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 49.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 49.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e0722ff5-b67d-47df-9459-606b919cf72c")) (pin "2" (uuid "e8118529-0cd7-4190-9fc7-793a312e1be2")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB11") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3b541137-8f16-4882-b2d3-a2aab09d83bb") 
+
+(property "Reference" "TOP12" (at 49.784 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 53.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 47.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 48.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 50.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "7a25fabf-eb7b-4676-aefb-b6f877fa598d")) (pin "1" (uuid "9d94d5c6-3e0e-4213-af3b-44d04ab21c95")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP12") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "da30cc2a-0f3f-4633-8d4d-64b3eb0378ba") 
+
+(property "Reference" "SUB12" (at 75.184 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 53.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 49.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 49.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "15d3f09a-bdb8-4e86-97fe-07c0f318f7ef")) (pin "2" (uuid "7d69ff9b-166b-45f5-9b4e-8ea7498d1cde")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB12") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "67272c92-703d-4f63-8e5e-8c3cf7af356c") 
+
+(property "Reference" "TOP13" (at 100.584 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 53.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 47.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 48.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 50.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "60f475a9-06e3-436d-8fda-8faede6b4c3e")) (pin "1" (uuid "f5a5def3-8bf0-47de-b450-d956eb2eb460")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP13") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a31453ca-6464-438c-9b4b-cb36e5377157") 
+
+(property "Reference" "SUB13" (at 125.984 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 53.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 49.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 49.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ad975be8-5bc6-44a4-bcd6-5f97edfc8dfe")) (pin "2" (uuid "35873879-18bb-49c8-852c-1d39c1384bd8")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB13") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "34b482ff-6ceb-4fe0-9bb4-b7a040e9ef32") 
+
+(property "Reference" "TOP14" (at 151.384 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 53.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 47.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 48.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 50.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "ff568dec-888c-476e-bfdf-770ce0fcfffd")) (pin "1" (uuid "fc2103dd-f558-4498-bea6-9ed3c4a0a0d7")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP14") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "21385a9e-3086-436e-a012-cab52dafc078") 
+
+(property "Reference" "SUB14" (at 176.784 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 53.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 49.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 49.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ccd8e304-d1f8-4a5c-a9c0-514b6fe0e56f")) (pin "2" (uuid "5e8d53ec-198a-4194-b087-354414f53717")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB14") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "936c5df0-02b9-46fa-82ee-cd5a18818c36") 
+
+(property "Reference" "TOP15" (at 202.184 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 53.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 47.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 48.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 50.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "d8ed294e-6d29-45ba-b4ce-50753b9c2f07")) (pin "1" (uuid "7df07747-9c8a-448a-8f87-836d7253f0f6")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP15") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 50.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3332226e-0763-47b0-acce-b6944bc8a8aa") 
+
+(property "Reference" "SUB15" (at 227.584 48.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 53.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 49.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 49.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "9647dfa5-8cd8-4e44-b81f-c4a59166e143")) (pin "2" (uuid "77c439f4-b341-4cca-96aa-995563aabbe4")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB15") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b78360ec-32a4-42d6-8adb-ee2ed3bf27e6") 
+
+(property "Reference" "TOP16" (at -1.016 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 78.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 73.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 73.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "6d80705b-cc44-4cd1-885a-80ebdaf817c0")) (pin "1" (uuid "a125515c-5891-479e-9869-52874cffa4db")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP16") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "30be9b61-700c-4b2e-8d7e-a126acf8cdb5") 
+
+(property "Reference" "SUB16" (at 24.384 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 78.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 74.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 74.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 77.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ff9656d9-5c28-4de3-a1fa-1ce9fc1900bb")) (pin "2" (uuid "1647b5b3-ed8e-4c68-a55b-638a28a9e985")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB16") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ba098181-7cbf-41a9-ad2f-e7131b11cc69") 
+
+(property "Reference" "TOP17" (at 49.784 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 78.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 73.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 73.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "8b4aff23-fb30-46a6-9e2d-fc7af1c7eb8e")) (pin "1" (uuid "38e4155d-0c7b-412c-b13c-5b11a3ef351e")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP17") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "07f26f0e-c035-4261-85fe-b671c0f8962f") 
+
+(property "Reference" "SUB17" (at 75.184 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 78.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 74.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 74.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 77.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ea53a902-1aa4-49d8-bff5-bdee7f2fdadc")) (pin "2" (uuid "59aed85e-eb21-4f7a-97f5-a8b106015ccf")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB17") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0391623b-a9ef-413d-a621-f1f0501815d7") 
+
+(property "Reference" "TOP18" (at 100.584 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 78.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 73.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 73.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "739133ee-81d1-4b4f-b452-a42056461f4a")) (pin "1" (uuid "c66cf460-9df5-454e-bb77-e663e68f3fea")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP18") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "aa8612dd-d92a-44e8-b909-7fc3f68ddedf") 
+
+(property "Reference" "SUB18" (at 125.984 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 78.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 74.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 74.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 77.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "17c60c66-51b2-4a81-a541-cbd2590d3aba")) (pin "2" (uuid "826b278d-bfd6-4c45-8d3a-f9dde7f11a9b")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB18") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bbff23f6-ca9d-45f9-a49f-f3ec7d5aefbd") 
+
+(property "Reference" "TOP19" (at 151.384 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 78.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 73.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 73.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "f1cc96f3-5be8-4491-a68d-94dbe55c72a6")) (pin "1" (uuid "b8d0a9c2-4442-4115-9da6-61429af91e93")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP19") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "812bf497-4402-49ec-bf02-d955e21b2f96") 
+
+(property "Reference" "SUB19" (at 176.784 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 78.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 74.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 74.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 77.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "c5dabf9b-68fc-48f8-9876-bf0db04b114c")) (pin "2" (uuid "7fdb5c67-3977-4ca4-be5d-5c693dc4a4e9")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB19") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ad63e08e-1a17-4c74-a59f-8402de346724") 
+
+(property "Reference" "TOP20" (at 202.184 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 78.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 73.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 73.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 76.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "bcd9f937-53ea-4f35-872b-111b8f560889")) (pin "1" (uuid "8271cda4-9b3c-4505-b7c9-e20d8052d12e")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP20") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9aae9af2-eb53-4b84-8ae8-57f6d964b084") 
+
+(property "Reference" "SUB20" (at 227.584 73.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 78.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 74.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 74.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 77.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "61043447-d5a3-442f-b1e5-f4eb295fa0b5")) (pin "2" (uuid "dba2ed2a-e250-4efd-b96f-2c94adc22eb3")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB20") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7587bd23-cc6a-409b-9600-8e7814d7a381") 
+
+(property "Reference" "TOP21" (at -1.016 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 104.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 98.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 99.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 101.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "d231712f-5f3a-47dd-9808-0a9c2dada3a7")) (pin "1" (uuid "a85224f9-88d4-4566-8622-f3aa2346be14")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP21") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5cd99fa0-19a2-4507-b8ca-d10aed990960") 
+
+(property "Reference" "SUB21" (at 24.384 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 103.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 99.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 100.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 102.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "aa8dddc4-5bdc-4c9d-80e1-2ca27997e2c8")) (pin "2" (uuid "22b5b7fd-2615-46f4-a015-dd58d06d0d70")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB21") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "831c902c-4bf3-4a1c-af53-6095ffc77167") 
+
+(property "Reference" "TOP22" (at 49.784 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 104.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 98.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 99.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 101.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "95e7929b-167f-4001-bf81-099526309373")) (pin "1" (uuid "39cbc630-9d8e-4796-98a6-122115663bc1")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP22") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "149ab0da-739e-415b-bc67-60e2e158d9a9") 
+
+(property "Reference" "SUB22" (at 75.184 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 103.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 99.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 100.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 102.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a9524e81-df18-4068-82fd-5acdd8eed507")) (pin "2" (uuid "9aca8306-5404-44bf-b440-d440e0e3e976")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB22") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2a8186d5-0bcd-4ddc-b571-9d9141ae4dd8") 
+
+(property "Reference" "TOP23" (at 100.584 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 104.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 98.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 99.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 101.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "00d751c1-4314-4f69-9caa-efa8da49c4cf")) (pin "1" (uuid "4f5f4154-f03b-47eb-b389-4e69ce36efb8")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP23") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cd5ddca2-f11c-468f-b209-045daf6a5447") 
+
+(property "Reference" "SUB23" (at 125.984 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 103.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 99.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 100.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 102.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "dd7564fb-8dc1-4335-bb69-6658b4c8530c")) (pin "2" (uuid "5b8fa68b-73a3-408a-95af-60a601fd1a78")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB23") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d4d90354-2740-4477-983c-0fe4d6c133c0") 
+
+(property "Reference" "TOP24" (at 151.384 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 104.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 98.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 99.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 101.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "470bf82b-6f0e-4571-b798-39d7cc501a08")) (pin "1" (uuid "e12f2718-4f12-4168-b08b-683c4fa37bdb")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP24") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1fa6b7d4-ac6b-4c7b-80d8-0bf77b727733") 
+
+(property "Reference" "SUB24" (at 176.784 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 103.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 99.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 100.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 102.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "8195abf0-1ace-480f-b4df-31fef695c47f")) (pin "2" (uuid "fd6cd8ed-ab76-4bfc-91c5-86bcc0ca543d")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB24") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "680c7027-98e5-442b-8da3-b48d7dbddaa0") 
+
+(property "Reference" "TOP25" (at 202.184 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 104.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 98.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 99.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 101.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "5c80f162-4ce0-4d27-94be-9982630258b7")) (pin "1" (uuid "a95bce33-4c70-4707-a52f-2900b72b9562")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP25") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f1484749-7f04-4ecf-a6f5-508168541855") 
+
+(property "Reference" "SUB25" (at 227.584 99.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 103.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 99.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 100.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 102.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e52b92e7-0321-4b95-b60b-bc2f6e10a3a2")) (pin "2" (uuid "22f1cdb2-c26f-4b44-8a4e-d575ac01e96f")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB25") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e97d8f81-944e-404b-be4e-83b3fa79da07") 
+
+(property "Reference" "TOP26" (at -1.016 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 129.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 123.952 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 124.46 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 127.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "12988eb7-fe65-4e68-9738-af08b52a49cb")) (pin "1" (uuid "41e0fd50-5463-4d4d-b365-584c3c5cb662")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP26") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e21c5383-161e-481a-8e63-80f9767144b7") 
+
+(property "Reference" "SUB26" (at 24.384 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 129.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 125.222 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 125.73 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 128.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "6b13d6a3-4c1d-495e-ad9b-df5b20518c10")) (pin "2" (uuid "cc35e8b7-529e-4125-bd07-7ce3b7681ef0")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB26") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "70ef59cf-efab-4268-8546-9d61eccc287b") 
+
+(property "Reference" "TOP27" (at 49.784 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 129.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 123.952 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 124.46 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 127.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "65dc141b-30f6-4f9e-bdd6-1b44c39ce884")) (pin "1" (uuid "fd18b5b7-d168-41b4-ac3a-fcfab82a65df")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP27") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ef646e0a-4c89-46e5-8080-14fc7106f941") 
+
+(property "Reference" "SUB27" (at 75.184 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 129.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 125.222 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 125.73 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 128.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "19bbaf08-0a85-4fb0-b985-b54d9a3c9df0")) (pin "2" (uuid "fedf7b94-db6c-43e5-8059-d31d8e2311c2")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB27") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3a5c2621-92ee-40a9-80cd-6a6cdc60bf30") 
+
+(property "Reference" "TOP28" (at 100.584 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 129.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 123.952 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 124.46 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 127.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "be0c108f-cd54-4d5d-b787-fbb06a63f889")) (pin "1" (uuid "d5f49f4c-653d-48ec-8fe9-d19c8b97d989")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP28") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6c0e73fb-14ab-438f-89e5-14ee7b289fbb") 
+
+(property "Reference" "SUB28" (at 125.984 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 129.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 125.222 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 125.73 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 128.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a6481482-86bb-431c-b2d9-8829c84ea8de")) (pin "2" (uuid "8778de39-ef16-478d-a581-dcf73affc38f")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB28") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "98748136-89b1-46cd-8475-eae7b9e2174e") 
+
+(property "Reference" "TOP29" (at 151.384 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 129.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 123.952 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 124.46 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 127.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "29d4e6c3-628a-45f6-b9b8-2389ecfdac31")) (pin "1" (uuid "52cd6275-7df8-46c3-b786-24238027d94b")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP29") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d5c8c996-47fc-4266-a780-4fe81a1c5bf1") 
+
+(property "Reference" "SUB29" (at 176.784 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 129.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 125.222 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 125.73 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 128.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "41ba0d00-e78b-48d9-8bb6-7a7aad353788")) (pin "2" (uuid "42b62734-a5af-4635-b272-5b06bf0f651f")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB29") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1a14ad81-6d10-4e74-90c9-0cf51ec6a48c") 
+
+(property "Reference" "TOP30" (at 202.184 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 129.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 123.952 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 124.46 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 127.0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "0bce60e4-3ddc-427a-a987-5ef307566609")) (pin "1" (uuid "6af09cff-cd2e-42c7-9829-25eb816951d1")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP30") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 127.0 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e29fde87-2c25-4efd-996c-4819acae9e10") 
+
+(property "Reference" "SUB30" (at 227.584 124.46 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 129.286 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 125.222 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 125.73 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 128.27 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "2c2ef861-7569-4ab1-a76b-c778f8bc29a8")) (pin "2" (uuid "b6c913eb-cb52-4801-a7b3-a32b66a4f585")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB30") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "03f9ef23-f4f6-4459-a9e2-b09dacd9a86f") 
+
+(property "Reference" "TOP31" (at -1.016 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 154.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 149.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 149.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 152.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "4e412d0e-2058-4272-8346-38ff127717df")) (pin "1" (uuid "7549c800-21a6-444a-9eeb-b75e7932a801")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP31") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "14623a62-b2f8-4d80-9ccf-c059c3373501") 
+
+(property "Reference" "SUB31" (at 24.384 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 154.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 150.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 151.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 153.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "d4c39d34-ac83-45aa-86f6-622ec363c702")) (pin "2" (uuid "38c5adb0-d4c7-4e3c-a5fc-71762af625f2")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB31") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e813f5d5-32f6-4abb-ab47-f7f40461b741") 
+
+(property "Reference" "TOP32" (at 49.784 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 154.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 149.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 149.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 152.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "62873403-c76b-4fbe-bbd0-89a286746215")) (pin "1" (uuid "0a0eb9c3-e2fa-491a-b454-0bcba35d4ed7")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP32") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5d4fe115-0120-44db-8dd8-7ff668cb20c3") 
+
+(property "Reference" "SUB32" (at 75.184 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 154.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 150.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 151.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 153.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "9e1cc5a4-3fbd-478f-9103-4fc53c76e386")) (pin "2" (uuid "96707f66-9069-41e9-93a0-4eb2704ae29f")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB32") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3020d231-a78a-4aff-bb93-bf5199e77ad0") 
+
+(property "Reference" "TOP33" (at 100.584 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 154.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 149.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 149.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 152.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "8f8ed542-0dbd-492c-8ca8-abb712c228e5")) (pin "1" (uuid "17f39d62-8494-4cb0-a363-b7a0f7e08fc4")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP33") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6f511984-6fa5-4a73-b957-55a6f011bf87") 
+
+(property "Reference" "SUB33" (at 125.984 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 154.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 150.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 151.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 153.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "25810122-90f2-4d93-9521-0aa2b5f43b94")) (pin "2" (uuid "4ce0ffc6-1143-47e8-9c61-c740905ada18")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB33") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fe102ef8-efbc-4f30-bcfb-2c29a65e3242") 
+
+(property "Reference" "TOP34" (at 151.384 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 154.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 149.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 149.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 152.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "1ea2a7c2-e985-45f5-b329-c1abd7be63ed")) (pin "1" (uuid "2faa893e-b9f4-4420-b69b-cc1e6861fdbc")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP34") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "02ba5404-b731-4667-9009-90b41410514d") 
+
+(property "Reference" "SUB34" (at 176.784 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 154.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 150.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 151.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 153.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "fa812c69-ba38-4933-be91-da87a4f42f96")) (pin "2" (uuid "cf5f54ea-73ea-4484-b323-2f7602c46913")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB34") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4c5ef077-7a70-4205-be1c-392cb01e55ac") 
+
+(property "Reference" "TOP35" (at 202.184 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 154.94 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 149.352 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 149.86 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 152.4 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "63e42666-a807-4639-9d88-c0cd79c3cfa6")) (pin "1" (uuid "c3b014ed-2834-4acf-bac9-314010835e8c")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP35") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8cb98f77-7234-4f65-89fe-d2a6fa1bb9f8") 
+
+(property "Reference" "SUB35" (at 227.584 149.86 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 154.686 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 150.622 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 151.13 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 153.67 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "2a4d0ab0-8991-4b2a-9ad8-5afefdcb57ef")) (pin "2" (uuid "3fe885fa-954f-4d64-ba84-b7ddf718538b")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB35") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b97858ba-4727-4ccd-a186-6f763a75c627") 
+
+(property "Reference" "TOP36" (at -1.016 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 180.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 174.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 175.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 177.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "82e4b162-f216-4d07-94df-57fa1b0f2b89")) (pin "1" (uuid "358474d7-d973-499d-9e34-c6a9e7c90778")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP36") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5071c28a-dbe4-412b-8ca3-3e7dfed889a5") 
+
+(property "Reference" "SUB36" (at 24.384 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 180.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 176.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 176.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 179.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "082a46e8-a59b-4625-9924-6f01dcf21790")) (pin "2" (uuid "c0e006b1-bae4-4dc8-a3e8-ad7069f5bacd")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB36") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d3f83aa6-12da-41b1-8c2c-9f53c5fc654f") 
+
+(property "Reference" "TOP37" (at 49.784 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 180.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 174.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 175.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 177.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "e5ffb721-ccee-4a1e-8dd8-50013a309812")) (pin "1" (uuid "bb62c786-92de-4b17-81dd-c7699ce4abee")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP37") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "79862ebd-aa0f-4d99-bb78-bfe1ae3d2611") 
+
+(property "Reference" "SUB37" (at 75.184 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 180.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 176.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 176.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 179.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "adefc8e2-a40a-4c38-a62c-957f953819bc")) (pin "2" (uuid "2757b137-a370-46b0-8ac2-4703de898141")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB37") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ccb1cdc8-db56-4083-a660-69a13a005c74") 
+
+(property "Reference" "TOP38" (at 100.584 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 180.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 174.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 175.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 177.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "085d666f-9b01-45a7-8884-134af4924e54")) (pin "1" (uuid "93f6cc6e-f513-4822-90c1-86052f432669")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP38") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "40eed3ab-7526-4cfb-9292-cdaf0effae52") 
+
+(property "Reference" "SUB38" (at 125.984 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 180.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 176.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 176.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 179.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "03fc7278-a6d1-4b9d-8727-c91657c1f12c")) (pin "2" (uuid "36f60574-401c-4d26-a24e-096af650164d")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB38") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9f9c5e2d-1987-4610-a573-158db08abf5f") 
+
+(property "Reference" "TOP39" (at 151.384 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 180.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 174.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 175.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 177.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "575972ed-653a-4177-8fd2-1e5047b931a1")) (pin "1" (uuid "2cb40038-e249-4f6a-9738-0fe7d5ff5433")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP39") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9092b5da-35cc-485f-81b7-09ed77f200da") 
+
+(property "Reference" "SUB39" (at 176.784 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 180.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 176.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 176.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 179.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e0691eb9-fcf4-4afa-9a25-f7a65641f1bc")) (pin "2" (uuid "454ef38e-a92e-4ee9-8fd8-6644aae9945d")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB39") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f9bbe510-1097-45a1-90c9-a97f850aace5") 
+
+(property "Reference" "TOP40" (at 202.184 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 180.34 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 174.752 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 175.26 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 177.8 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "d7d05600-1c93-4e58-a6fe-b83f87201cef")) (pin "1" (uuid "da899c88-8927-47df-a0ab-835a5824a22b")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP40") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 177.8 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e479cd23-1739-417f-bc01-29d9887b64f9") 
+
+(property "Reference" "SUB40" (at 227.584 175.26 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 180.086 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 176.022 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 176.53 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 179.07 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "80dc31ea-bc62-4150-b7d7-cb7f1d87dbbb")) (pin "2" (uuid "4139e945-59a3-4a4e-b022-fae81b309390")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB40") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4c69050d-037a-460f-b170-68bbee36f459") 
+
+(property "Reference" "TOP41" (at -1.016 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 205.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 200.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 200.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 203.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "9204b19f-ef93-46b6-96e7-27b7fa316877")) (pin "1" (uuid "9b06a4ea-feac-46e6-978e-691c33b7bf3e")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP41") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ffb90e29-63d4-4ca6-b706-3a15553e7336") 
+
+(property "Reference" "SUB41" (at 24.384 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 205.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 201.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 201.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 204.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "8bcd9f57-547f-462f-81da-a40296518198")) (pin "2" (uuid "68be7a11-8710-4fdf-adcd-30e4cdde8994")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB41") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "794b286a-4b57-4134-9501-1a60a6b568c8") 
+
+(property "Reference" "TOP42" (at 49.784 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 205.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 200.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 200.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 203.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "b245131a-5d9d-469d-8163-2b1fa2f1b589")) (pin "1" (uuid "03680656-c937-4eb9-99eb-3bd19d38255a")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP42") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5d9ff889-bf42-4155-bdf0-5ec16e0b5541") 
+
+(property "Reference" "SUB42" (at 75.184 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 205.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 201.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 201.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 204.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "873d021d-9b57-4b39-bc04-de71a9cfb4f5")) (pin "2" (uuid "fedfc604-b721-47e8-8067-c306c1f7f352")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB42") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bb88c2b4-fc4a-47de-b7bb-2ad79a8404a4") 
+
+(property "Reference" "TOP43" (at 100.584 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 205.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 200.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 200.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 203.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "d3a25a2a-8529-40cf-9287-950b7fa093c4")) (pin "1" (uuid "c5200e1c-d558-4529-8463-9e125b6d65eb")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP43") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "eb41ca3b-516f-4400-ac0b-a6e5eb921f5f") 
+
+(property "Reference" "SUB43" (at 125.984 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 205.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 201.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 201.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 204.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "bf62e170-637c-4299-8306-59f5c080f6c8")) (pin "2" (uuid "0e8f4c8d-1b68-417d-97e3-9b3453793474")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB43") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7e8dc3fe-834f-4450-a111-d5964e5c945c") 
+
+(property "Reference" "TOP44" (at 151.384 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 205.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 200.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 200.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 203.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "7bfffa5b-6182-42fb-add2-cf20bab5b6db")) (pin "1" (uuid "bf884516-b350-4593-b4b5-f85a4c9a98ce")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP44") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1bb54c15-e0be-4120-a870-2ef80d771bd0") 
+
+(property "Reference" "SUB44" (at 176.784 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 205.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 201.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 201.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 204.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "882e337c-84d8-4380-9936-c7aa6d1fd20d")) (pin "2" (uuid "c82a11b6-1b45-41ad-9f42-54dc230f2048")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB44") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6a7b4013-f707-4048-853c-dd9200ae146c") 
+
+(property "Reference" "TOP45" (at 202.184 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 205.74 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 200.152 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 200.66 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 203.2 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "0cee49cf-f31d-4774-a175-e698309535b6")) (pin "1" (uuid "8a8e4ed2-4b0b-4c64-94ed-a1a0ffd69251")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP45") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 203.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "02df1b59-4188-48a9-b4ef-0c599e277900") 
+
+(property "Reference" "SUB45" (at 227.584 200.66 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 205.486 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 201.422 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 201.93 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 204.47 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "10771a09-3130-4ea3-8061-30a5324a47de")) (pin "2" (uuid "aa0f9ed9-9100-4cd3-b29d-341a62507c33")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB45") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at -1.27 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6bc194c4-ad6e-4beb-949a-ce08d9e7e140") 
+
+(property "Reference" "TOP46" (at -1.016 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at -1.016 231.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at -8.128 225.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at -1.905 226.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at -1.27 228.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "073f037a-4b12-4f2a-a8ca-e3d9eb14ce3d")) (pin "1" (uuid "7f8ad7c8-1cc3-4cb0-b13f-8124d6358be5")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP46") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 24.13 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "33785d8f-c840-4a51-91a7-e6a806970c53") 
+
+(property "Reference" "SUB46" (at 24.384 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 24.384 230.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 17.272 226.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 23.495 227.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 24.13 229.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "fa807507-11a1-4e62-9451-7eec122c642c")) (pin "2" (uuid "9db3557f-828f-41ab-997c-1c9004ede7dd")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB46") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 49.53 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8070e067-57c3-450f-bcbf-dee7d71f08aa") 
+
+(property "Reference" "TOP47" (at 49.784 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 49.784 231.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 42.672 225.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 48.895 226.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 49.53 228.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "42d6723f-a84f-4c6e-82c0-abe6c6e590e0")) (pin "1" (uuid "09a86858-7ab9-4bad-b973-9f75bf0010f5")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP47") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 74.93 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "428a8d0a-68e1-4418-b457-9fd11559ae83") 
+
+(property "Reference" "SUB47" (at 75.184 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 75.184 230.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 68.072 226.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 74.295 227.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 74.93 229.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "da965850-fa75-4abd-b295-2daa5c9f1faa")) (pin "2" (uuid "6f665dae-9098-4339-9fd1-02ab281b836c")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB47") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 100.33 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f02e2544-fb24-49c6-938f-ca0014e7fbe4") 
+
+(property "Reference" "TOP48" (at 100.584 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 100.584 231.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 93.472 225.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 99.695 226.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 100.33 228.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "90530e60-1130-4320-a260-e7a7ccef24c1")) (pin "1" (uuid "280adbfa-ad07-4e5f-a3d5-d3ab929ba619")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP48") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 125.73 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0f6bb266-ad1b-4593-a360-4e383f0bbcb3") 
+
+(property "Reference" "SUB48" (at 125.984 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 125.984 230.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 118.872 226.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 125.095 227.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 125.73 229.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "f12c0ae8-ac0a-45de-af1d-b8c5531e6946")) (pin "2" (uuid "c2976a55-efad-4af8-a97b-13bc842eb6b0")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB48") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 151.13 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "df3323e7-fa2a-4124-be9d-e190823ff3f5") 
+
+(property "Reference" "TOP49" (at 151.384 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 151.384 231.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 144.272 225.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 150.495 226.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 151.13 228.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "114dea25-9217-4ca0-a33e-7b46724f2fb6")) (pin "1" (uuid "c0e18294-0602-4462-9ef8-db02ba475d97")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP49") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 176.53 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "82497f56-6faa-4ced-b9b4-2a3afa6fc529") 
+
+(property "Reference" "SUB49" (at 176.784 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 176.784 230.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 169.672 226.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 175.895 227.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 176.53 229.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "c6c0db28-85a6-47b0-95b4-8a9f26b48ec9")) (pin "2" (uuid "6592610c-7d64-4c82-b3a5-718c48bb3e06")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB49") (unit 1))))) 
+
+(symbol (lib_id "square_coils:top_coil") (at 201.93 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a119e06a-cac6-4a4b-89f6-fc26e5bfa4f8") 
+
+(property "Reference" "TOP50" (at 202.184 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "top_coil" (at 202.184 231.14 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 195.072 225.552 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 201.295 226.06 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 201.93 228.6 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "2" (uuid "247f427d-c417-4c9a-8f79-44a72be87246")) (pin "1" (uuid "3d88861c-4ceb-40c8-8f4f-adf4d835c95c")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "TOP50") (unit 1))))) 
+
+(symbol (lib_id "square_coils:sub_coil") (at 227.33 228.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9c23de92-e2cf-444e-88d8-d192e8c7ec42") 
+
+(property "Reference" "SUB50" (at 227.584 226.06 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "sub_coil" (at 227.584 230.886 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "sub_coils:top_coil" (at 220.472 226.822 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 226.695 227.33 90) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Electromagnetic actor" (at 227.33 229.87 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "8774e372-79ba-428d-b316-83855f12d5bc")) (pin "2" (uuid "d76a4f08-ed19-4b98-bdb1-2db6a7808a92")) (instances (project "" (path "/11af7b42-8094-4ca6-9444-8e07a1921bec" (reference "SUB50") (unit 1))))) 
+
+(wire (pts 
+
+(xy -1.27 -3.81) 
+
+(xy -3.81 -3.81)) (stroke (width 0) (type default)) (uuid 2f82d097-8be0-446e-bff0-4eaa23b2216e)) 
+
+(wire (pts 
+
+(xy -1.27 3.81) 
+
+(xy 1.27 3.81)) (stroke (width 0) (type default)) (uuid cda94a71-01a0-40f6-8090-8e86534aa882)) 
+
+(wire (pts 
+
+(xy 1.27 3.81) 
+
+(xy 1.27 -3.81)) (stroke (width 0) (type default)) (uuid 1436fc1a-93ce-4079-9bd9-22aa1373ea82)) 
+
+(wire (pts 
+
+(xy 24.13 -3.81) 
+
+(xy 21.59 -3.81)) (stroke (width 0) (type default)) (uuid 9634b1d8-37ae-4538-916a-4ed67de99955)) 
+
+(wire (pts 
+
+(xy 24.13 3.81) 
+
+(xy 26.67 3.81)) (stroke (width 0) (type default)) (uuid 9ab48b4f-f835-480d-9480-76c06496f9eb)) 
+
+(wire (pts 
+
+(xy 26.67 3.81) 
+
+(xy 26.67 -3.81)) (stroke (width 0) (type default)) (uuid b92406a6-c1a3-4abe-a97e-961370591a13)) 
+
+(wire (pts 
+
+(xy 49.53 -3.81) 
+
+(xy 46.99 -3.81)) (stroke (width 0) (type default)) (uuid 14bac536-343c-4470-9ce5-35f9996bfd19)) 
+
+(wire (pts 
+
+(xy 49.53 3.81) 
+
+(xy 52.07 3.81)) (stroke (width 0) (type default)) (uuid 76e4fd01-6841-4f3b-9ee6-0cfaa755b36c)) 
+
+(wire (pts 
+
+(xy 52.07 3.81) 
+
+(xy 52.07 -3.81)) (stroke (width 0) (type default)) (uuid 01a760da-4eef-4bee-a700-ffe8dd49f35a)) 
+
+(wire (pts 
+
+(xy 74.93 -3.81) 
+
+(xy 72.39 -3.81)) (stroke (width 0) (type default)) (uuid a92cab4d-8f57-4e0c-b06f-f284b537085b)) 
+
+(wire (pts 
+
+(xy 74.93 3.81) 
+
+(xy 77.47 3.81)) (stroke (width 0) (type default)) (uuid ce400ae5-72eb-4f06-847c-ba83a054a354)) 
+
+(wire (pts 
+
+(xy 77.47 3.81) 
+
+(xy 77.47 -3.81)) (stroke (width 0) (type default)) (uuid 7c84e9e6-35b7-41a8-b9a9-4238a7e8967a)) 
+
+(wire (pts 
+
+(xy 100.33 -3.81) 
+
+(xy 97.79 -3.81)) (stroke (width 0) (type default)) (uuid 3553330f-5a95-4afe-a83d-63e2a518b82d)) 
+
+(wire (pts 
+
+(xy 100.33 3.81) 
+
+(xy 102.87 3.81)) (stroke (width 0) (type default)) (uuid e26abf47-d375-4689-b402-477c02d7d999)) 
+
+(wire (pts 
+
+(xy 102.87 3.81) 
+
+(xy 102.87 -3.81)) (stroke (width 0) (type default)) (uuid 536a8f1f-60ac-4d03-96c1-5e61bfc70661)) 
+
+(wire (pts 
+
+(xy 125.73 -3.81) 
+
+(xy 123.19 -3.81)) (stroke (width 0) (type default)) (uuid e0ff0e40-1731-43b0-aa9b-7842ad23aa1c)) 
+
+(wire (pts 
+
+(xy 125.73 3.81) 
+
+(xy 128.27 3.81)) (stroke (width 0) (type default)) (uuid 37ff7da5-9d77-4b13-aec3-2628116ea2c0)) 
+
+(wire (pts 
+
+(xy 128.27 3.81) 
+
+(xy 128.27 -3.81)) (stroke (width 0) (type default)) (uuid 97cc2b1b-790f-465d-85d0-44caee79c158)) 
+
+(wire (pts 
+
+(xy 151.13 -3.81) 
+
+(xy 148.59 -3.81)) (stroke (width 0) (type default)) (uuid 352f979c-0f7c-412f-9481-6eea1bebdd60)) 
+
+(wire (pts 
+
+(xy 151.13 3.81) 
+
+(xy 153.67 3.81)) (stroke (width 0) (type default)) (uuid 3c04f3aa-05da-4ef6-a9b5-12e89de9d0cc)) 
+
+(wire (pts 
+
+(xy 153.67 3.81) 
+
+(xy 153.67 -3.81)) (stroke (width 0) (type default)) (uuid a3e11de2-286f-43f0-9ed6-9c7cd42ff23a)) 
+
+(wire (pts 
+
+(xy 176.53 -3.81) 
+
+(xy 173.99 -3.81)) (stroke (width 0) (type default)) (uuid 493316ed-bff2-4f7a-9e28-11fe112ec990)) 
+
+(wire (pts 
+
+(xy 176.53 3.81) 
+
+(xy 179.07 3.81)) (stroke (width 0) (type default)) (uuid 57c817fa-70f5-4228-a509-8ada40a232c6)) 
+
+(wire (pts 
+
+(xy 179.07 3.81) 
+
+(xy 179.07 -3.81)) (stroke (width 0) (type default)) (uuid 5f514180-838b-4059-9112-26892460d41b)) 
+
+(wire (pts 
+
+(xy 201.93 -3.81) 
+
+(xy 199.39 -3.81)) (stroke (width 0) (type default)) (uuid fe0b1c0d-2829-46ef-a0ae-46c6c8dda0ee)) 
+
+(wire (pts 
+
+(xy 201.93 3.81) 
+
+(xy 204.47 3.81)) (stroke (width 0) (type default)) (uuid 300c8e19-2c42-4074-b487-85b70b725d2d)) 
+
+(wire (pts 
+
+(xy 204.47 3.81) 
+
+(xy 204.47 -3.81)) (stroke (width 0) (type default)) (uuid 835b1654-f1d5-4642-a1ff-d798ed49b114)) 
+
+(wire (pts 
+
+(xy 227.33 -3.81) 
+
+(xy 224.79 -3.81)) (stroke (width 0) (type default)) (uuid 0dd30b48-a62c-45a9-92b8-7e75199eb85c)) 
+
+(wire (pts 
+
+(xy 227.33 3.81) 
+
+(xy 229.87 3.81)) (stroke (width 0) (type default)) (uuid ff97b481-bbb5-42c9-a81c-baa1e16c3967)) 
+
+(wire (pts 
+
+(xy 229.87 3.81) 
+
+(xy 229.87 -3.81)) (stroke (width 0) (type default)) (uuid 5fb78814-90d6-4e1c-a4b5-c29d442f981f)) 
+
+(wire (pts 
+
+(xy -1.27 21.59) 
+
+(xy -3.81 21.59)) (stroke (width 0) (type default)) (uuid e757b156-c2a5-4491-ad73-eadd132a31d3)) 
+
+(wire (pts 
+
+(xy -1.27 29.21) 
+
+(xy 1.27 29.21)) (stroke (width 0) (type default)) (uuid 4c6fe663-8c51-4ea5-a18e-db6450b53c19)) 
+
+(wire (pts 
+
+(xy 1.27 29.21) 
+
+(xy 1.27 21.59)) (stroke (width 0) (type default)) (uuid 5cd09153-daf5-4d80-b783-113f5588af37)) 
+
+(wire (pts 
+
+(xy 24.13 21.59) 
+
+(xy 21.59 21.59)) (stroke (width 0) (type default)) (uuid bc209e29-046b-4fa2-b0b8-d268bc775e01)) 
+
+(wire (pts 
+
+(xy 24.13 29.21) 
+
+(xy 26.67 29.21)) (stroke (width 0) (type default)) (uuid bb4fc389-3d15-4a8d-b71f-1c1739535406)) 
+
+(wire (pts 
+
+(xy 26.67 29.21) 
+
+(xy 26.67 21.59)) (stroke (width 0) (type default)) (uuid f05b4c5b-d0ed-4bba-8058-876d5ab7ff4e)) 
+
+(wire (pts 
+
+(xy 49.53 21.59) 
+
+(xy 46.99 21.59)) (stroke (width 0) (type default)) (uuid 54a3c1a2-2709-4f99-945a-6bfaba75f466)) 
+
+(wire (pts 
+
+(xy 49.53 29.21) 
+
+(xy 52.07 29.21)) (stroke (width 0) (type default)) (uuid 48287342-294b-4992-a267-9a95ce18fbfd)) 
+
+(wire (pts 
+
+(xy 52.07 29.21) 
+
+(xy 52.07 21.59)) (stroke (width 0) (type default)) (uuid 4230c890-1bf6-4434-a0e7-d1db3c9cdef3)) 
+
+(wire (pts 
+
+(xy 74.93 21.59) 
+
+(xy 72.39 21.59)) (stroke (width 0) (type default)) (uuid d883b725-4f1f-4b41-95aa-5a010c1aa469)) 
+
+(wire (pts 
+
+(xy 74.93 29.21) 
+
+(xy 77.47 29.21)) (stroke (width 0) (type default)) (uuid 244db42e-828f-474a-a3ad-e2eccacd9abd)) 
+
+(wire (pts 
+
+(xy 77.47 29.21) 
+
+(xy 77.47 21.59)) (stroke (width 0) (type default)) (uuid f554afee-3134-4f8c-86bf-4347cf389a0d)) 
+
+(wire (pts 
+
+(xy 100.33 21.59) 
+
+(xy 97.79 21.59)) (stroke (width 0) (type default)) (uuid c73892a0-c26f-49b6-9585-0a09b3a8cee3)) 
+
+(wire (pts 
+
+(xy 100.33 29.21) 
+
+(xy 102.87 29.21)) (stroke (width 0) (type default)) (uuid 3c43e8f6-75ec-40ec-8c6e-7dacbe96db63)) 
+
+(wire (pts 
+
+(xy 102.87 29.21) 
+
+(xy 102.87 21.59)) (stroke (width 0) (type default)) (uuid 732b1b9d-cf09-4725-b6bc-2e51cb0c9314)) 
+
+(wire (pts 
+
+(xy 125.73 21.59) 
+
+(xy 123.19 21.59)) (stroke (width 0) (type default)) (uuid aad63ee1-71fe-4325-8c4d-1e9fb1dcc0cb)) 
+
+(wire (pts 
+
+(xy 125.73 29.21) 
+
+(xy 128.27 29.21)) (stroke (width 0) (type default)) (uuid 030dc814-99e0-45bc-8727-e481cf37384e)) 
+
+(wire (pts 
+
+(xy 128.27 29.21) 
+
+(xy 128.27 21.59)) (stroke (width 0) (type default)) (uuid 9b8a63e5-02cd-4390-9492-da0a14981353)) 
+
+(wire (pts 
+
+(xy 151.13 21.59) 
+
+(xy 148.59 21.59)) (stroke (width 0) (type default)) (uuid 67c7c99b-c8ea-4143-ad30-8dd0e67a5440)) 
+
+(wire (pts 
+
+(xy 151.13 29.21) 
+
+(xy 153.67 29.21)) (stroke (width 0) (type default)) (uuid 9c2550f0-d32e-4a88-894a-e84aef200a2e)) 
+
+(wire (pts 
+
+(xy 153.67 29.21) 
+
+(xy 153.67 21.59)) (stroke (width 0) (type default)) (uuid 99266558-4303-49ff-973b-423c6614f024)) 
+
+(wire (pts 
+
+(xy 176.53 21.59) 
+
+(xy 173.99 21.59)) (stroke (width 0) (type default)) (uuid 5b413d67-310a-47bf-8dd2-44bcb02e45ec)) 
+
+(wire (pts 
+
+(xy 176.53 29.21) 
+
+(xy 179.07 29.21)) (stroke (width 0) (type default)) (uuid 47830fa3-f385-4df3-a8f6-0b158a01fba3)) 
+
+(wire (pts 
+
+(xy 179.07 29.21) 
+
+(xy 179.07 21.59)) (stroke (width 0) (type default)) (uuid 9b678fe0-296e-49d6-b78e-71a36a0e01af)) 
+
+(wire (pts 
+
+(xy 201.93 21.59) 
+
+(xy 199.39 21.59)) (stroke (width 0) (type default)) (uuid c3ad9a59-2ac8-430a-9847-3e7504d6a471)) 
+
+(wire (pts 
+
+(xy 201.93 29.21) 
+
+(xy 204.47 29.21)) (stroke (width 0) (type default)) (uuid 5990f923-824e-49f8-8a26-93ee6b0cd960)) 
+
+(wire (pts 
+
+(xy 204.47 29.21) 
+
+(xy 204.47 21.59)) (stroke (width 0) (type default)) (uuid bb0ce55a-40ec-4f0c-b620-7ec221161c4d)) 
+
+(wire (pts 
+
+(xy 227.33 21.59) 
+
+(xy 224.79 21.59)) (stroke (width 0) (type default)) (uuid df96f7d1-3da6-4051-8dcb-9f2944b1d3b5)) 
+
+(wire (pts 
+
+(xy 227.33 29.21) 
+
+(xy 229.87 29.21)) (stroke (width 0) (type default)) (uuid 3c56df1c-3e9a-456d-ae82-aeb4bd52f138)) 
+
+(wire (pts 
+
+(xy 229.87 29.21) 
+
+(xy 229.87 21.59)) (stroke (width 0) (type default)) (uuid 231b3fb6-ff49-421b-9489-6d33b2ac009c)) 
+
+(wire (pts 
+
+(xy -1.27 46.99) 
+
+(xy -3.81 46.99)) (stroke (width 0) (type default)) (uuid 610286d7-5e34-42b7-8d53-936b2be2d7d7)) 
+
+(wire (pts 
+
+(xy -1.27 54.61) 
+
+(xy 1.27 54.61)) (stroke (width 0) (type default)) (uuid b7ac4355-4bfb-4743-b6d5-e3454bb388f1)) 
+
+(wire (pts 
+
+(xy 1.27 54.61) 
+
+(xy 1.27 46.99)) (stroke (width 0) (type default)) (uuid abb26e1a-a102-44f9-b8fe-9beebbb04d83)) 
+
+(wire (pts 
+
+(xy 24.13 46.99) 
+
+(xy 21.59 46.99)) (stroke (width 0) (type default)) (uuid dde0d6c8-afc5-465c-9073-4d892975d9c2)) 
+
+(wire (pts 
+
+(xy 24.13 54.61) 
+
+(xy 26.67 54.61)) (stroke (width 0) (type default)) (uuid 393f2e53-35e7-46ce-84c1-0411c9301b16)) 
+
+(wire (pts 
+
+(xy 26.67 54.61) 
+
+(xy 26.67 46.99)) (stroke (width 0) (type default)) (uuid 67f7c2da-92d9-4582-9360-9e677bc1ee1f)) 
+
+(wire (pts 
+
+(xy 49.53 46.99) 
+
+(xy 46.99 46.99)) (stroke (width 0) (type default)) (uuid 8cfd0dcd-b3d7-48f8-8fda-b601de8fffdd)) 
+
+(wire (pts 
+
+(xy 49.53 54.61) 
+
+(xy 52.07 54.61)) (stroke (width 0) (type default)) (uuid 602106ef-f5c6-4266-9c01-1bd88a7f1d3f)) 
+
+(wire (pts 
+
+(xy 52.07 54.61) 
+
+(xy 52.07 46.99)) (stroke (width 0) (type default)) (uuid 82fad90b-dbfc-4af6-a007-815b531421c8)) 
+
+(wire (pts 
+
+(xy 74.93 46.99) 
+
+(xy 72.39 46.99)) (stroke (width 0) (type default)) (uuid 53fd01f3-cdc3-453e-8287-5823ed476a6c)) 
+
+(wire (pts 
+
+(xy 74.93 54.61) 
+
+(xy 77.47 54.61)) (stroke (width 0) (type default)) (uuid 071fa15e-cc0b-4ad9-b0c1-0f8ede8fd257)) 
+
+(wire (pts 
+
+(xy 77.47 54.61) 
+
+(xy 77.47 46.99)) (stroke (width 0) (type default)) (uuid bc16d4f7-5559-431e-9847-58a8144d7171)) 
+
+(wire (pts 
+
+(xy 100.33 46.99) 
+
+(xy 97.79 46.99)) (stroke (width 0) (type default)) (uuid bf38611f-4f36-4e4d-83d9-7bc34cc7bcdf)) 
+
+(wire (pts 
+
+(xy 100.33 54.61) 
+
+(xy 102.87 54.61)) (stroke (width 0) (type default)) (uuid de1c053b-1b01-4c13-a531-ea99de952a1a)) 
+
+(wire (pts 
+
+(xy 102.87 54.61) 
+
+(xy 102.87 46.99)) (stroke (width 0) (type default)) (uuid fc7dead1-9b84-41e2-851b-2b970935fa77)) 
+
+(wire (pts 
+
+(xy 125.73 46.99) 
+
+(xy 123.19 46.99)) (stroke (width 0) (type default)) (uuid 301dd72f-91e3-4f42-946a-9d58870a3785)) 
+
+(wire (pts 
+
+(xy 125.73 54.61) 
+
+(xy 128.27 54.61)) (stroke (width 0) (type default)) (uuid 61b05f73-61a8-4478-ab2a-4cb91e764459)) 
+
+(wire (pts 
+
+(xy 128.27 54.61) 
+
+(xy 128.27 46.99)) (stroke (width 0) (type default)) (uuid d04ee313-dfd4-4064-960a-70b0fbac4bfd)) 
+
+(wire (pts 
+
+(xy 151.13 46.99) 
+
+(xy 148.59 46.99)) (stroke (width 0) (type default)) (uuid 3ff071f9-c648-462b-bc9f-24176c454a40)) 
+
+(wire (pts 
+
+(xy 151.13 54.61) 
+
+(xy 153.67 54.61)) (stroke (width 0) (type default)) (uuid 43be9c79-633a-47a1-b8e3-1b3dd34c8126)) 
+
+(wire (pts 
+
+(xy 153.67 54.61) 
+
+(xy 153.67 46.99)) (stroke (width 0) (type default)) (uuid 1999595d-fe6a-4dc5-9338-388ebf8550df)) 
+
+(wire (pts 
+
+(xy 176.53 46.99) 
+
+(xy 173.99 46.99)) (stroke (width 0) (type default)) (uuid 667d1b2f-e1cb-4d3a-a3f0-3b628b84a0de)) 
+
+(wire (pts 
+
+(xy 176.53 54.61) 
+
+(xy 179.07 54.61)) (stroke (width 0) (type default)) (uuid cbe9569d-0381-4507-b038-80a355cd7be5)) 
+
+(wire (pts 
+
+(xy 179.07 54.61) 
+
+(xy 179.07 46.99)) (stroke (width 0) (type default)) (uuid 96d221b3-6835-49a4-bafb-57c6ac1b27b7)) 
+
+(wire (pts 
+
+(xy 201.93 46.99) 
+
+(xy 199.39 46.99)) (stroke (width 0) (type default)) (uuid cf0d4a16-4f4a-4aab-8ee1-c395d42df212)) 
+
+(wire (pts 
+
+(xy 201.93 54.61) 
+
+(xy 204.47 54.61)) (stroke (width 0) (type default)) (uuid c4158a54-00b4-4407-a6c2-f0986852f89c)) 
+
+(wire (pts 
+
+(xy 204.47 54.61) 
+
+(xy 204.47 46.99)) (stroke (width 0) (type default)) (uuid fe36bbfb-8241-4156-ac22-009d30831085)) 
+
+(wire (pts 
+
+(xy 227.33 46.99) 
+
+(xy 224.79 46.99)) (stroke (width 0) (type default)) (uuid 2b813970-3403-40e9-b5a5-c7acb566f35f)) 
+
+(wire (pts 
+
+(xy 227.33 54.61) 
+
+(xy 229.87 54.61)) (stroke (width 0) (type default)) (uuid 35095479-32eb-4c1b-a257-654f376ea950)) 
+
+(wire (pts 
+
+(xy 229.87 54.61) 
+
+(xy 229.87 46.99)) (stroke (width 0) (type default)) (uuid 98532297-afd7-403e-8258-867e4eec9ab2)) 
+
+(wire (pts 
+
+(xy -1.27 72.39) 
+
+(xy -3.81 72.39)) (stroke (width 0) (type default)) (uuid 7a744faa-153c-4036-a50d-cc2760232eae)) 
+
+(wire (pts 
+
+(xy -1.27 80.01) 
+
+(xy 1.27 80.01)) (stroke (width 0) (type default)) (uuid a400c237-c2f8-4b60-8663-552742116054)) 
+
+(wire (pts 
+
+(xy 1.27 80.01) 
+
+(xy 1.27 72.39)) (stroke (width 0) (type default)) (uuid 66e15cce-1582-474b-b0fc-3018e868a6d8)) 
+
+(wire (pts 
+
+(xy 24.13 72.39) 
+
+(xy 21.59 72.39)) (stroke (width 0) (type default)) (uuid 6ffe7297-6f19-429a-be4a-ca89a6433274)) 
+
+(wire (pts 
+
+(xy 24.13 80.01) 
+
+(xy 26.67 80.01)) (stroke (width 0) (type default)) (uuid dcb05e93-96aa-4b5e-a1a7-736619515b05)) 
+
+(wire (pts 
+
+(xy 26.67 80.01) 
+
+(xy 26.67 72.39)) (stroke (width 0) (type default)) (uuid bebff30a-fa7f-4ea5-8007-a626ce43b004)) 
+
+(wire (pts 
+
+(xy 49.53 72.39) 
+
+(xy 46.99 72.39)) (stroke (width 0) (type default)) (uuid d1ebd80c-4c21-444a-b360-6cd38b3dcf7c)) 
+
+(wire (pts 
+
+(xy 49.53 80.01) 
+
+(xy 52.07 80.01)) (stroke (width 0) (type default)) (uuid c509998c-2650-4afd-9047-5451d4e50bb5)) 
+
+(wire (pts 
+
+(xy 52.07 80.01) 
+
+(xy 52.07 72.39)) (stroke (width 0) (type default)) (uuid a67a251b-7a47-46a4-b9bb-c207c8dd72cd)) 
+
+(wire (pts 
+
+(xy 74.93 72.39) 
+
+(xy 72.39 72.39)) (stroke (width 0) (type default)) (uuid 9efa4925-6d00-4f38-95d9-66b9eed0fb12)) 
+
+(wire (pts 
+
+(xy 74.93 80.01) 
+
+(xy 77.47 80.01)) (stroke (width 0) (type default)) (uuid 7ef543ba-3590-4527-97e8-0daedee05e22)) 
+
+(wire (pts 
+
+(xy 77.47 80.01) 
+
+(xy 77.47 72.39)) (stroke (width 0) (type default)) (uuid a7a3ec50-150e-4125-873a-e2edcbcd12ef)) 
+
+(wire (pts 
+
+(xy 100.33 72.39) 
+
+(xy 97.79 72.39)) (stroke (width 0) (type default)) (uuid 91cebdef-3f9d-46d8-a857-e0ca860f4ce4)) 
+
+(wire (pts 
+
+(xy 100.33 80.01) 
+
+(xy 102.87 80.01)) (stroke (width 0) (type default)) (uuid 3efe7a59-f913-4979-8a13-11dba793dcd4)) 
+
+(wire (pts 
+
+(xy 102.87 80.01) 
+
+(xy 102.87 72.39)) (stroke (width 0) (type default)) (uuid 6f702c85-c676-4a3d-b2da-93c8d2d0788f)) 
+
+(wire (pts 
+
+(xy 125.73 72.39) 
+
+(xy 123.19 72.39)) (stroke (width 0) (type default)) (uuid d2b48676-a846-4cdc-a71e-8dbbdfcad315)) 
+
+(wire (pts 
+
+(xy 125.73 80.01) 
+
+(xy 128.27 80.01)) (stroke (width 0) (type default)) (uuid 01432cfe-8d53-4804-a7d1-bd4772eee730)) 
+
+(wire (pts 
+
+(xy 128.27 80.01) 
+
+(xy 128.27 72.39)) (stroke (width 0) (type default)) (uuid 72f7ba16-50f4-42f7-9e23-1213527477be)) 
+
+(wire (pts 
+
+(xy 151.13 72.39) 
+
+(xy 148.59 72.39)) (stroke (width 0) (type default)) (uuid 914d9b90-0bf5-47e9-9107-d94c85fc9407)) 
+
+(wire (pts 
+
+(xy 151.13 80.01) 
+
+(xy 153.67 80.01)) (stroke (width 0) (type default)) (uuid 7bc02074-3e1c-42ad-bf28-7287bb44c9dd)) 
+
+(wire (pts 
+
+(xy 153.67 80.01) 
+
+(xy 153.67 72.39)) (stroke (width 0) (type default)) (uuid 341ca132-d494-488f-a0d5-daec7a222676)) 
+
+(wire (pts 
+
+(xy 176.53 72.39) 
+
+(xy 173.99 72.39)) (stroke (width 0) (type default)) (uuid 5f6e654e-a52c-4523-baa5-8ab93a3efef5)) 
+
+(wire (pts 
+
+(xy 176.53 80.01) 
+
+(xy 179.07 80.01)) (stroke (width 0) (type default)) (uuid f5570690-7727-4951-b84a-a0515f3569c9)) 
+
+(wire (pts 
+
+(xy 179.07 80.01) 
+
+(xy 179.07 72.39)) (stroke (width 0) (type default)) (uuid f72c3bf6-1bc7-4261-a84b-1fcb682ca67f)) 
+
+(wire (pts 
+
+(xy 201.93 72.39) 
+
+(xy 199.39 72.39)) (stroke (width 0) (type default)) (uuid 1c2f2369-1432-4dea-8deb-2eb730794abf)) 
+
+(wire (pts 
+
+(xy 201.93 80.01) 
+
+(xy 204.47 80.01)) (stroke (width 0) (type default)) (uuid 4630aa16-c65e-4153-a349-bba7ea306f7c)) 
+
+(wire (pts 
+
+(xy 204.47 80.01) 
+
+(xy 204.47 72.39)) (stroke (width 0) (type default)) (uuid c24fdddb-f15f-4f07-861a-2c8107b1afec)) 
+
+(wire (pts 
+
+(xy 227.33 72.39) 
+
+(xy 224.79 72.39)) (stroke (width 0) (type default)) (uuid 2967a3a2-d79d-420a-bf9c-7e100929d445)) 
+
+(wire (pts 
+
+(xy 227.33 80.01) 
+
+(xy 229.87 80.01)) (stroke (width 0) (type default)) (uuid 9b664e7f-dd4c-4367-bf7e-c3c7cf537a45)) 
+
+(wire (pts 
+
+(xy 229.87 80.01) 
+
+(xy 229.87 72.39)) (stroke (width 0) (type default)) (uuid 1b82148b-e768-44e8-aa2b-4b57e7cb181b)) 
+
+(wire (pts 
+
+(xy -1.27 97.79) 
+
+(xy -3.81 97.79)) (stroke (width 0) (type default)) (uuid 0ccae89d-659d-4478-9a55-c0ada278df60)) 
+
+(wire (pts 
+
+(xy -1.27 105.41) 
+
+(xy 1.27 105.41)) (stroke (width 0) (type default)) (uuid e391dead-5a43-4a9a-88e5-c3a1689fff22)) 
+
+(wire (pts 
+
+(xy 1.27 105.41) 
+
+(xy 1.27 97.79)) (stroke (width 0) (type default)) (uuid aae2963c-377b-47cc-bd30-88793ddae8bc)) 
+
+(wire (pts 
+
+(xy 24.13 97.79) 
+
+(xy 21.59 97.79)) (stroke (width 0) (type default)) (uuid e147071f-0c5e-4516-b362-8292fa393f43)) 
+
+(wire (pts 
+
+(xy 24.13 105.41) 
+
+(xy 26.67 105.41)) (stroke (width 0) (type default)) (uuid 834351e5-2eda-4ddc-a9ab-1a50e0d88a80)) 
+
+(wire (pts 
+
+(xy 26.67 105.41) 
+
+(xy 26.67 97.79)) (stroke (width 0) (type default)) (uuid ded53e84-a974-49f8-b41f-e3512252f837)) 
+
+(wire (pts 
+
+(xy 49.53 97.79) 
+
+(xy 46.99 97.79)) (stroke (width 0) (type default)) (uuid a7c23807-0577-46b5-a5e4-bf55d2d83035)) 
+
+(wire (pts 
+
+(xy 49.53 105.41) 
+
+(xy 52.07 105.41)) (stroke (width 0) (type default)) (uuid 56e368bb-f4f3-44ae-afcb-4eb3ffdf0c59)) 
+
+(wire (pts 
+
+(xy 52.07 105.41) 
+
+(xy 52.07 97.79)) (stroke (width 0) (type default)) (uuid fd3313d3-442f-49b7-b35b-481df177e49f)) 
+
+(wire (pts 
+
+(xy 74.93 97.79) 
+
+(xy 72.39 97.79)) (stroke (width 0) (type default)) (uuid e09ee930-b854-4cb4-a0fe-e1f02f15cc6c)) 
+
+(wire (pts 
+
+(xy 74.93 105.41) 
+
+(xy 77.47 105.41)) (stroke (width 0) (type default)) (uuid e8740250-747c-47b9-9bc3-61960fc19ebd)) 
+
+(wire (pts 
+
+(xy 77.47 105.41) 
+
+(xy 77.47 97.79)) (stroke (width 0) (type default)) (uuid bbefb297-7d90-486b-8123-5ef101e8b457)) 
+
+(wire (pts 
+
+(xy 100.33 97.79) 
+
+(xy 97.79 97.79)) (stroke (width 0) (type default)) (uuid bcf05096-5315-4fab-b7e1-3e0722e6270b)) 
+
+(wire (pts 
+
+(xy 100.33 105.41) 
+
+(xy 102.87 105.41)) (stroke (width 0) (type default)) (uuid 75ea5377-54f0-4d71-8cbd-a81ca18c7bac)) 
+
+(wire (pts 
+
+(xy 102.87 105.41) 
+
+(xy 102.87 97.79)) (stroke (width 0) (type default)) (uuid a897ea18-c1dd-4640-a044-a58d0c04e063)) 
+
+(wire (pts 
+
+(xy 125.73 97.79) 
+
+(xy 123.19 97.79)) (stroke (width 0) (type default)) (uuid cc08b9f6-557e-4666-94d5-7642587d5e98)) 
+
+(wire (pts 
+
+(xy 125.73 105.41) 
+
+(xy 128.27 105.41)) (stroke (width 0) (type default)) (uuid b450e2b9-cb1a-4417-bb3f-451f0abeacdd)) 
+
+(wire (pts 
+
+(xy 128.27 105.41) 
+
+(xy 128.27 97.79)) (stroke (width 0) (type default)) (uuid 807ed5ec-ea93-4735-ba23-9ce9e723988c)) 
+
+(wire (pts 
+
+(xy 151.13 97.79) 
+
+(xy 148.59 97.79)) (stroke (width 0) (type default)) (uuid f3d14cad-946f-45bf-82ab-eb24a31e7913)) 
+
+(wire (pts 
+
+(xy 151.13 105.41) 
+
+(xy 153.67 105.41)) (stroke (width 0) (type default)) (uuid 997bf4fe-1f60-428b-bb98-01c4c86245eb)) 
+
+(wire (pts 
+
+(xy 153.67 105.41) 
+
+(xy 153.67 97.79)) (stroke (width 0) (type default)) (uuid f1fb95d7-8a92-4149-ae13-78794ef3183c)) 
+
+(wire (pts 
+
+(xy 176.53 97.79) 
+
+(xy 173.99 97.79)) (stroke (width 0) (type default)) (uuid 763611b3-6582-4dd2-b062-10d750d5edc1)) 
+
+(wire (pts 
+
+(xy 176.53 105.41) 
+
+(xy 179.07 105.41)) (stroke (width 0) (type default)) (uuid afe768fe-bba4-4258-900a-989fbd8e4a89)) 
+
+(wire (pts 
+
+(xy 179.07 105.41) 
+
+(xy 179.07 97.79)) (stroke (width 0) (type default)) (uuid c8c29ffb-f046-43b0-b123-b85dbe485e93)) 
+
+(wire (pts 
+
+(xy 201.93 97.79) 
+
+(xy 199.39 97.79)) (stroke (width 0) (type default)) (uuid 8c9ff81b-7a83-41b4-b5f6-ab8571264d71)) 
+
+(wire (pts 
+
+(xy 201.93 105.41) 
+
+(xy 204.47 105.41)) (stroke (width 0) (type default)) (uuid d2b63640-86d5-4e21-a563-31fcb4c282f5)) 
+
+(wire (pts 
+
+(xy 204.47 105.41) 
+
+(xy 204.47 97.79)) (stroke (width 0) (type default)) (uuid 0686bbf6-47ec-436a-9a7b-18385ea24bbc)) 
+
+(wire (pts 
+
+(xy 227.33 97.79) 
+
+(xy 224.79 97.79)) (stroke (width 0) (type default)) (uuid 66951053-c259-47a8-90b2-62d6b8e53f6f)) 
+
+(wire (pts 
+
+(xy 227.33 105.41) 
+
+(xy 229.87 105.41)) (stroke (width 0) (type default)) (uuid 0cdfabd7-db89-4679-91a5-ca751cdda3e5)) 
+
+(wire (pts 
+
+(xy 229.87 105.41) 
+
+(xy 229.87 97.79)) (stroke (width 0) (type default)) (uuid 82600bb7-5e1d-4b59-8866-e668d1bcceae)) 
+
+(wire (pts 
+
+(xy -1.27 123.19) 
+
+(xy -3.81 123.19)) (stroke (width 0) (type default)) (uuid b0355581-acd4-4db1-a68d-10b447f45f53)) 
+
+(wire (pts 
+
+(xy -1.27 130.81) 
+
+(xy 1.27 130.81)) (stroke (width 0) (type default)) (uuid df340acf-416c-4606-b194-6e4b4d88249a)) 
+
+(wire (pts 
+
+(xy 1.27 130.81) 
+
+(xy 1.27 123.19)) (stroke (width 0) (type default)) (uuid b9a5c59f-c22c-4730-a83c-8d346712aef3)) 
+
+(wire (pts 
+
+(xy 24.13 123.19) 
+
+(xy 21.59 123.19)) (stroke (width 0) (type default)) (uuid eb5cf9f1-d2f2-439b-a866-86fd274fb596)) 
+
+(wire (pts 
+
+(xy 24.13 130.81) 
+
+(xy 26.67 130.81)) (stroke (width 0) (type default)) (uuid 0a719ca5-a066-4357-90d2-a0ef4f667c2b)) 
+
+(wire (pts 
+
+(xy 26.67 130.81) 
+
+(xy 26.67 123.19)) (stroke (width 0) (type default)) (uuid 814666aa-2b30-4578-8c6b-b753568a7ee6)) 
+
+(wire (pts 
+
+(xy 49.53 123.19) 
+
+(xy 46.99 123.19)) (stroke (width 0) (type default)) (uuid e26adc23-2618-4038-8135-c902952235a8)) 
+
+(wire (pts 
+
+(xy 49.53 130.81) 
+
+(xy 52.07 130.81)) (stroke (width 0) (type default)) (uuid 3bd6623c-c303-4332-b9eb-d5d9ab864ee5)) 
+
+(wire (pts 
+
+(xy 52.07 130.81) 
+
+(xy 52.07 123.19)) (stroke (width 0) (type default)) (uuid 3aedc008-7218-4d23-9a05-451f2dd400be)) 
+
+(wire (pts 
+
+(xy 74.93 123.19) 
+
+(xy 72.39 123.19)) (stroke (width 0) (type default)) (uuid 2a17dd7d-464c-4a1b-b8b4-e7e315670652)) 
+
+(wire (pts 
+
+(xy 74.93 130.81) 
+
+(xy 77.47 130.81)) (stroke (width 0) (type default)) (uuid d505d72c-d494-40f8-b918-6e770448e901)) 
+
+(wire (pts 
+
+(xy 77.47 130.81) 
+
+(xy 77.47 123.19)) (stroke (width 0) (type default)) (uuid b6a7b3cb-01f1-43d5-9a8a-afb506afe5bd)) 
+
+(wire (pts 
+
+(xy 100.33 123.19) 
+
+(xy 97.79 123.19)) (stroke (width 0) (type default)) (uuid 63f659d6-7582-4f72-8964-fe7a1779c7c1)) 
+
+(wire (pts 
+
+(xy 100.33 130.81) 
+
+(xy 102.87 130.81)) (stroke (width 0) (type default)) (uuid afcb162b-602e-4d07-a605-b211837511ff)) 
+
+(wire (pts 
+
+(xy 102.87 130.81) 
+
+(xy 102.87 123.19)) (stroke (width 0) (type default)) (uuid 08c43186-c63c-4b53-a721-a154f50d9dcb)) 
+
+(wire (pts 
+
+(xy 125.73 123.19) 
+
+(xy 123.19 123.19)) (stroke (width 0) (type default)) (uuid c1b53ffa-38c9-4c97-a189-fa179a7558c2)) 
+
+(wire (pts 
+
+(xy 125.73 130.81) 
+
+(xy 128.27 130.81)) (stroke (width 0) (type default)) (uuid ba222bcf-447e-4049-a76a-85739fbba5e7)) 
+
+(wire (pts 
+
+(xy 128.27 130.81) 
+
+(xy 128.27 123.19)) (stroke (width 0) (type default)) (uuid 6f51953a-3589-4aae-871a-9259d93cdabb)) 
+
+(wire (pts 
+
+(xy 151.13 123.19) 
+
+(xy 148.59 123.19)) (stroke (width 0) (type default)) (uuid fc45173b-9b73-4510-98ea-4c47be86b51f)) 
+
+(wire (pts 
+
+(xy 151.13 130.81) 
+
+(xy 153.67 130.81)) (stroke (width 0) (type default)) (uuid 6ae9d7ae-698a-4f44-8b4e-74ea76ea8a02)) 
+
+(wire (pts 
+
+(xy 153.67 130.81) 
+
+(xy 153.67 123.19)) (stroke (width 0) (type default)) (uuid d3adb481-3f6a-4670-9f1d-ce7d0664f611)) 
+
+(wire (pts 
+
+(xy 176.53 123.19) 
+
+(xy 173.99 123.19)) (stroke (width 0) (type default)) (uuid 738ac887-5c1f-475f-8fe0-41a167b492f6)) 
+
+(wire (pts 
+
+(xy 176.53 130.81) 
+
+(xy 179.07 130.81)) (stroke (width 0) (type default)) (uuid b4fdc0ce-621a-44f1-a284-2c7009418eed)) 
+
+(wire (pts 
+
+(xy 179.07 130.81) 
+
+(xy 179.07 123.19)) (stroke (width 0) (type default)) (uuid 111982c5-fdb3-4205-9f82-48205b736bdb)) 
+
+(wire (pts 
+
+(xy 201.93 123.19) 
+
+(xy 199.39 123.19)) (stroke (width 0) (type default)) (uuid b1e3a05a-9b42-4666-8008-eeb316cd6d2d)) 
+
+(wire (pts 
+
+(xy 201.93 130.81) 
+
+(xy 204.47 130.81)) (stroke (width 0) (type default)) (uuid 857a5370-1eaf-4ec4-87c9-67836fbab722)) 
+
+(wire (pts 
+
+(xy 204.47 130.81) 
+
+(xy 204.47 123.19)) (stroke (width 0) (type default)) (uuid 4f54cab2-8322-4cd1-a257-d138fcb4ea37)) 
+
+(wire (pts 
+
+(xy 227.33 123.19) 
+
+(xy 224.79 123.19)) (stroke (width 0) (type default)) (uuid d841babf-59cf-4d2c-881c-cc76a6b63f0e)) 
+
+(wire (pts 
+
+(xy 227.33 130.81) 
+
+(xy 229.87 130.81)) (stroke (width 0) (type default)) (uuid 72671f98-3fbb-412d-a8f5-6804a0301a42)) 
+
+(wire (pts 
+
+(xy 229.87 130.81) 
+
+(xy 229.87 123.19)) (stroke (width 0) (type default)) (uuid c9f8b2af-c462-4470-b6f2-c5ce5acb2967)) 
+
+(wire (pts 
+
+(xy -1.27 148.59) 
+
+(xy -3.81 148.59)) (stroke (width 0) (type default)) (uuid bf07dfaa-94e2-439a-8738-1b9edfe790a2)) 
+
+(wire (pts 
+
+(xy -1.27 156.21) 
+
+(xy 1.27 156.21)) (stroke (width 0) (type default)) (uuid b2efba3f-3ca1-4e75-83e8-2704c8154264)) 
+
+(wire (pts 
+
+(xy 1.27 156.21) 
+
+(xy 1.27 148.59)) (stroke (width 0) (type default)) (uuid 6e420383-b909-431c-b450-2aec47a849d3)) 
+
+(wire (pts 
+
+(xy 24.13 148.59) 
+
+(xy 21.59 148.59)) (stroke (width 0) (type default)) (uuid 095563d6-6d53-40d9-bdc8-1956e86deeae)) 
+
+(wire (pts 
+
+(xy 24.13 156.21) 
+
+(xy 26.67 156.21)) (stroke (width 0) (type default)) (uuid 894b5b3e-df92-486a-8076-86923f78f013)) 
+
+(wire (pts 
+
+(xy 26.67 156.21) 
+
+(xy 26.67 148.59)) (stroke (width 0) (type default)) (uuid 9f25b48b-5bc9-4571-80a4-0a2c9c24f168)) 
+
+(wire (pts 
+
+(xy 49.53 148.59) 
+
+(xy 46.99 148.59)) (stroke (width 0) (type default)) (uuid 2e727aa8-ad17-4727-acd3-dc4f4b5ce400)) 
+
+(wire (pts 
+
+(xy 49.53 156.21) 
+
+(xy 52.07 156.21)) (stroke (width 0) (type default)) (uuid 5035c726-d084-46f3-b9c3-df8d48d89b18)) 
+
+(wire (pts 
+
+(xy 52.07 156.21) 
+
+(xy 52.07 148.59)) (stroke (width 0) (type default)) (uuid 7c299bb3-4260-4bb2-bd76-f453a0e2e173)) 
+
+(wire (pts 
+
+(xy 74.93 148.59) 
+
+(xy 72.39 148.59)) (stroke (width 0) (type default)) (uuid 68981ede-de31-4320-8a82-7fc6a1350c24)) 
+
+(wire (pts 
+
+(xy 74.93 156.21) 
+
+(xy 77.47 156.21)) (stroke (width 0) (type default)) (uuid 51a07b2a-f9b1-4130-86da-3f848cb22ef0)) 
+
+(wire (pts 
+
+(xy 77.47 156.21) 
+
+(xy 77.47 148.59)) (stroke (width 0) (type default)) (uuid 60cbea70-7f99-4bc4-8c02-9734178e13b7)) 
+
+(wire (pts 
+
+(xy 100.33 148.59) 
+
+(xy 97.79 148.59)) (stroke (width 0) (type default)) (uuid 1f5d440f-c264-4803-837b-6a50c0efbdb8)) 
+
+(wire (pts 
+
+(xy 100.33 156.21) 
+
+(xy 102.87 156.21)) (stroke (width 0) (type default)) (uuid 9a7b7589-fb3e-46f9-afe7-2d4035259bc0)) 
+
+(wire (pts 
+
+(xy 102.87 156.21) 
+
+(xy 102.87 148.59)) (stroke (width 0) (type default)) (uuid 84b9cb07-d38b-4e36-b02c-de644bb1ac8d)) 
+
+(wire (pts 
+
+(xy 125.73 148.59) 
+
+(xy 123.19 148.59)) (stroke (width 0) (type default)) (uuid cc365c0e-71a4-4484-a1d0-d4810fac5ced)) 
+
+(wire (pts 
+
+(xy 125.73 156.21) 
+
+(xy 128.27 156.21)) (stroke (width 0) (type default)) (uuid e529c382-47e5-4e44-8ec5-7e848e88ea3c)) 
+
+(wire (pts 
+
+(xy 128.27 156.21) 
+
+(xy 128.27 148.59)) (stroke (width 0) (type default)) (uuid b775d2e9-5127-45bb-81ff-fc35964ccbf3)) 
+
+(wire (pts 
+
+(xy 151.13 148.59) 
+
+(xy 148.59 148.59)) (stroke (width 0) (type default)) (uuid 051ca8fc-6412-4012-98d2-bdc89290cbe8)) 
+
+(wire (pts 
+
+(xy 151.13 156.21) 
+
+(xy 153.67 156.21)) (stroke (width 0) (type default)) (uuid 20a81f29-4743-4306-8d1e-8c1ef71b31c4)) 
+
+(wire (pts 
+
+(xy 153.67 156.21) 
+
+(xy 153.67 148.59)) (stroke (width 0) (type default)) (uuid dbd4d19c-96f9-4953-8a86-8e69152445c7)) 
+
+(wire (pts 
+
+(xy 176.53 148.59) 
+
+(xy 173.99 148.59)) (stroke (width 0) (type default)) (uuid a54e0826-dc67-424f-b20e-9e94e78a78ce)) 
+
+(wire (pts 
+
+(xy 176.53 156.21) 
+
+(xy 179.07 156.21)) (stroke (width 0) (type default)) (uuid 4d26d967-81f5-4596-b3ee-17a435dfc7d9)) 
+
+(wire (pts 
+
+(xy 179.07 156.21) 
+
+(xy 179.07 148.59)) (stroke (width 0) (type default)) (uuid 241f16a9-6353-40cd-b313-a73b00a0ed9b)) 
+
+(wire (pts 
+
+(xy 201.93 148.59) 
+
+(xy 199.39 148.59)) (stroke (width 0) (type default)) (uuid 2c7351c2-d837-439a-8652-63ab1ff7621a)) 
+
+(wire (pts 
+
+(xy 201.93 156.21) 
+
+(xy 204.47 156.21)) (stroke (width 0) (type default)) (uuid ce04f278-5d88-4229-90e3-1f8f41df9074)) 
+
+(wire (pts 
+
+(xy 204.47 156.21) 
+
+(xy 204.47 148.59)) (stroke (width 0) (type default)) (uuid bbef74f7-e907-4183-9c30-430f5ce6f98e)) 
+
+(wire (pts 
+
+(xy 227.33 148.59) 
+
+(xy 224.79 148.59)) (stroke (width 0) (type default)) (uuid def2a9fe-fd99-4084-8392-098ea4d4c9a7)) 
+
+(wire (pts 
+
+(xy 227.33 156.21) 
+
+(xy 229.87 156.21)) (stroke (width 0) (type default)) (uuid 0af32d83-77ae-4fbb-8a9f-b270bdf99001)) 
+
+(wire (pts 
+
+(xy 229.87 156.21) 
+
+(xy 229.87 148.59)) (stroke (width 0) (type default)) (uuid fa8005f5-05ef-455a-917b-613583a643fd)) 
+
+(wire (pts 
+
+(xy -1.27 173.99) 
+
+(xy -3.81 173.99)) (stroke (width 0) (type default)) (uuid 81d8a384-2a75-475d-b753-d17d68c915ee)) 
+
+(wire (pts 
+
+(xy -1.27 181.61) 
+
+(xy 1.27 181.61)) (stroke (width 0) (type default)) (uuid 89ac781f-8682-4cbf-b7e4-c63321d1da47)) 
+
+(wire (pts 
+
+(xy 1.27 181.61) 
+
+(xy 1.27 173.99)) (stroke (width 0) (type default)) (uuid c66787de-9556-458b-8057-129a0cb66ba3)) 
+
+(wire (pts 
+
+(xy 24.13 173.99) 
+
+(xy 21.59 173.99)) (stroke (width 0) (type default)) (uuid 3da0fc2a-cf80-41c1-85dd-2940d152f6f1)) 
+
+(wire (pts 
+
+(xy 24.13 181.61) 
+
+(xy 26.67 181.61)) (stroke (width 0) (type default)) (uuid 056ea458-4390-402e-95c9-5e2521a4f849)) 
+
+(wire (pts 
+
+(xy 26.67 181.61) 
+
+(xy 26.67 173.99)) (stroke (width 0) (type default)) (uuid b95d97dc-cf98-4a88-8955-bc8accfbef2c)) 
+
+(wire (pts 
+
+(xy 49.53 173.99) 
+
+(xy 46.99 173.99)) (stroke (width 0) (type default)) (uuid 06e02b9c-19cf-4911-9111-a864078f7dde)) 
+
+(wire (pts 
+
+(xy 49.53 181.61) 
+
+(xy 52.07 181.61)) (stroke (width 0) (type default)) (uuid 4a9a027a-7aff-441b-975e-eec252ab12d4)) 
+
+(wire (pts 
+
+(xy 52.07 181.61) 
+
+(xy 52.07 173.99)) (stroke (width 0) (type default)) (uuid f9ba8e2b-fa23-4d24-8f71-ca1c93a339d3)) 
+
+(wire (pts 
+
+(xy 74.93 173.99) 
+
+(xy 72.39 173.99)) (stroke (width 0) (type default)) (uuid 3477dd38-dbd2-4b13-9ec6-8611c207dc98)) 
+
+(wire (pts 
+
+(xy 74.93 181.61) 
+
+(xy 77.47 181.61)) (stroke (width 0) (type default)) (uuid a8c7a022-c90c-4930-a762-23abaacfd5a8)) 
+
+(wire (pts 
+
+(xy 77.47 181.61) 
+
+(xy 77.47 173.99)) (stroke (width 0) (type default)) (uuid e525fa5b-8417-4669-842f-bbcf58f7cb16)) 
+
+(wire (pts 
+
+(xy 100.33 173.99) 
+
+(xy 97.79 173.99)) (stroke (width 0) (type default)) (uuid 855aac40-d5b5-4835-b46a-1884a7061391)) 
+
+(wire (pts 
+
+(xy 100.33 181.61) 
+
+(xy 102.87 181.61)) (stroke (width 0) (type default)) (uuid 5dd9c167-11e6-48d5-8963-675977f3ae09)) 
+
+(wire (pts 
+
+(xy 102.87 181.61) 
+
+(xy 102.87 173.99)) (stroke (width 0) (type default)) (uuid 1aae847a-f4a8-4bf3-981c-8140662ce527)) 
+
+(wire (pts 
+
+(xy 125.73 173.99) 
+
+(xy 123.19 173.99)) (stroke (width 0) (type default)) (uuid 0ea3395a-d9f3-4d0e-bb0b-57528fccf6e1)) 
+
+(wire (pts 
+
+(xy 125.73 181.61) 
+
+(xy 128.27 181.61)) (stroke (width 0) (type default)) (uuid d971f048-50b6-4773-9685-5dc678fa427e)) 
+
+(wire (pts 
+
+(xy 128.27 181.61) 
+
+(xy 128.27 173.99)) (stroke (width 0) (type default)) (uuid f9cf3b09-7ef5-4daa-bb8c-237c4663ed44)) 
+
+(wire (pts 
+
+(xy 151.13 173.99) 
+
+(xy 148.59 173.99)) (stroke (width 0) (type default)) (uuid 756a4b07-cea2-4742-b45a-f9d55070585a)) 
+
+(wire (pts 
+
+(xy 151.13 181.61) 
+
+(xy 153.67 181.61)) (stroke (width 0) (type default)) (uuid 93588ec8-eea5-46f1-a064-6f94e47740a9)) 
+
+(wire (pts 
+
+(xy 153.67 181.61) 
+
+(xy 153.67 173.99)) (stroke (width 0) (type default)) (uuid 12adb021-72b9-4a2e-8505-5abd61b9ecf8)) 
+
+(wire (pts 
+
+(xy 176.53 173.99) 
+
+(xy 173.99 173.99)) (stroke (width 0) (type default)) (uuid e94fa46e-35a3-4623-a7cf-56e0b3c80b2f)) 
+
+(wire (pts 
+
+(xy 176.53 181.61) 
+
+(xy 179.07 181.61)) (stroke (width 0) (type default)) (uuid 781ea800-a146-4b39-865c-acb5cdaaac48)) 
+
+(wire (pts 
+
+(xy 179.07 181.61) 
+
+(xy 179.07 173.99)) (stroke (width 0) (type default)) (uuid 870af8ed-0dbc-4563-b048-9802c8f8bf75)) 
+
+(wire (pts 
+
+(xy 201.93 173.99) 
+
+(xy 199.39 173.99)) (stroke (width 0) (type default)) (uuid 9241f699-c23a-4197-8790-f3f76695a903)) 
+
+(wire (pts 
+
+(xy 201.93 181.61) 
+
+(xy 204.47 181.61)) (stroke (width 0) (type default)) (uuid 92cc8ce6-f52f-423e-a4ef-423b68bf55d7)) 
+
+(wire (pts 
+
+(xy 204.47 181.61) 
+
+(xy 204.47 173.99)) (stroke (width 0) (type default)) (uuid d63fca62-2cf6-4bf4-a4c1-9652fde4033f)) 
+
+(wire (pts 
+
+(xy 227.33 173.99) 
+
+(xy 224.79 173.99)) (stroke (width 0) (type default)) (uuid 93944487-2858-4356-a466-4f47681af33f)) 
+
+(wire (pts 
+
+(xy 227.33 181.61) 
+
+(xy 229.87 181.61)) (stroke (width 0) (type default)) (uuid b6680ed6-0f8d-4eda-9771-c4816270117f)) 
+
+(wire (pts 
+
+(xy 229.87 181.61) 
+
+(xy 229.87 173.99)) (stroke (width 0) (type default)) (uuid b893ca20-e291-48e4-92d1-e4fd354b4f81)) 
+
+(wire (pts 
+
+(xy -1.27 199.39) 
+
+(xy -3.81 199.39)) (stroke (width 0) (type default)) (uuid 132c4726-2b95-49ba-be69-cfabcab8a2a2)) 
+
+(wire (pts 
+
+(xy -1.27 207.01) 
+
+(xy 1.27 207.01)) (stroke (width 0) (type default)) (uuid fef4fb8d-d4b5-47af-be7b-0205dede41db)) 
+
+(wire (pts 
+
+(xy 1.27 207.01) 
+
+(xy 1.27 199.39)) (stroke (width 0) (type default)) (uuid c77856d6-3844-4366-93d9-50965f0585f2)) 
+
+(wire (pts 
+
+(xy 24.13 199.39) 
+
+(xy 21.59 199.39)) (stroke (width 0) (type default)) (uuid 683946dd-f383-4a2b-9692-ea08273f104e)) 
+
+(wire (pts 
+
+(xy 24.13 207.01) 
+
+(xy 26.67 207.01)) (stroke (width 0) (type default)) (uuid 1425e493-0be6-48de-8c52-56ab15f1d312)) 
+
+(wire (pts 
+
+(xy 26.67 207.01) 
+
+(xy 26.67 199.39)) (stroke (width 0) (type default)) (uuid 907b09a9-93b3-4e1f-9b3c-69f2c4da947a)) 
+
+(wire (pts 
+
+(xy 49.53 199.39) 
+
+(xy 46.99 199.39)) (stroke (width 0) (type default)) (uuid b7b0f76b-84a2-429d-bbc2-7279bb95b698)) 
+
+(wire (pts 
+
+(xy 49.53 207.01) 
+
+(xy 52.07 207.01)) (stroke (width 0) (type default)) (uuid a9a64627-e8dd-4e8a-a708-03ee4968ff69)) 
+
+(wire (pts 
+
+(xy 52.07 207.01) 
+
+(xy 52.07 199.39)) (stroke (width 0) (type default)) (uuid 14ddae5b-25ed-46ff-ab0c-c942adf9cfda)) 
+
+(wire (pts 
+
+(xy 74.93 199.39) 
+
+(xy 72.39 199.39)) (stroke (width 0) (type default)) (uuid 70a08d0a-ca20-4ee8-b5a8-ccb0e372c9ef)) 
+
+(wire (pts 
+
+(xy 74.93 207.01) 
+
+(xy 77.47 207.01)) (stroke (width 0) (type default)) (uuid 9b5d26bd-a4f7-4f36-b1c3-8a8096bc42a4)) 
+
+(wire (pts 
+
+(xy 77.47 207.01) 
+
+(xy 77.47 199.39)) (stroke (width 0) (type default)) (uuid 50ad389b-0717-422b-a12d-a725d044b6c9)) 
+
+(wire (pts 
+
+(xy 100.33 199.39) 
+
+(xy 97.79 199.39)) (stroke (width 0) (type default)) (uuid 95b1af0b-7ccc-4487-bdb7-530b34ce23d0)) 
+
+(wire (pts 
+
+(xy 100.33 207.01) 
+
+(xy 102.87 207.01)) (stroke (width 0) (type default)) (uuid b4c359c8-63fb-428f-9723-1a4d4be517f7)) 
+
+(wire (pts 
+
+(xy 102.87 207.01) 
+
+(xy 102.87 199.39)) (stroke (width 0) (type default)) (uuid 004fe93b-8999-4ee9-b612-565d056c62e2)) 
+
+(wire (pts 
+
+(xy 125.73 199.39) 
+
+(xy 123.19 199.39)) (stroke (width 0) (type default)) (uuid 59757d5a-680d-4e76-8ad2-2439c672f895)) 
+
+(wire (pts 
+
+(xy 125.73 207.01) 
+
+(xy 128.27 207.01)) (stroke (width 0) (type default)) (uuid 1ad04e66-1603-4906-9bae-aad177c58964)) 
+
+(wire (pts 
+
+(xy 128.27 207.01) 
+
+(xy 128.27 199.39)) (stroke (width 0) (type default)) (uuid 9f9d2dbe-c847-4ad5-aee9-8efcc099f600)) 
+
+(wire (pts 
+
+(xy 151.13 199.39) 
+
+(xy 148.59 199.39)) (stroke (width 0) (type default)) (uuid 92a46765-10a7-42d7-a529-2ef47dc7fb9d)) 
+
+(wire (pts 
+
+(xy 151.13 207.01) 
+
+(xy 153.67 207.01)) (stroke (width 0) (type default)) (uuid 6305a9a8-1db0-4463-b7cc-22300ce114e5)) 
+
+(wire (pts 
+
+(xy 153.67 207.01) 
+
+(xy 153.67 199.39)) (stroke (width 0) (type default)) (uuid 62ade461-d590-4493-9ecd-9c2ed3daab09)) 
+
+(wire (pts 
+
+(xy 176.53 199.39) 
+
+(xy 173.99 199.39)) (stroke (width 0) (type default)) (uuid 89157fe4-d1ec-44ae-9c5c-2e647caa6bd0)) 
+
+(wire (pts 
+
+(xy 176.53 207.01) 
+
+(xy 179.07 207.01)) (stroke (width 0) (type default)) (uuid a075f151-69b2-4339-a3b2-b4bc91f53c3a)) 
+
+(wire (pts 
+
+(xy 179.07 207.01) 
+
+(xy 179.07 199.39)) (stroke (width 0) (type default)) (uuid 45f68810-f9eb-4dbb-b0ea-1ad5a3a5fcfe)) 
+
+(wire (pts 
+
+(xy 201.93 199.39) 
+
+(xy 199.39 199.39)) (stroke (width 0) (type default)) (uuid 34604f88-e5c1-4ab0-9f35-043770070904)) 
+
+(wire (pts 
+
+(xy 201.93 207.01) 
+
+(xy 204.47 207.01)) (stroke (width 0) (type default)) (uuid 97b14b5c-84cd-4795-8b78-d281ce85cf4c)) 
+
+(wire (pts 
+
+(xy 204.47 207.01) 
+
+(xy 204.47 199.39)) (stroke (width 0) (type default)) (uuid ea0ffbdf-c8f5-449f-82e2-8cf7411b8263)) 
+
+(wire (pts 
+
+(xy 227.33 199.39) 
+
+(xy 224.79 199.39)) (stroke (width 0) (type default)) (uuid 7e39395a-8715-4f44-aa4d-fc872c0757c2)) 
+
+(wire (pts 
+
+(xy 227.33 207.01) 
+
+(xy 229.87 207.01)) (stroke (width 0) (type default)) (uuid 6eef2c66-6c20-4f2f-bf21-acac194220ad)) 
+
+(wire (pts 
+
+(xy 229.87 207.01) 
+
+(xy 229.87 199.39)) (stroke (width 0) (type default)) (uuid 146ba117-d1f2-45a8-a4a7-901ba687bf55)) 
+
+(wire (pts 
+
+(xy -1.27 224.79) 
+
+(xy -3.81 224.79)) (stroke (width 0) (type default)) (uuid 1ddf268c-ac0b-45fd-b94f-53274464009e)) 
+
+(wire (pts 
+
+(xy -1.27 232.41) 
+
+(xy 1.27 232.41)) (stroke (width 0) (type default)) (uuid 51098f3e-9858-4bea-a38c-ed84e8f2a338)) 
+
+(wire (pts 
+
+(xy 1.27 232.41) 
+
+(xy 1.27 224.79)) (stroke (width 0) (type default)) (uuid 40b0294a-daea-4bd7-87fd-e21e87464c5f)) 
+
+(wire (pts 
+
+(xy 24.13 224.79) 
+
+(xy 21.59 224.79)) (stroke (width 0) (type default)) (uuid 3538e1b0-412a-4a57-94fa-ee632b2181b9)) 
+
+(wire (pts 
+
+(xy 24.13 232.41) 
+
+(xy 26.67 232.41)) (stroke (width 0) (type default)) (uuid 452a629f-a486-43f4-96f2-1884e49eaa04)) 
+
+(wire (pts 
+
+(xy 26.67 232.41) 
+
+(xy 26.67 224.79)) (stroke (width 0) (type default)) (uuid 1df11b38-3010-463a-bdc1-c8559bfe4e1e)) 
+
+(wire (pts 
+
+(xy 49.53 224.79) 
+
+(xy 46.99 224.79)) (stroke (width 0) (type default)) (uuid f6184c80-9cc9-4033-a47d-bac45120587a)) 
+
+(wire (pts 
+
+(xy 49.53 232.41) 
+
+(xy 52.07 232.41)) (stroke (width 0) (type default)) (uuid d3688173-decb-44ef-9a0b-f3d5eec540c1)) 
+
+(wire (pts 
+
+(xy 52.07 232.41) 
+
+(xy 52.07 224.79)) (stroke (width 0) (type default)) (uuid 1fa5471b-2112-4ebc-a764-49fd5dac929f)) 
+
+(wire (pts 
+
+(xy 74.93 224.79) 
+
+(xy 72.39 224.79)) (stroke (width 0) (type default)) (uuid 002ba7d2-5d76-49a2-97a0-f0bf30c1d9f3)) 
+
+(wire (pts 
+
+(xy 74.93 232.41) 
+
+(xy 77.47 232.41)) (stroke (width 0) (type default)) (uuid 4f8cb9cf-140a-45e7-83af-8d74134958f7)) 
+
+(wire (pts 
+
+(xy 77.47 232.41) 
+
+(xy 77.47 224.79)) (stroke (width 0) (type default)) (uuid 34c9fab3-ea6d-41d0-91e9-361c738182cb)) 
+
+(wire (pts 
+
+(xy 100.33 224.79) 
+
+(xy 97.79 224.79)) (stroke (width 0) (type default)) (uuid 638121e8-d14f-4f46-8bb1-0041d763ec53)) 
+
+(wire (pts 
+
+(xy 100.33 232.41) 
+
+(xy 102.87 232.41)) (stroke (width 0) (type default)) (uuid d5b0f09d-0bec-46dd-aee0-b96a446fd92b)) 
+
+(wire (pts 
+
+(xy 102.87 232.41) 
+
+(xy 102.87 224.79)) (stroke (width 0) (type default)) (uuid e869f804-ebe6-4867-90f7-793b1fbbeba5)) 
+
+(wire (pts 
+
+(xy 125.73 224.79) 
+
+(xy 123.19 224.79)) (stroke (width 0) (type default)) (uuid dd506d2d-7975-482c-864a-09e950355db2)) 
+
+(wire (pts 
+
+(xy 125.73 232.41) 
+
+(xy 128.27 232.41)) (stroke (width 0) (type default)) (uuid a6ca215a-f439-4ba5-aa88-4ae27fa66535)) 
+
+(wire (pts 
+
+(xy 128.27 232.41) 
+
+(xy 128.27 224.79)) (stroke (width 0) (type default)) (uuid 1bcb320c-bd5c-4e9e-bbd0-7a833a9ad339)) 
+
+(wire (pts 
+
+(xy 151.13 224.79) 
+
+(xy 148.59 224.79)) (stroke (width 0) (type default)) (uuid 7ad6c986-ee93-4578-89bc-87e54a0ca9ad)) 
+
+(wire (pts 
+
+(xy 151.13 232.41) 
+
+(xy 153.67 232.41)) (stroke (width 0) (type default)) (uuid 7249cefc-b9eb-4159-9473-6d17f90f61c9)) 
+
+(wire (pts 
+
+(xy 153.67 232.41) 
+
+(xy 153.67 224.79)) (stroke (width 0) (type default)) (uuid 511251a4-1f8b-4fee-9fb2-1fc7034afa58)) 
+
+(wire (pts 
+
+(xy 176.53 224.79) 
+
+(xy 173.99 224.79)) (stroke (width 0) (type default)) (uuid f8ebe7d8-d920-42ca-b21e-7dca8c261ddf)) 
+
+(wire (pts 
+
+(xy 176.53 232.41) 
+
+(xy 179.07 232.41)) (stroke (width 0) (type default)) (uuid a185cf87-0361-4cfa-93c7-d6750ddbb049)) 
+
+(wire (pts 
+
+(xy 179.07 232.41) 
+
+(xy 179.07 224.79)) (stroke (width 0) (type default)) (uuid 89726b11-ec19-4b39-968d-b30b4438adeb)) 
+
+(wire (pts 
+
+(xy 201.93 224.79) 
+
+(xy 199.39 224.79)) (stroke (width 0) (type default)) (uuid 2745edc2-7402-4b2a-8323-25957464c4af)) 
+
+(wire (pts 
+
+(xy 201.93 232.41) 
+
+(xy 204.47 232.41)) (stroke (width 0) (type default)) (uuid 41fa14a8-607a-4e9e-8d7a-ed2c77f00ffc)) 
+
+(wire (pts 
+
+(xy 204.47 232.41) 
+
+(xy 204.47 224.79)) (stroke (width 0) (type default)) (uuid 8d5476fe-30c4-448b-900c-15e54b9030c3)) 
+
+(wire (pts 
+
+(xy 227.33 224.79) 
+
+(xy 224.79 224.79)) (stroke (width 0) (type default)) (uuid 4200b04a-aa67-406f-a80d-25f2e3e8b46d)) 
+
+(wire (pts 
+
+(xy 227.33 232.41) 
+
+(xy 229.87 232.41)) (stroke (width 0) (type default)) (uuid aa9b19cc-a4fb-440c-ac7e-04b92d1f32f0)) 
+
+(wire (pts 
+
+(xy 229.87 232.41) 
+
+(xy 229.87 224.79)) (stroke (width 0) (type default)) (uuid 354e2133-826e-478b-a40c-83991c1d5bae)) 
+
+(wire (pts 
+
+(xy 229.87 -3.81) 
+
+(xy -8.89 -3.81)) (stroke (width 0) (type default)) (uuid 791aeb59-3193-417a-b677-18602d6d0ec1)) 
+
+(junction (at 1.27 -3.81) (diameter 0) (color 0 0 0 0) (uuid 4aaf55e6-fdd9-4ccc-ba72-c9aed582d6bf)) 
+
+(junction (at 26.67 -3.81) (diameter 0) (color 0 0 0 0) (uuid 84bcd455-ab8d-4a84-9ab3-69fbbf83e0d4)) 
+
+(junction (at 52.07 -3.81) (diameter 0) (color 0 0 0 0) (uuid 2301efe6-bbc5-4157-9819-0124b30b9669)) 
+
+(junction (at 77.47 -3.81) (diameter 0) (color 0 0 0 0) (uuid bc8c7f54-9cf1-4c6c-8ce7-82b1455d526e)) 
+
+(junction (at 102.87 -3.81) (diameter 0) (color 0 0 0 0) (uuid cf7a48ea-2562-4fc7-8b6b-27b37d16d390)) 
+
+(junction (at 128.27 -3.81) (diameter 0) (color 0 0 0 0) (uuid 7dc0622c-d7f3-4da9-94a2-9bf1576157ca)) 
+
+(junction (at 153.67 -3.81) (diameter 0) (color 0 0 0 0) (uuid d9696af4-9a2e-40bf-9237-5ba1c16ca841)) 
+
+(junction (at 179.07 -3.81) (diameter 0) (color 0 0 0 0) (uuid 1d8e147c-9bb1-47d5-a0f8-8da89ab1fda2)) 
+
+(junction (at 204.47 -3.81) (diameter 0) (color 0 0 0 0) (uuid e0e5e15a-e979-4fba-ae2b-f4106a86f0f7)) 
+
+(junction (at 229.87 -3.81) (diameter 0) (color 0 0 0 0) (uuid 79498f47-2faa-4e6b-b960-4d89df4cb6b2)) 
+
+(global_label "ROW_1" (shape input) (at -8.89 -3.81 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 0bbcd437-84f9-421e-8b58-6a00ad273b5b) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 -3.81 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 21.59) 
+
+(xy -8.89 21.59)) (stroke (width 0) (type default)) (uuid b88ebd91-10a4-47b4-9ad7-947217164e94)) 
+
+(junction (at 1.27 21.59) (diameter 0) (color 0 0 0 0) (uuid 7549ed20-8989-408e-a67f-1693252a29eb)) 
+
+(junction (at 26.67 21.59) (diameter 0) (color 0 0 0 0) (uuid 25fd4c5b-952a-42f5-a0b3-aeff840f098e)) 
+
+(junction (at 52.07 21.59) (diameter 0) (color 0 0 0 0) (uuid e4b5ac64-2321-4e26-ba2e-70e642541abc)) 
+
+(junction (at 77.47 21.59) (diameter 0) (color 0 0 0 0) (uuid 5a26dd3b-8b2a-4aab-8acd-ec643c924a8e)) 
+
+(junction (at 102.87 21.59) (diameter 0) (color 0 0 0 0) (uuid 4a92be4c-a918-40c2-a940-11e8bc76a966)) 
+
+(junction (at 128.27 21.59) (diameter 0) (color 0 0 0 0) (uuid 9c93b6af-5bb7-4088-a3c3-35d0aa755528)) 
+
+(junction (at 153.67 21.59) (diameter 0) (color 0 0 0 0) (uuid 093622f9-b53a-444b-8a78-94e9ce20166b)) 
+
+(junction (at 179.07 21.59) (diameter 0) (color 0 0 0 0) (uuid 5c83c92e-d6fd-4232-a173-8f5d41987025)) 
+
+(junction (at 204.47 21.59) (diameter 0) (color 0 0 0 0) (uuid 28b5f1c4-286b-45e4-a141-2ad4070a8d66)) 
+
+(junction (at 229.87 21.59) (diameter 0) (color 0 0 0 0) (uuid 26566961-c875-4e89-94c0-9cc9c5df6fac)) 
+
+(global_label "ROW_2" (shape input) (at -8.89 21.59 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 9ecec018-8eb4-4e30-b660-80507321effb) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 21.59 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 46.99) 
+
+(xy -8.89 46.99)) (stroke (width 0) (type default)) (uuid ee6162ac-18f3-4a86-9f9a-4107b421a24f)) 
+
+(junction (at 1.27 46.99) (diameter 0) (color 0 0 0 0) (uuid bda1c115-5b80-4833-b1ec-601202484bbb)) 
+
+(junction (at 26.67 46.99) (diameter 0) (color 0 0 0 0) (uuid 7581ff28-5e46-466f-b686-c35bdecdeee2)) 
+
+(junction (at 52.07 46.99) (diameter 0) (color 0 0 0 0) (uuid 5d7170cd-7bcf-46bb-b1e5-4347e4426135)) 
+
+(junction (at 77.47 46.99) (diameter 0) (color 0 0 0 0) (uuid af0b6a04-60dd-4c29-b8d9-75211f5bd211)) 
+
+(junction (at 102.87 46.99) (diameter 0) (color 0 0 0 0) (uuid aa9e43cf-04df-411d-9202-2d73067a6b9f)) 
+
+(junction (at 128.27 46.99) (diameter 0) (color 0 0 0 0) (uuid 64758f4a-b7d0-4268-8d4c-10f07422d73f)) 
+
+(junction (at 153.67 46.99) (diameter 0) (color 0 0 0 0) (uuid 2ea4ae83-6f15-4f75-bd86-267faeeef5da)) 
+
+(junction (at 179.07 46.99) (diameter 0) (color 0 0 0 0) (uuid 762dee97-62a0-404f-bdd9-f0030b28241f)) 
+
+(junction (at 204.47 46.99) (diameter 0) (color 0 0 0 0) (uuid b4ca58db-a450-4375-ac8c-0630c058d7fd)) 
+
+(junction (at 229.87 46.99) (diameter 0) (color 0 0 0 0) (uuid d2696d6e-3591-458d-bb8c-d1c32f90696f)) 
+
+(global_label "ROW_3" (shape input) (at -8.89 46.99 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 22a22232-1e8c-4aad-93bd-c198ec134cab) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 46.99 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 72.39) 
+
+(xy -8.89 72.39)) (stroke (width 0) (type default)) (uuid 479a6ec0-c058-4559-a39a-81aa1b11ed20)) 
+
+(junction (at 1.27 72.39) (diameter 0) (color 0 0 0 0) (uuid 9bd99efb-88e3-489d-af02-83310b22e311)) 
+
+(junction (at 26.67 72.39) (diameter 0) (color 0 0 0 0) (uuid d65f9410-953f-4a7e-81e3-7c9e31c00776)) 
+
+(junction (at 52.07 72.39) (diameter 0) (color 0 0 0 0) (uuid 1f1bca0e-4891-4ac5-bec2-d2bce34e6510)) 
+
+(junction (at 77.47 72.39) (diameter 0) (color 0 0 0 0) (uuid 40987813-3c27-4de9-b596-4d8d4c990c99)) 
+
+(junction (at 102.87 72.39) (diameter 0) (color 0 0 0 0) (uuid 5b457011-3bad-43a6-8afe-f85d6f2649de)) 
+
+(junction (at 128.27 72.39) (diameter 0) (color 0 0 0 0) (uuid 6cb0924f-ce21-4d97-abd3-1bb90840091c)) 
+
+(junction (at 153.67 72.39) (diameter 0) (color 0 0 0 0) (uuid 34ce09e6-e2c8-42d6-8c34-4070cd335722)) 
+
+(junction (at 179.07 72.39) (diameter 0) (color 0 0 0 0) (uuid 70dc0587-3f41-4617-9c2b-fd7c543593d5)) 
+
+(junction (at 204.47 72.39) (diameter 0) (color 0 0 0 0) (uuid dde7f3ff-53d0-490b-b90d-6f7057aa5514)) 
+
+(junction (at 229.87 72.39) (diameter 0) (color 0 0 0 0) (uuid 453ef119-4b4f-4bbe-bf4f-5610538869d0)) 
+
+(global_label "ROW_4" (shape input) (at -8.89 72.39 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 38b60607-c03e-4702-97c9-74b81aac994d) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 72.39 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 97.79) 
+
+(xy -8.89 97.79)) (stroke (width 0) (type default)) (uuid 522f9f1b-85b0-40ed-b62e-216b7d499a84)) 
+
+(junction (at 1.27 97.79) (diameter 0) (color 0 0 0 0) (uuid 76341c7b-0de6-4cee-8f11-4901375a4e92)) 
+
+(junction (at 26.67 97.79) (diameter 0) (color 0 0 0 0) (uuid aad44085-bdfb-4c50-ad9e-c0004adb6774)) 
+
+(junction (at 52.07 97.79) (diameter 0) (color 0 0 0 0) (uuid 5ec66d50-3874-4127-880f-cdd61c0b9dc0)) 
+
+(junction (at 77.47 97.79) (diameter 0) (color 0 0 0 0) (uuid 8a65495f-4b96-4bd0-938c-81e546b14987)) 
+
+(junction (at 102.87 97.79) (diameter 0) (color 0 0 0 0) (uuid f73c13f7-9d19-40b4-924d-3714a56f7cd2)) 
+
+(junction (at 128.27 97.79) (diameter 0) (color 0 0 0 0) (uuid 93304596-c8b3-40f2-ad6d-34fe1797fb34)) 
+
+(junction (at 153.67 97.79) (diameter 0) (color 0 0 0 0) (uuid 4a8c2faf-d7d2-4b9f-aaae-533eedd842d8)) 
+
+(junction (at 179.07 97.79) (diameter 0) (color 0 0 0 0) (uuid 84f4fad8-9498-4e4b-b688-218b00300a51)) 
+
+(junction (at 204.47 97.79) (diameter 0) (color 0 0 0 0) (uuid c7f33b67-2d4e-4645-aaf5-7f3e63e40766)) 
+
+(junction (at 229.87 97.79) (diameter 0) (color 0 0 0 0) (uuid be4f592c-af15-4856-be06-1a270e9fea2a)) 
+
+(global_label "ROW_5" (shape input) (at -8.89 97.79 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 991640ee-6fca-43b5-85db-460db3c4fcee) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 97.79 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 123.19) 
+
+(xy -8.89 123.19)) (stroke (width 0) (type default)) (uuid 18fb40a0-b9e1-49e3-ad00-5c67895ef87d)) 
+
+(junction (at 1.27 123.19) (diameter 0) (color 0 0 0 0) (uuid 6aad10d2-05df-4c44-8b2c-71b86b80e299)) 
+
+(junction (at 26.67 123.19) (diameter 0) (color 0 0 0 0) (uuid e422d964-7a32-4ab6-a2a1-08bc5c00eafa)) 
+
+(junction (at 52.07 123.19) (diameter 0) (color 0 0 0 0) (uuid 2dc51dc5-3347-4d94-b035-0dae5a267b44)) 
+
+(junction (at 77.47 123.19) (diameter 0) (color 0 0 0 0) (uuid 75a3c8fe-2311-47ab-b4e3-8d522c74ef67)) 
+
+(junction (at 102.87 123.19) (diameter 0) (color 0 0 0 0) (uuid 3fe349ce-1011-46bb-8db5-b73619984bd4)) 
+
+(junction (at 128.27 123.19) (diameter 0) (color 0 0 0 0) (uuid 7c95f9dc-0332-4f5a-b294-5f0117ac586b)) 
+
+(junction (at 153.67 123.19) (diameter 0) (color 0 0 0 0) (uuid e1df3302-d60d-4e11-9660-f335896e4765)) 
+
+(junction (at 179.07 123.19) (diameter 0) (color 0 0 0 0) (uuid 1617d09a-23b1-4b1b-b588-13e87e8b4c2f)) 
+
+(junction (at 204.47 123.19) (diameter 0) (color 0 0 0 0) (uuid d1f8d303-aea8-41cc-bdf8-535c9e3aa27b)) 
+
+(junction (at 229.87 123.19) (diameter 0) (color 0 0 0 0) (uuid 1ad8ba1a-5b2d-4f8f-b849-45dc9519f77e)) 
+
+(global_label "ROW_6" (shape input) (at -8.89 123.19 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid d99706c7-d97a-44b5-b151-04c96f375712) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 123.19 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 148.59) 
+
+(xy -8.89 148.59)) (stroke (width 0) (type default)) (uuid d7652388-8f73-4afe-92b2-a3a5b15d6319)) 
+
+(junction (at 1.27 148.59) (diameter 0) (color 0 0 0 0) (uuid 94275834-da1e-4821-8ee1-a8d814947be4)) 
+
+(junction (at 26.67 148.59) (diameter 0) (color 0 0 0 0) (uuid aae977ee-408b-4e4f-951b-2e83342b1545)) 
+
+(junction (at 52.07 148.59) (diameter 0) (color 0 0 0 0) (uuid 283b2036-c142-48d8-a8ae-69fc017f7ddd)) 
+
+(junction (at 77.47 148.59) (diameter 0) (color 0 0 0 0) (uuid b0251522-a661-49e5-a0f7-2747c8efc4da)) 
+
+(junction (at 102.87 148.59) (diameter 0) (color 0 0 0 0) (uuid 9b117107-eb90-47e8-b3e3-419f7c52226f)) 
+
+(junction (at 128.27 148.59) (diameter 0) (color 0 0 0 0) (uuid e6a967b3-7342-4b8f-acee-cca09779177c)) 
+
+(junction (at 153.67 148.59) (diameter 0) (color 0 0 0 0) (uuid d7f46737-b45c-4524-9fac-911a7756a8e8)) 
+
+(junction (at 179.07 148.59) (diameter 0) (color 0 0 0 0) (uuid 42ac94b1-38bb-463e-a235-55e713580b4c)) 
+
+(junction (at 204.47 148.59) (diameter 0) (color 0 0 0 0) (uuid 4f3adf50-1ce7-46d2-9472-d451f81e5224)) 
+
+(junction (at 229.87 148.59) (diameter 0) (color 0 0 0 0) (uuid 91410230-b114-45b9-bd9b-2452bdb297b9)) 
+
+(global_label "ROW_7" (shape input) (at -8.89 148.59 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 5b5d24ca-316e-4644-a9e2-bd9e13ce87c1) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 148.59 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 173.99) 
+
+(xy -8.89 173.99)) (stroke (width 0) (type default)) (uuid 3eda7667-fde0-42da-9cce-902708da21a0)) 
+
+(junction (at 1.27 173.99) (diameter 0) (color 0 0 0 0) (uuid 68d1f36c-1c4b-4c4e-b7b6-aab25ac58827)) 
+
+(junction (at 26.67 173.99) (diameter 0) (color 0 0 0 0) (uuid b98f0695-46b6-4c56-9365-8c489b85f104)) 
+
+(junction (at 52.07 173.99) (diameter 0) (color 0 0 0 0) (uuid c8ca4351-38e4-4333-a228-2814887c5e9a)) 
+
+(junction (at 77.47 173.99) (diameter 0) (color 0 0 0 0) (uuid 90dc1926-efd1-44ad-90e4-637be12571f0)) 
+
+(junction (at 102.87 173.99) (diameter 0) (color 0 0 0 0) (uuid 66bfe3bc-0280-4ec5-ad22-ebddab969ce6)) 
+
+(junction (at 128.27 173.99) (diameter 0) (color 0 0 0 0) (uuid 5ba639ab-380c-4356-a7a5-87eddf1edfc6)) 
+
+(junction (at 153.67 173.99) (diameter 0) (color 0 0 0 0) (uuid 5057d350-e210-4c67-9f05-c9d10059f2df)) 
+
+(junction (at 179.07 173.99) (diameter 0) (color 0 0 0 0) (uuid 92fff538-3ac1-4484-91d0-42c612108ecf)) 
+
+(junction (at 204.47 173.99) (diameter 0) (color 0 0 0 0) (uuid 478380c6-7d31-4504-ae96-1207ea5aeefc)) 
+
+(junction (at 229.87 173.99) (diameter 0) (color 0 0 0 0) (uuid 096da11a-43c9-4911-ab0e-d9fd66fa63f7)) 
+
+(global_label "ROW_8" (shape input) (at -8.89 173.99 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 4cbb3fd6-6653-4d3a-b288-8ebc97d9f6bb) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 173.99 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 199.39) 
+
+(xy -8.89 199.39)) (stroke (width 0) (type default)) (uuid 4f22f5ca-b914-4666-af9d-5fe8e570fa47)) 
+
+(junction (at 1.27 199.39) (diameter 0) (color 0 0 0 0) (uuid fdf6396d-4ebf-4636-9ae9-560f5b45b8a8)) 
+
+(junction (at 26.67 199.39) (diameter 0) (color 0 0 0 0) (uuid 261d05bb-62ff-421d-b0e3-08cd585c2534)) 
+
+(junction (at 52.07 199.39) (diameter 0) (color 0 0 0 0) (uuid 0b33ebc5-47df-4093-8e08-11d037f8ccfc)) 
+
+(junction (at 77.47 199.39) (diameter 0) (color 0 0 0 0) (uuid dda24568-9945-4c90-a582-9d4e6c5ff941)) 
+
+(junction (at 102.87 199.39) (diameter 0) (color 0 0 0 0) (uuid 78aadc93-4458-4e42-9389-743c404e8f54)) 
+
+(junction (at 128.27 199.39) (diameter 0) (color 0 0 0 0) (uuid 3120f851-bedd-41b7-821f-d8d27d2774e5)) 
+
+(junction (at 153.67 199.39) (diameter 0) (color 0 0 0 0) (uuid 5367577e-9b0f-46e4-aceb-00136b5e2b8d)) 
+
+(junction (at 179.07 199.39) (diameter 0) (color 0 0 0 0) (uuid 147f39b2-b6f1-4a46-813f-6e64163b2631)) 
+
+(junction (at 204.47 199.39) (diameter 0) (color 0 0 0 0) (uuid d2e66d4c-5ab1-4d7b-a8c0-5264030d8c57)) 
+
+(junction (at 229.87 199.39) (diameter 0) (color 0 0 0 0) (uuid 772cecff-d347-41a7-846c-e72f33b2a460)) 
+
+(global_label "ROW_9" (shape input) (at -8.89 199.39 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 69ff6ba9-29ab-4c5b-87cd-58ee79251d44) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 199.39 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy 229.87 224.79) 
+
+(xy -8.89 224.79)) (stroke (width 0) (type default)) (uuid 01af412f-d8ca-47b8-aee6-289a5fc647f2)) 
+
+(junction (at 1.27 224.79) (diameter 0) (color 0 0 0 0) (uuid 04fc9c0a-a98d-493e-a525-eda409ccf227)) 
+
+(junction (at 26.67 224.79) (diameter 0) (color 0 0 0 0) (uuid 1eb4a5ad-2ac3-4c03-8738-a1d2e38197b8)) 
+
+(junction (at 52.07 224.79) (diameter 0) (color 0 0 0 0) (uuid f073dc4c-102c-4858-a1c6-682ec47aa773)) 
+
+(junction (at 77.47 224.79) (diameter 0) (color 0 0 0 0) (uuid 97abf108-9d0a-4250-8615-5f7cfed3c85c)) 
+
+(junction (at 102.87 224.79) (diameter 0) (color 0 0 0 0) (uuid 3161c529-85dd-4914-91b9-53acedd9583b)) 
+
+(junction (at 128.27 224.79) (diameter 0) (color 0 0 0 0) (uuid 56c78d2f-2441-49af-acae-780cb13b51c5)) 
+
+(junction (at 153.67 224.79) (diameter 0) (color 0 0 0 0) (uuid e47a636b-81fb-4928-8a09-ba24d458d9f2)) 
+
+(junction (at 179.07 224.79) (diameter 0) (color 0 0 0 0) (uuid 09cd5354-3845-412b-a74e-04ca6e0c16e0)) 
+
+(junction (at 204.47 224.79) (diameter 0) (color 0 0 0 0) (uuid c7c71320-ab44-42dc-b157-e2792ac88e96)) 
+
+(junction (at 229.87 224.79) (diameter 0) (color 0 0 0 0) (uuid dd36e283-6596-4412-a74e-54580450354a)) 
+
+(global_label "ROW_10" (shape input) (at -8.89 224.79 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid b9537053-5644-4db7-9374-8c89517eb290) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -15.1409 224.79 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(wire (pts 
+
+(xy -3.81 -3.81) 
+
+(xy -3.81 234.95)) (stroke (width 0.4) (type dot)) (uuid 07ac02d1-f04e-4636-a539-d2456f7b50ed)) 
+
+(junction (at -3.81 21.59) (diameter 0) (color 0 0 0 0) (uuid 85d54d59-4a85-4c92-b413-4111c3565341)) 
+
+(junction (at -3.81 46.99) (diameter 0) (color 0 0 0 0) (uuid 7979a781-b6c5-4650-bb2c-3561d7029144)) 
+
+(junction (at -3.81 72.39) (diameter 0) (color 0 0 0 0) (uuid bb1aba31-1a5f-47e7-b46c-ff8dc9ba6bdc)) 
+
+(junction (at -3.81 97.79) (diameter 0) (color 0 0 0 0) (uuid fae8a2d0-d6b5-40a2-ac91-f52d9e87f10f)) 
+
+(junction (at -3.81 123.19) (diameter 0) (color 0 0 0 0) (uuid a04b371c-400e-4b13-8bf5-3392e728f3b9)) 
+
+(junction (at -3.81 148.59) (diameter 0) (color 0 0 0 0) (uuid a5055de6-6585-4682-b810-c3e1d857e029)) 
+
+(junction (at -3.81 173.99) (diameter 0) (color 0 0 0 0) (uuid 35f4cc96-9c53-4bfa-8606-b7ecbfbae44b)) 
+
+(junction (at -3.81 199.39) (diameter 0) (color 0 0 0 0) (uuid 38f11b15-fdd9-4131-8957-e5acd7b572ca)) 
+
+(junction (at -3.81 224.79) (diameter 0) (color 0 0 0 0) (uuid 41a41b07-151b-4cdf-95fe-eb1fb68fc58b)) 
+
+(wire (pts 
+
+(xy 21.59 -3.81) 
+
+(xy 21.59 234.95)) (stroke (width 0.4) (type dot)) (uuid 559dcb6f-0857-4b30-90bb-b73c109e9d1a)) 
+
+(junction (at 21.59 21.59) (diameter 0) (color 0 0 0 0) (uuid 11923caa-454f-4b66-a7c8-52fda9105dd0)) 
+
+(junction (at 21.59 46.99) (diameter 0) (color 0 0 0 0) (uuid c62c8647-7500-4bba-b794-699f1942d05b)) 
+
+(junction (at 21.59 72.39) (diameter 0) (color 0 0 0 0) (uuid 3a013c04-9eb3-4e93-b23d-4806bb7b6da1)) 
+
+(junction (at 21.59 97.79) (diameter 0) (color 0 0 0 0) (uuid 5d45b4a4-f442-4e06-8324-d9f80b7c42c7)) 
+
+(junction (at 21.59 123.19) (diameter 0) (color 0 0 0 0) (uuid b3f8df43-b745-4fcb-b503-c77d85e16e7a)) 
+
+(junction (at 21.59 148.59) (diameter 0) (color 0 0 0 0) (uuid 46a6f0cb-f94e-44c3-8174-cc6fce7257d9)) 
+
+(junction (at 21.59 173.99) (diameter 0) (color 0 0 0 0) (uuid 97abfbc1-571a-411c-b048-3218f3b13a5d)) 
+
+(junction (at 21.59 199.39) (diameter 0) (color 0 0 0 0) (uuid ef9d4bf6-dd70-422a-a89f-c4161fcd6967)) 
+
+(junction (at 21.59 224.79) (diameter 0) (color 0 0 0 0) (uuid fd10377c-8915-41e5-b509-fb3c66350af1)) 
+
+(wire (pts 
+
+(xy 46.99 -3.81) 
+
+(xy 46.99 234.95)) (stroke (width 0.4) (type dot)) (uuid bb8d1cdf-38fc-4cac-b758-cb7de71e4650)) 
+
+(junction (at 46.99 21.59) (diameter 0) (color 0 0 0 0) (uuid 05ae2479-b97c-48f2-8957-a18b5b2b6dc2)) 
+
+(junction (at 46.99 46.99) (diameter 0) (color 0 0 0 0) (uuid 3139607c-d190-474b-9cb2-40f4b4b4ef31)) 
+
+(junction (at 46.99 72.39) (diameter 0) (color 0 0 0 0) (uuid 12e9d5bc-c21b-4d46-954e-1b2787752f19)) 
+
+(junction (at 46.99 97.79) (diameter 0) (color 0 0 0 0) (uuid 83911188-6091-4c10-983b-cbaada19dd09)) 
+
+(junction (at 46.99 123.19) (diameter 0) (color 0 0 0 0) (uuid 8dc4a817-1b79-4a2a-8f81-941d0bb304cc)) 
+
+(junction (at 46.99 148.59) (diameter 0) (color 0 0 0 0) (uuid b04eded0-5b89-4cb6-a977-9af26c663f29)) 
+
+(junction (at 46.99 173.99) (diameter 0) (color 0 0 0 0) (uuid ad8cbc27-20d7-485f-be6f-02ddb1d2031c)) 
+
+(junction (at 46.99 199.39) (diameter 0) (color 0 0 0 0) (uuid 13895238-4f19-4e09-8d20-b94aa19cad8c)) 
+
+(junction (at 46.99 224.79) (diameter 0) (color 0 0 0 0) (uuid be665d59-a60f-4641-969d-8e0c67890ecd)) 
+
+(wire (pts 
+
+(xy 72.39 -3.81) 
+
+(xy 72.39 234.95)) (stroke (width 0.4) (type dot)) (uuid 4b92a876-4934-4f0e-a133-03f260a75c11)) 
+
+(junction (at 72.39 21.59) (diameter 0) (color 0 0 0 0) (uuid c8ec0d63-703a-4c76-b304-8881093083d2)) 
+
+(junction (at 72.39 46.99) (diameter 0) (color 0 0 0 0) (uuid fe27d2c4-f03d-462f-84c3-e02d87062433)) 
+
+(junction (at 72.39 72.39) (diameter 0) (color 0 0 0 0) (uuid fa781479-022a-496c-92cc-93426b7dd821)) 
+
+(junction (at 72.39 97.79) (diameter 0) (color 0 0 0 0) (uuid b78680e6-ba3a-4f59-a753-36a7b45108d5)) 
+
+(junction (at 72.39 123.19) (diameter 0) (color 0 0 0 0) (uuid e59ebe0d-378d-4921-bcbc-3086cdbddf81)) 
+
+(junction (at 72.39 148.59) (diameter 0) (color 0 0 0 0) (uuid 2c50df7e-f60c-43b5-bc78-790278da98fd)) 
+
+(junction (at 72.39 173.99) (diameter 0) (color 0 0 0 0) (uuid 100ecfdf-fe72-43e7-b9de-bc15109d221a)) 
+
+(junction (at 72.39 199.39) (diameter 0) (color 0 0 0 0) (uuid f3cf1010-ebf2-4249-8787-ee0cf3e06e7c)) 
+
+(junction (at 72.39 224.79) (diameter 0) (color 0 0 0 0) (uuid a1da348b-6565-475d-92f0-091d5469aef9)) 
+
+(wire (pts 
+
+(xy 97.79 -3.81) 
+
+(xy 97.79 234.95)) (stroke (width 0.4) (type dot)) (uuid 2c944dfb-76eb-41c9-b161-3c0262e88fa8)) 
+
+(junction (at 97.79 21.59) (diameter 0) (color 0 0 0 0) (uuid 80710f54-4214-4d3d-9bc6-8b5ae74b7050)) 
+
+(junction (at 97.79 46.99) (diameter 0) (color 0 0 0 0) (uuid cf493f69-468e-49ed-977b-706a94ece31c)) 
+
+(junction (at 97.79 72.39) (diameter 0) (color 0 0 0 0) (uuid 4541cb51-adc3-4469-8f5a-c6aa292d97cf)) 
+
+(junction (at 97.79 97.79) (diameter 0) (color 0 0 0 0) (uuid cd12a28d-dad8-43d5-9c04-55718889a344)) 
+
+(junction (at 97.79 123.19) (diameter 0) (color 0 0 0 0) (uuid 6bf5884e-3964-4e87-ac5a-3d232fd18d4a)) 
+
+(junction (at 97.79 148.59) (diameter 0) (color 0 0 0 0) (uuid 8ececc65-2370-4c7c-b1af-5512246d44f9)) 
+
+(junction (at 97.79 173.99) (diameter 0) (color 0 0 0 0) (uuid 112ed7a5-31f2-462a-b988-3b1c2a84acd5)) 
+
+(junction (at 97.79 199.39) (diameter 0) (color 0 0 0 0) (uuid e82f0a6f-a1df-4030-971f-6b17a868f45a)) 
+
+(junction (at 97.79 224.79) (diameter 0) (color 0 0 0 0) (uuid fd473f52-1c1f-45d0-99bf-d52f0f5b2eca)) 
+
+(wire (pts 
+
+(xy 123.19 -3.81) 
+
+(xy 123.19 234.95)) (stroke (width 0.4) (type dot)) (uuid 096ab019-2f40-45b3-82d4-713279c9256f)) 
+
+(junction (at 123.19 21.59) (diameter 0) (color 0 0 0 0) (uuid 0dc8016f-bae1-49e4-a2bb-5ab10cb4b9d7)) 
+
+(junction (at 123.19 46.99) (diameter 0) (color 0 0 0 0) (uuid 56c63e63-60b7-4a6d-9b26-22a1f5d927ed)) 
+
+(junction (at 123.19 72.39) (diameter 0) (color 0 0 0 0) (uuid 0077b6c2-6b0c-46aa-b2bc-0f1d4d1a89c7)) 
+
+(junction (at 123.19 97.79) (diameter 0) (color 0 0 0 0) (uuid 978819a2-c0ef-4ecf-9adc-f175abadf609)) 
+
+(junction (at 123.19 123.19) (diameter 0) (color 0 0 0 0) (uuid 9d0f89c2-9e6a-4d72-a331-5451ca953427)) 
+
+(junction (at 123.19 148.59) (diameter 0) (color 0 0 0 0) (uuid 15caa42a-c64c-4202-a23f-7d635042a772)) 
+
+(junction (at 123.19 173.99) (diameter 0) (color 0 0 0 0) (uuid 9bed0f1b-74e5-440a-8a7e-accfd1a79c5e)) 
+
+(junction (at 123.19 199.39) (diameter 0) (color 0 0 0 0) (uuid f0f4f274-d753-46f6-a780-6940ecb37f22)) 
+
+(junction (at 123.19 224.79) (diameter 0) (color 0 0 0 0) (uuid 19bd8246-7afb-4ff1-9ba1-aeae09e6f280)) 
+
+(wire (pts 
+
+(xy 148.59 -3.81) 
+
+(xy 148.59 234.95)) (stroke (width 0.4) (type dot)) (uuid 7b393f4a-5522-42ee-b9e3-3ef0a9da1c31)) 
+
+(junction (at 148.59 21.59) (diameter 0) (color 0 0 0 0) (uuid 7f1acb68-bed6-4694-9af5-0432dc8d5fda)) 
+
+(junction (at 148.59 46.99) (diameter 0) (color 0 0 0 0) (uuid b5a3f8de-54d9-4e52-aacf-11f297b03ded)) 
+
+(junction (at 148.59 72.39) (diameter 0) (color 0 0 0 0) (uuid b9730ec3-ad88-4880-85e4-294043d8361b)) 
+
+(junction (at 148.59 97.79) (diameter 0) (color 0 0 0 0) (uuid d2794a9e-050f-419c-afca-f13b062a3198)) 
+
+(junction (at 148.59 123.19) (diameter 0) (color 0 0 0 0) (uuid c1051965-3d84-4417-ad25-00525816becf)) 
+
+(junction (at 148.59 148.59) (diameter 0) (color 0 0 0 0) (uuid e688c008-7312-493e-af3e-5e39efc9abd8)) 
+
+(junction (at 148.59 173.99) (diameter 0) (color 0 0 0 0) (uuid 13d7e5a7-bf1e-49db-8161-37a162eb10e1)) 
+
+(junction (at 148.59 199.39) (diameter 0) (color 0 0 0 0) (uuid 179a0510-0b17-4983-87c3-72bf6a4e1c81)) 
+
+(junction (at 148.59 224.79) (diameter 0) (color 0 0 0 0) (uuid ed4aeba4-3672-4b90-a525-143e5832d886)) 
+
+(wire (pts 
+
+(xy 173.99 -3.81) 
+
+(xy 173.99 234.95)) (stroke (width 0.4) (type dot)) (uuid efd74f40-17a7-44f8-ad8e-25ec3bb8b2d8)) 
+
+(junction (at 173.99 21.59) (diameter 0) (color 0 0 0 0) (uuid b09c852e-307a-496a-83be-c9e2bed23a3a)) 
+
+(junction (at 173.99 46.99) (diameter 0) (color 0 0 0 0) (uuid dd77bfb1-41de-425a-9cd9-3b1228eb3189)) 
+
+(junction (at 173.99 72.39) (diameter 0) (color 0 0 0 0) (uuid c9b1d9a1-075f-4098-9db5-b04087ff70c6)) 
+
+(junction (at 173.99 97.79) (diameter 0) (color 0 0 0 0) (uuid 71c8ece4-2850-4ea6-8f0b-c75f7d7e6fa8)) 
+
+(junction (at 173.99 123.19) (diameter 0) (color 0 0 0 0) (uuid 11da241f-febe-4a6e-ab66-0bdc2d8b4301)) 
+
+(junction (at 173.99 148.59) (diameter 0) (color 0 0 0 0) (uuid c5fff9f7-52a6-40f2-9052-17a3c0b08e5e)) 
+
+(junction (at 173.99 173.99) (diameter 0) (color 0 0 0 0) (uuid ba528043-0696-4252-879c-35c51e397c7f)) 
+
+(junction (at 173.99 199.39) (diameter 0) (color 0 0 0 0) (uuid 9b9b119f-0ef2-4d29-a81e-0b19d18aa88b)) 
+
+(junction (at 173.99 224.79) (diameter 0) (color 0 0 0 0) (uuid 9fc95d34-f960-4e76-9f16-41674286b9da)) 
+
+(wire (pts 
+
+(xy 199.39 -3.81) 
+
+(xy 199.39 234.95)) (stroke (width 0.4) (type dot)) (uuid 1c403d3d-50d9-46a4-9058-9247aaffaff8)) 
+
+(junction (at 199.39 21.59) (diameter 0) (color 0 0 0 0) (uuid 7b1e2c69-03b8-4cac-a945-ca042def5b7e)) 
+
+(junction (at 199.39 46.99) (diameter 0) (color 0 0 0 0) (uuid ce77851a-f360-47b9-8e27-6df7fce27508)) 
+
+(junction (at 199.39 72.39) (diameter 0) (color 0 0 0 0) (uuid e29519d8-5f50-46d7-8465-18de07245c0d)) 
+
+(junction (at 199.39 97.79) (diameter 0) (color 0 0 0 0) (uuid 7e249184-4a75-493e-94f2-63d0a070b5e8)) 
+
+(junction (at 199.39 123.19) (diameter 0) (color 0 0 0 0) (uuid 9a350afe-136e-4e25-a3c2-a26bf6323a56)) 
+
+(junction (at 199.39 148.59) (diameter 0) (color 0 0 0 0) (uuid 69dce41c-c41f-4f15-a745-f8173a79a45c)) 
+
+(junction (at 199.39 173.99) (diameter 0) (color 0 0 0 0) (uuid f7f670a4-3c6b-45ae-8297-cd20412ab285)) 
+
+(junction (at 199.39 199.39) (diameter 0) (color 0 0 0 0) (uuid 41865ed3-c7c1-4b1d-aff1-f3cf07d34499)) 
+
+(junction (at 199.39 224.79) (diameter 0) (color 0 0 0 0) (uuid a7a0b2e7-9cbd-47d1-b37f-b7036ef66779)) 
+
+(wire (pts 
+
+(xy 224.79 -3.81) 
+
+(xy 224.79 234.95)) (stroke (width 0.4) (type dot)) (uuid 1cd8d5b6-9709-44ec-87b2-9a6e46a7e763)) 
+
+(junction (at 224.79 21.59) (diameter 0) (color 0 0 0 0) (uuid 3e2d503b-cb6e-48d8-b1d8-27d72673a247)) 
+
+(junction (at 224.79 46.99) (diameter 0) (color 0 0 0 0) (uuid 44d4ae72-88e6-4c77-9783-047a6d1dc683)) 
+
+(junction (at 224.79 72.39) (diameter 0) (color 0 0 0 0) (uuid 8c2a3a68-0817-4fed-b6a3-e9c991bdbdd4)) 
+
+(junction (at 224.79 97.79) (diameter 0) (color 0 0 0 0) (uuid de03218b-999d-45ae-ac75-14f3da017da6)) 
+
+(junction (at 224.79 123.19) (diameter 0) (color 0 0 0 0) (uuid 22cee90d-2c0f-436f-beb2-3ee3c44317e5)) 
+
+(junction (at 224.79 148.59) (diameter 0) (color 0 0 0 0) (uuid 9ccfeecd-b5ab-4306-90c4-66781bb243a0)) 
+
+(junction (at 224.79 173.99) (diameter 0) (color 0 0 0 0) (uuid 967c2b0c-5ff8-4be2-b543-e7aa61817f37)) 
+
+(junction (at 224.79 199.39) (diameter 0) (color 0 0 0 0) (uuid 71042242-0e1d-4240-bdf8-21f13b40705c)) 
+
+(junction (at 224.79 224.79) (diameter 0) (color 0 0 0 0) (uuid 8b6f19c5-3158-430a-81a3-bcbf7bcd4d49)) 
+
+(global_label "COL_1" (shape input) (at -3.81 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 1706e039-f7a7-45f5-806a-86bbe761a0cd) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at -10.0609 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_2" (shape input) (at 21.59 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid bdf59234-4dbe-42cc-931f-d2c88301bb35) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 15.3391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_3" (shape input) (at 46.99 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 46e46d8a-f1d1-4f25-bcd8-eb013eaa8495) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 40.7391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_4" (shape input) (at 72.39 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 49dc3f8b-0619-45b3-8c19-85bf33a5a2a5) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.1391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_5" (shape input) (at 97.79 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 0d699ac8-87d3-464d-9ea4-3347421a241e) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 91.5391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_6" (shape input) (at 123.19 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 03b98b24-7c55-4807-9a60-a3a8afdb6f3e) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 116.9391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_7" (shape input) (at 148.59 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 7c9bc614-d387-437a-8076-c04d756d19fa) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 142.3391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_8" (shape input) (at 173.99 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 86cee111-f315-4ff7-89a0-d7f82155f549) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 167.7391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_9" (shape input) (at 199.39 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid 71c8d572-7feb-46dc-a906-188925249a17) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 193.1391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))) 
+
+(global_label "COL_10" (shape input) (at 224.79 234.95 180) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify right)) (uuid abcf230b-79cc-45e8-b733-f5e7163190de) 
+
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 218.5391 234.95 0) (effects (font (size 1.27 1.27)) (justify right) hide))))
