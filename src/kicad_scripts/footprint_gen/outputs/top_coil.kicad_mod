@@ -1,4 +1,4 @@
-(module coil (layer F.Cu) (tedit 669AD33D)
+(module coil (layer F.Cu) (tedit 66A0DC13)
   (descr "Test Coil")
   (fp_text reference REF** (at 0 -2) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
