@@ -51,10 +51,43 @@ for i in range(nb_row_col):
     print("")
 
 
-# Move the first component to a new position
-new_position = pcbnew.wxPointMM(float(200), float(200))
+# Update the position of each component
+top_delta_x = 13
+top_delta_y = 26
+
+sub_delta_x = 13
+sub_delta_y = 13
+
+origin = 0, 0
+for y_axis in range(nb_row_col):
+    for x_axis in range(nb_row_col):
+        component = final_arr[y_axis][x_axis]
+
+        if "SUB" in component.GetReference():
+            pos = pcbnew.wxPointMM(
+                float(origin[0] + x_axis * sub_delta_x),
+                float(origin[1] + y_axis * sub_delta_y),
+            )
+            component.SetOrientationDegrees(45)
+
+        elif "TOP" in component.GetReference():
+            if y_axis % 2 == 0:
+                temp_x = x_axis
+            else:
+                temp_x = nb_row_col - x_axis - 1
+            pos = pcbnew.wxPointMM(
+                float(origin[0] + temp_x * top_delta_x),
+                float(origin[1] + y_axis * top_delta_y),
+            )
+            component.SetOrientationDegrees(-90)
+
+        print(f"Moving {component.GetReference()} to {pos}")
+        print(f"{component}")
+        component.SetX(pos.x)
+        component.SetY(pos.y)
+
 
 # Save the updated PCB file
-# pcb.Save(pcb_path)
+pcb.Save(pcb_path)
 
 print("PCB file updated")
