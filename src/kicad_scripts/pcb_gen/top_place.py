@@ -55,16 +55,18 @@ for y_axis in range(layout.shape[0]):
         component = final_arr[y_axis][x_axis]
 
         if "TOP" in component.GetReference():
-            if x_axis % 2 == 0:
-                temp_x = x_axis
-            else:
-                temp_x = 9 - x_axis - 1
+            print(f"Moving {component.GetReference()} to {x_axis} {y_axis}")
+
+            #if y_axis % 2 == 0:
+            #    temp_x = x_axis
+            #else:
+            #    temp_x = 9 - x_axis - 1
             pos = pcbnew.wxPointMM(
-                float(origin[0] + temp_x * top_delta_x),
+                float(origin[0] + x_axis * top_delta_x),
                 float(origin[1] + y_axis * top_delta_y),
             )
             component.SetOrientationDegrees(-90)
-        print(f"Moving {component.GetReference()} to {pos}")
+        #print(f"Moving {component.GetReference()} to {pos}")
         print(f"{component}")
         component.SetX(pos.x)
         component.SetY(pos.y)
