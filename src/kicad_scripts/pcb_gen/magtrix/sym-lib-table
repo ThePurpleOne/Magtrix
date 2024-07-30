@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "top_coil")(type "KiCad")(uri "${KIPRJMOD}/libs/top_coil.kicad_sym")(options "")(descr ""))
+  (lib (name "square_coils")(type "KiCad")(uri "${KIPRJMOD}/libs/square_coils.kicad_sym")(options "")(descr ""))
+  (lib (name "SN74HCS16507DR")(type "KiCad")(uri "${KIPRJMOD}/libs/SHIFT_REGISTER/SN74HCS16507DR.kicad_sym")(options "")(descr ""))
+)
