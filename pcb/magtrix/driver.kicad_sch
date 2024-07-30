@@ -1018,7 +1018,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0854b27c-4320-4ca9-b75e-2572c97ce76d")
-		(property "Reference" "R4"
+		(property "Reference" "R28"
 			(at 65.786 51.054 0)
 			(effects
 				(font
@@ -1165,7 +1165,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "238d72ef-0408-492b-b703-c4378f522208")
-		(property "Reference" "D3"
+		(property "Reference" "D15"
 			(at 51.054 49.53 90)
 			(effects
 				(font
@@ -1313,7 +1313,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "51e72edc-06f6-41e2-ab19-6d8b47259955")
-		(property "Reference" "Q2"
+		(property "Reference" "Q14"
 			(at 75.692 43.688 0)
 			(effects
 				(font
@@ -1331,7 +1331,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TRANSISTOR:TRANS_BUK9D23-40EX_3Dadded"
+		(property "Footprint" "TRANSISTOR_NMOS:TRANS_BUK9D23-40EX"
 			(at 76.962 27.94 0)
 			(effects
 				(font
@@ -1478,7 +1478,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d9e4007-6866-43c2-82b1-371c65b90eef")
-		(property "Reference" "R3"
+		(property "Reference" "R27"
 			(at 50.8 54.61 0)
 			(effects
 				(font
@@ -1625,7 +1625,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d27315cf-3346-4913-a817-a84b133510b6")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR032"
 			(at 49.53 66.04 0)
 			(effects
 				(font

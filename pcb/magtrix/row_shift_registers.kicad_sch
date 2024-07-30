@@ -591,6 +591,10 @@
 			)
 		)
 	)
+	(no_connect
+		(at 148.59 81.28)
+		(uuid "6628dc29-a5e6-4627-9c87-8bc7991d3b7e")
+	)
 	(wire
 		(pts
 			(xy 148.59 76.2) (xy 161.29 76.2)
@@ -1375,7 +1379,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SHIFT_REGISTER:SOIC127P600X175-16N"
 			(at 138.43 68.58 0)
 			(effects
 				(font
@@ -1394,6 +1398,24 @@
 			)
 		)
 		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+			(at 138.43 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "74HC595D(BJ) "
+			(at 138.43 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "757-74HC595DBJ "
 			(at 138.43 68.58 0)
 			(effects
 				(font
@@ -1487,7 +1509,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SHIFT_REGISTER:SOIC127P600X175-16N"
 			(at 87.63 45.72 0)
 			(effects
 				(font
@@ -1506,6 +1528,24 @@
 			)
 		)
 		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+			(at 87.63 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "74HC595D(BJ) "
+			(at 87.63 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "757-74HC595DBJ "
 			(at 87.63 45.72 0)
 			(effects
 				(font

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74HC595D_BJ_
+D Logic Gates CMOS 8-Bit Shift Register/Latch
+K
+F https://componentsearchengine.com/Datasheets/1/74HC595D(BJ).pdf
+$ENDCMP
+#
+#End Doc Library

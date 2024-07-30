@@ -5624,7 +5624,7 @@
 		)
 		(uuid "8f040e7b-76b4-4397-87be-02e8bb637588")
 	)
-	(text "LC = 20pF\nC = (CL - 5pF) * 2 \nC = 30pF"
+	(text "LC = 15pF\nC = (CL - 5pF) * 2 \nC = 20pF"
 		(exclude_from_sim no)
 		(at 149.86 127 0)
 		(effects
@@ -6460,6 +6460,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "CRCW060310K0JNEC "
+			(at 139.7 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "71-CRCW060310K0JNEC "
+			(at 139.7 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cd4f594d-3f8b-4303-acdb-46d20bc50a39")
 		)
@@ -6530,6 +6548,24 @@
 			)
 		)
 		(property "LCSC" "C14663"
+			(at 229.87 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 229.87 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
 			(at 229.87 44.45 0)
 			(effects
 				(font
@@ -6643,7 +6679,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 157.48 116.84 0)
 			(effects
 				(font
@@ -6671,6 +6707,24 @@
 			)
 		)
 		(property "LCSC" "C21190"
+			(at 157.48 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" " ERJ-S08F1001V "
+			(at 157.48 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" " 667-ERJ-S08F1001V "
 			(at 157.48 116.84 0)
 			(effects
 				(font
@@ -6952,6 +7006,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 236.22 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
+			(at 236.22 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "70b0eb43-4564-4633-9cfa-c61e511cc15c")
 		)
@@ -7125,7 +7197,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 70.8152 93.98 0)
 			(effects
 				(font
@@ -7153,6 +7225,24 @@
 			)
 		)
 		(property "LCSC" "C96446"
+			(at 69.85 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "CL31A106MBHNNNE "
+			(at 69.85 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" " 187-CL31A106MBHNNNE  "
 			(at 69.85 90.17 0)
 			(effects
 				(font
@@ -7231,6 +7321,24 @@
 			)
 		)
 		(property "LCSC" "C15849"
+			(at 223.52 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "CL10A105KA8NNNC "
+			(at 223.52 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "187-CL10A105KA8NNNC "
 			(at 223.52 44.45 0)
 			(effects
 				(font
@@ -7445,6 +7553,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "CRCW060333R0JNEA "
+			(at 167.64 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "71-CRCW0603J-33-E3 "
+			(at 167.64 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "68c7c7d7-3aa4-46d9-b4ad-bb2e39081dcd")
 		)
@@ -7520,6 +7646,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "MFR" "SC0914(13) "
+			(at 208.28 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "358-SC091413 "
+			(at 208.28 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7831,6 +7975,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 248.92 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
+			(at 248.92 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "dab7485e-bb42-4f45-b4ec-a81bc534536d")
 		)
@@ -7909,6 +8071,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "CL10A105KA8NNNC "
+			(at 193.04 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "187-CL10A105KA8NNNC "
+			(at 193.04 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "845eb2dd-1023-4f85-a533-000d4af5d60d")
 		)
@@ -7942,7 +8122,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "30p"
+		(property "Value" "20p"
 			(at 144.526 121.412 0)
 			(effects
 				(font
@@ -7979,6 +8159,24 @@
 			)
 		)
 		(property "LCSC" "C1658"
+			(at 143.51 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "CL10C200JB8NNNC "
+			(at 143.51 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "187-CL10C200JB8NNNC "
 			(at 143.51 123.19 0)
 			(effects
 				(font
@@ -8063,6 +8261,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "MFR" "W25Q128JVSIM"
+			(at 57.15 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "454-W25Q128JVSIM "
+			(at 57.15 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8151,6 +8367,24 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "CRCW060310K0JNEC "
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "71-CRCW060310K0JNEC "
 			(at 72.39 127 0)
 			(effects
 				(font
@@ -8331,6 +8565,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 261.62 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
+			(at 261.62 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6b9bf601-98fb-4292-9aac-ff523af5ca66")
 		)
@@ -8407,6 +8659,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "CRCW060333R0JNEA "
+			(at 167.64 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "71-CRCW0603J-33-E3 "
+			(at 167.64 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d86b0981-7f81-4276-88d7-a0b6f916a7e9")
 		)
@@ -8447,7 +8717,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+		(property "Footprint" "CRYSTAL:crystal"
 			(at 138.43 116.84 0)
 			(effects
 				(font
@@ -8480,6 +8750,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "MFR" "830069944 "
+			(at 138.43 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "710-830069944 "
+			(at 138.43 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8696,6 +8984,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "CR0603AFX-5101EAS "
+			(at 83.82 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "652-CR0603AFX5101EAS "
+			(at 83.82 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e09559d1-4fb4-4526-abdc-7bedb30b30bd")
 		)
@@ -8774,6 +9080,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 242.57 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
+			(at 242.57 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8e80472c-02e1-43fc-a76f-85265135f368")
 		)
@@ -8844,6 +9168,24 @@
 			)
 		)
 		(property "LCSC" "C14663"
+			(at 186.69 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 186.69 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
 			(at 186.69 44.45 0)
 			(effects
 				(font
@@ -9002,7 +9344,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x08_P1.00mm_Vertical_SMD_Pin1Left"
 			(at 255.27 152.4 0)
 			(effects
 				(font
@@ -9482,6 +9824,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "CR0603AFX-5101EAS "
+			(at 76.835 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "652-CR0603AFX5101EAS "
+			(at 76.835 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "43c2a965-cbd9-494d-a069-ed68b46b52b3")
 		)
@@ -9522,7 +9882,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 92.71 138.43 0)
 			(effects
 				(font
@@ -9550,6 +9910,24 @@
 			)
 		)
 		(property "LCSC" "C21190"
+			(at 92.71 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" " ERJ-S08F1001V "
+			(at 92.71 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" " 667-ERJ-S08F1001V "
 			(at 92.71 138.43 0)
 			(effects
 				(font
@@ -9592,7 +9970,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "30p"
+		(property "Value" "20p"
 			(at 132.842 120.904 0)
 			(effects
 				(font
@@ -9629,6 +10007,24 @@
 			)
 		)
 		(property "LCSC" "C1658"
+			(at 133.35 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "CL10C200JB8NNNC "
+			(at 133.35 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "187-CL10C200JB8NNNC "
 			(at 133.35 123.19 0)
 			(effects
 				(font
@@ -9846,6 +10242,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 43.18 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
+			(at 43.18 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b00e7797-4d2e-4fcc-b578-819148a30032")
 		)
@@ -9915,6 +10329,24 @@
 			)
 		)
 		(property "LCSC" "C173386"
+			(at 57.15 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "LM1117MPX-3.3/NOPB "
+			(at 57.15 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "926-LM1117MPX3.3NOPB "
 			(at 57.15 83.82 0)
 			(effects
 				(font
@@ -10099,7 +10531,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 45.4152 93.98 0)
 			(effects
 				(font
@@ -10127,6 +10559,24 @@
 			)
 		)
 		(property "LCSC" "C96446"
+			(at 44.45 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "CL31A106MBHNNNE "
+			(at 44.45 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" " 187-CL31A106MBHNNNE  "
 			(at 44.45 90.17 0)
 			(effects
 				(font
@@ -10213,6 +10663,24 @@
 				(hide yes)
 			)
 		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 255.27 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
+			(at 255.27 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cd7c55a3-7c72-4006-b164-1fec22024fae")
 		)
@@ -10283,6 +10751,24 @@
 			)
 		)
 		(property "LCSC" "C14663"
+			(at 180.34 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "TMK107BJ104KA-T "
+			(at 180.34 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MOUSER" "963-TMK107BJ104KA-T"
 			(at 180.34 44.45 0)
 			(effects
 				(font

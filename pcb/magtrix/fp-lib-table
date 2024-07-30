@@ -1,4 +1,11 @@
 (fp_lib_table
   (version 7)
   (lib (name "libs")(type "KiCad")(uri "${KIPRJMOD}/libs")(options "")(descr ""))
+  (lib (name "TRANSISTOR_NMOS")(type "KiCad")(uri "${KIPRJMOD}/libs/TRANSISTOR_NMOS")(options "")(descr ""))
+  (lib (name "TRANSISTOR_PMOS")(type "KiCad")(uri "${KIPRJMOD}/libs/TRANSISTOR_PMOS")(options "")(descr ""))
+  (lib (name "SHIFT_REGISTER")(type "KiCad")(uri "${KIPRJMOD}/libs/SHIFT_REGISTER")(options "")(descr ""))
+  (lib (name "push_button")(type "KiCad")(uri "${KIPRJMOD}/libs/PUSH_BUTTON/push_button.pretty")(options "")(descr ""))
+  (lib (name "PUSH_BUTTON")(type "KiCad")(uri "${KIPRJMOD}/libs/PUSH_BUTTON")(options "")(descr ""))
+  (lib (name "CRYSTAL")(type "KiCad")(uri "${KIPRJMOD}/libs/CRYSTAL")(options "")(descr ""))
+  (lib (name "USBC")(type "KiCad")(uri "${KIPRJMOD}/libs/USBC/USBC.pretty")(options "")(descr ""))
 )

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BUK6D120-60PX
+D MOSFET 60V P-CH TRENCHMOS SOT1220
+K
+F https://componentsearchengine.com/Datasheets/2/BUK6D120-60PX.pdf
+$ENDCMP
+#
+#End Doc Library
