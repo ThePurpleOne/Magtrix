@@ -575,6 +575,36 @@
           "label": "Sim.Device",
           "name": "Sim.Device",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -612,7 +642,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "PDF/schematics.pdf",
+    "plot_directory": "PDF/",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -636,12 +666,12 @@
       "coil_matrix"
     ],
     [
-      "a751c71a-68bd-443d-b777-ca31adb4b693",
-      "driver3"
+      "600800a6-32f3-4253-a8b7-4d0d43fda224",
+      "row_shift_registers"
     ],
     [
-      "29523b5e-a6e1-44c6-ad81-355c6478a108",
-      "driver4"
+      "c8f702e2-4071-43b7-82f1-e073a147621d",
+      "BEMF"
     ],
     [
       "59448804-ea6a-4f5b-b572-fff89c270cf8",
@@ -704,10 +734,6 @@
       "up_driver"
     ],
     [
-      "600800a6-32f3-4253-a8b7-4d0d43fda224",
-      "row_shift_registers"
-    ],
-    [
       "0b4f6fb6-2c65-403c-8b01-28a6f9e19105",
       "up_driver1"
     ],
@@ -768,8 +794,12 @@
       "up_driver15"
     ],
     [
-      "c8f702e2-4071-43b7-82f1-e073a147621d",
-      "BEMF"
+      "a751c71a-68bd-443d-b777-ca31adb4b693",
+      "driver3"
+    ],
+    [
+      "29523b5e-a6e1-44c6-ad81-355c6478a108",
+      "driver4"
     ]
   ],
   "text_variables": {}

@@ -920,16 +920,6 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 130.81) (xy 156.21 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "425b746e-bae8-4719-9b78-2c398e06b38d")
-	)
-	(wire
-		(pts
 			(xy 180.34 71.12) (xy 173.99 71.12)
 		)
 		(stroke
@@ -6785,7 +6775,7 @@
 		(instances
 			(project "magtrix"
 				(path "/11af7b42-8094-4ca6-9444-8e07a1921bec"
-					(page "5")
+					(page "38")
 				)
 			)
 		)
@@ -7222,16 +7212,6 @@
 				(justify left top)
 			)
 		)
-		(pin "CLR" input
-			(at 156.21 130.81 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "7675457a-0d5e-40e2-bc71-ff2d0b80d713")
-		)
 		(pin "CLK" input
 			(at 156.21 118.11 180)
 			(effects
@@ -7435,7 +7415,7 @@
 		(instances
 			(project "magtrix"
 				(path "/11af7b42-8094-4ca6-9444-8e07a1921bec"
-					(page "21")
+					(page "4")
 				)
 			)
 		)
@@ -7770,7 +7750,7 @@
 		(instances
 			(project "magtrix"
 				(path "/11af7b42-8094-4ca6-9444-8e07a1921bec"
-					(page "4")
+					(page "37")
 				)
 			)
 		)
@@ -8402,16 +8382,6 @@
 			)
 			(uuid "cd3dee59-03e0-40c5-a1c9-0cae5db8b626")
 		)
-		(pin "~{SR_CLR}" output
-			(at 143.51 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "d453af7d-4129-40be-8ecb-c3557825b78b")
-		)
 		(pin "SR_CLK" output
 			(at 143.51 118.11 0)
 			(effects
@@ -8900,7 +8870,7 @@
 		(instances
 			(project "magtrix"
 				(path "/11af7b42-8094-4ca6-9444-8e07a1921bec"
-					(page "37")
+					(page "5")
 				)
 			)
 		)

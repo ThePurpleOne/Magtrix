@@ -1,5 +1,5 @@
 (module "SOIC127P600X175-16N" (layer F.Cu)
-  (descr "P-SOP16-0410-1.27-005")
+  (descr "D (R-PDSO-G16)")
   (tags "Integrated Circuit")
   (attr smd)
   (fp_text reference IC** (at 0 0) (layer F.SilkS)
@@ -41,8 +41,8 @@
   (pad 14 smd rect (at 2.712 -1.905 90) (size 0.65 1.525) (layers F.Cu F.Paste F.Mask))
   (pad 15 smd rect (at 2.712 -3.175 90) (size 0.65 1.525) (layers F.Cu F.Paste F.Mask))
   (pad 16 smd rect (at 2.712 -4.445 90) (size 0.65 1.525) (layers F.Cu F.Paste F.Mask))
-  (model 74HC595D_BJ_.stp
-    (at (xyz 0 0 0))
+  (model SN74HCS16507DR.stp
+    (at (xyz 0 0.00039370077860168 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )

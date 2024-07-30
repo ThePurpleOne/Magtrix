@@ -3728,6 +3728,10 @@
 		(uuid "61d57886-cd38-4f5e-85c9-8d2a2951dd13")
 	)
 	(no_connect
+		(at 233.68 116.84)
+		(uuid "732e4692-6a68-4a1f-b25c-abf73cb0b873")
+	)
+	(no_connect
 		(at 182.88 127)
 		(uuid "a6e0d096-ce0b-4c1f-b837-8ff8e4c08c10")
 	)
@@ -5367,16 +5371,6 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 116.84) (xy 240.03 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef0e1dc7-5489-4594-bf5c-db34f7af9fab")
-	)
-	(wire
-		(pts
 			(xy 80.01 135.89) (xy 67.31 135.89)
 		)
 		(stroke
@@ -6215,18 +6209,6 @@
 			(justify left)
 		)
 		(uuid "5ed2f226-9cb3-470b-8c56-399033926fbe")
-	)
-	(hierarchical_label "~{SR_CLR}"
-		(shape output)
-		(at 240.03 116.84 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6f425f77-61d3-47aa-b46a-680744aa1083")
 	)
 	(hierarchical_label "COL13"
 		(shape output)
