@@ -3313,7 +3313,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 44.45 64.77 0)
 			(effects
 				(font
@@ -3945,7 +3945,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 130.81 31.75 0)
 			(effects
 				(font
@@ -4185,7 +4185,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 87.63 31.75 0)
 			(effects
 				(font
@@ -4622,7 +4622,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 173.99 64.77 0)
 			(effects
 				(font
@@ -4948,7 +4948,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 66.04 31.75 0)
 			(effects
 				(font
@@ -5122,7 +5122,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 22.86 64.77 0)
 			(effects
 				(font
@@ -5297,7 +5297,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 152.4 31.75 0)
 			(effects
 				(font
@@ -5449,7 +5449,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 130.81 64.77 0)
 			(effects
 				(font
@@ -5624,7 +5624,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 22.86 31.75 0)
 			(effects
 				(font
@@ -5776,7 +5776,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 44.45 31.75 0)
 			(effects
 				(font
@@ -5993,7 +5993,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 109.22 31.75 0)
 			(effects
 				(font
@@ -6080,7 +6080,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 66.04 64.77 0)
 			(effects
 				(font
@@ -7041,7 +7041,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 152.4 64.77 0)
 			(effects
 				(font
@@ -7215,7 +7215,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 109.22 64.77 0)
 			(effects
 				(font
@@ -7476,7 +7476,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 87.63 64.77 0)
 			(effects
 				(font
@@ -7563,7 +7563,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "BULK:EEEFK1V331P"
 			(at 173.99 31.75 0)
 			(effects
 				(font

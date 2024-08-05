@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CUS05S30,H3F
+D Diode 30 V 500mA Surface Mount USC
+K
+F https://toshiba.semicon-storage.com/ap-en/semiconductor/product/diodes/detail.CUS05S30.html
+$ENDCMP
+#
+#End Doc Library

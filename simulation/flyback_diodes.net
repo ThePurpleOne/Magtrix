@@ -1,0 +1,23 @@
+* C:\Users\jonas\Documents\ECOLE\magnetic_chess\simulation\flyback_diodes.asc
+L1 row2 col0 100µ Rser=5
+L2 row2 col1 0.1 Ipk=3 Rser=0.1
+L3 row1 col0 1 Ipk=0.069 Rser=5 Rpar=0 Cpar=0
+L4 row1 col1 1 Ipk=3 Rser=0.1
+V1 N001 0 5 Rser=3
+V2 a 0 PULSE(0 10 0.2 0.001 0.001 0.3 0.5 5)
+V5 d 0 0
+V3 b 0 0
+V4 c 0 PULSE(0 10 0.2 0.001 0.001 0.3 0.5 5)
+Q1 N001 a row1 0 2SCR542F3
+Q2 N001 b row2 0 2SCR542F3
+Q3 col0 c 0 0 2SCR542F3
+Q4 col1 d 0 0 2SCR542F3
+C1 row1 0 10µ
+C2 row1 0 100µ
+C3 row1 0 1m
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\jonas\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran 1
+.backanno
+.end

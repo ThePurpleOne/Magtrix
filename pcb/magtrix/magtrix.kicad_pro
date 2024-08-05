@@ -51,14 +51,20 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
       },
       "rule_severities": {
         "annular_width": "error",
-        "clearance": "error",
+        "clearance": "ignore",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
@@ -110,11 +116,11 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.0889,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
+        "min_hole_to_hole": 0.5,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
@@ -122,10 +128,10 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
+        "min_track_width": 0.0889,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -171,7 +177,15 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.0889,
+        0.127,
+        0.2032,
+        0.381,
+        0.762,
+        1.27
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -198,7 +212,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.4,
+          "drill": 0.2
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -670,8 +693,8 @@
       "row_shift_registers"
     ],
     [
-      "c8f702e2-4071-43b7-82f1-e073a147621d",
-      "BEMF"
+      "a757fe34-e29d-40a8-b2cd-53daa2f14066",
+      "flyback diodes"
     ],
     [
       "59448804-ea6a-4f5b-b572-fff89c270cf8",
@@ -708,18 +731,6 @@
     [
       "5a1b8e37-0bb2-4d96-9151-10549a5be687",
       "driver13"
-    ],
-    [
-      "183ed7b0-f152-4856-b3b8-9ad983ccfc71",
-      "driver14"
-    ],
-    [
-      "c7b6e6ff-a63f-4e25-ada9-683d569e7e99",
-      "driver15"
-    ],
-    [
-      "8a4198c8-3d71-4373-962f-63424f827279",
-      "driver16"
     ],
     [
       "575359e5-6021-441a-a812-e35131d6511f",
@@ -780,18 +791,6 @@
     [
       "d2f0e2b2-d2de-4858-83da-700ac21bf27c",
       "up_driver12"
-    ],
-    [
-      "3ec29f78-7881-4153-982a-fc957eb6dff0",
-      "up_driver13"
-    ],
-    [
-      "c320be50-adfd-4994-8c48-da90aa77687d",
-      "up_driver14"
-    ],
-    [
-      "c3e2f809-0283-4cab-b969-e6565462d611",
-      "up_driver15"
     ],
     [
       "a751c71a-68bd-443d-b777-ca31adb4b693",

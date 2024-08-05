@@ -8,4 +8,6 @@
   (lib (name "PUSH_BUTTON")(type "KiCad")(uri "${KIPRJMOD}/libs/PUSH_BUTTON")(options "")(descr ""))
   (lib (name "CRYSTAL")(type "KiCad")(uri "${KIPRJMOD}/libs/CRYSTAL")(options "")(descr ""))
   (lib (name "USBC")(type "KiCad")(uri "${KIPRJMOD}/libs/USBC/USBC.pretty")(options "")(descr ""))
+  (lib (name "BULK")(type "KiCad")(uri "${KIPRJMOD}/libs/BULK")(options "")(descr ""))
+  (lib (name "FLYBACK")(type "KiCad")(uri "${KIPRJMOD}/libs/FLYBACK")(options "")(descr ""))
 )

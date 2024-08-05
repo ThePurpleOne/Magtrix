@@ -3716,6 +3716,10 @@
 		(uuid "fec8c28e-f8a7-4dc8-9d28-74cc5af56426")
 	)
 	(no_connect
+		(at 233.68 96.52)
+		(uuid "06ee98f2-c5c9-4c2f-b583-9fe3833f41e5")
+	)
+	(no_connect
 		(at 182.88 129.54)
 		(uuid "3be06b18-30f4-4fcb-9e00-ba27071c4b65")
 	)
@@ -3728,6 +3732,10 @@
 		(uuid "61d57886-cd38-4f5e-85c9-8d2a2951dd13")
 	)
 	(no_connect
+		(at 233.68 99.06)
+		(uuid "6c63d51b-d24e-4024-a8b8-7a2e897a306a")
+	)
+	(no_connect
 		(at 233.68 116.84)
 		(uuid "732e4692-6a68-4a1f-b25c-abf73cb0b873")
 	)
@@ -3738,6 +3746,10 @@
 	(no_connect
 		(at 59.69 49.53)
 		(uuid "a7eff5b3-fc51-489f-8055-83c49a3e0aa1")
+	)
+	(no_connect
+		(at 233.68 93.98)
+		(uuid "d1d09a5e-39b9-45ae-96ee-64c84a65f866")
 	)
 	(wire
 		(pts
@@ -3798,16 +3810,6 @@
 			(type default)
 		)
 		(uuid "08a8cd92-35ac-4140-b3f5-94db0039f49d")
-	)
-	(wire
-		(pts
-			(xy 233.68 96.52) (xy 240.03 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09d705ff-1c29-43f4-bfc1-dfd8f5f5b68a")
 	)
 	(wire
 		(pts
@@ -4861,16 +4863,6 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 93.98) (xy 240.03 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "adae8c83-efdb-4482-b246-393d38075e93")
-	)
-	(wire
-		(pts
 			(xy 80.645 47.625) (xy 80.645 48.895)
 		)
 		(stroke
@@ -5498,16 +5490,6 @@
 			(type default)
 		)
 		(uuid "fa1fbc17-2615-462a-b5ef-d45ed284fb82")
-	)
-	(wire
-		(pts
-			(xy 233.68 99.06) (xy 240.03 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa90e1da-e92c-459d-a0b1-596dd1ae39ce")
 	)
 	(wire
 		(pts
@@ -6162,18 +6144,6 @@
 		)
 		(uuid "3859f700-bc3e-4567-913c-dbedb977269d")
 	)
-	(hierarchical_label "COL14"
-		(shape output)
-		(at 240.03 96.52 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3fea6ba9-e52d-4e15-9174-7434e86db88c")
-	)
 	(hierarchical_label "COL11"
 		(shape output)
 		(at 240.03 88.9 0)
@@ -6209,18 +6179,6 @@
 			(justify left)
 		)
 		(uuid "5ed2f226-9cb3-470b-8c56-399033926fbe")
-	)
-	(hierarchical_label "COL13"
-		(shape output)
-		(at 240.03 93.98 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "713d1bae-bd90-4f1d-862d-a005842a0c06")
 	)
 	(hierarchical_label "COL4"
 		(shape output)
@@ -6353,18 +6311,6 @@
 			(justify left)
 		)
 		(uuid "d72e8817-d694-446a-8e00-b9f76ac9552e")
-	)
-	(hierarchical_label "COL15"
-		(shape output)
-		(at 240.03 99.06 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e8d27080-7e30-4364-b2da-b20d607bef5e")
 	)
 	(hierarchical_label "COL7"
 		(shape output)

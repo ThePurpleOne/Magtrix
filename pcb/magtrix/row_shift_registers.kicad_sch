@@ -632,6 +632,10 @@
 		(uuid "19b668ba-c03a-4a16-8fbc-5a536cf94a67")
 	)
 	(no_connect
+		(at 156.21 73.66)
+		(uuid "5d38617f-37bb-4259-b2cf-35a149ee2fc5")
+	)
+	(no_connect
 		(at 148.59 81.28)
 		(uuid "6628dc29-a5e6-4627-9c87-8bc7991d3b7e")
 	)
@@ -639,15 +643,13 @@
 		(at 156.21 81.28)
 		(uuid "6eff9337-242e-46c5-ac42-a2be2580b036")
 	)
-	(wire
-		(pts
-			(xy 156.21 73.66) (xy 161.29 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a56ec7b-ad13-4d09-bf2d-38ef0d7111f6")
+	(no_connect
+		(at 156.21 76.2)
+		(uuid "a00d957e-5909-473f-8db6-06258fc8a025")
+	)
+	(no_connect
+		(at 156.21 71.12)
+		(uuid "eb2fd844-16a4-404e-bbd4-41fe98e7fcc0")
 	)
 	(wire
 		(pts
@@ -668,16 +670,6 @@
 			(type default)
 		)
 		(uuid "180dd522-580d-4d86-8a5f-20e79a1db109")
-	)
-	(wire
-		(pts
-			(xy 156.21 76.2) (xy 161.29 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18d2d2b9-b39d-4acf-8efc-ca7c83ee4dac")
 	)
 	(wire
 		(pts
@@ -868,16 +860,6 @@
 			(type default)
 		)
 		(uuid "b15256c9-147d-4b3e-a900-dd78affc3fe0")
-	)
-	(wire
-		(pts
-			(xy 156.21 71.12) (xy 161.29 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bbdd8a40-21cd-48aa-9db6-6dcb4c82b3e8")
 	)
 	(wire
 		(pts
@@ -1104,18 +1086,6 @@
 		)
 		(uuid "28c0e83f-290a-4809-bd47-276aa1350bf7")
 	)
-	(hierarchical_label "ROW13"
-		(shape output)
-		(at 161.29 71.12 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "32ff982e-cd87-49e5-a058-24c4928db75a")
-	)
 	(hierarchical_label "ROW9"
 		(shape output)
 		(at 161.29 60.96 0)
@@ -1164,18 +1134,6 @@
 		)
 		(uuid "4c4762ae-44b1-43aa-9a72-651b4c8a76d8")
 	)
-	(hierarchical_label "ROW14"
-		(shape output)
-		(at 161.29 73.66 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "62f19cac-9eb5-483c-89f8-e1d28219e6be")
-	)
 	(hierarchical_label "SER"
 		(shape input)
 		(at 25.4 38.1 180)
@@ -1211,18 +1169,6 @@
 			(justify left)
 		)
 		(uuid "7bf4f0e7-2222-41ee-bdc5-9f65ec25cee6")
-	)
-	(hierarchical_label "ROW15"
-		(shape output)
-		(at 161.29 76.2 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8a8c90bf-ac69-4ca6-b2e2-052718a05448")
 	)
 	(hierarchical_label "ROW11"
 		(shape output)
