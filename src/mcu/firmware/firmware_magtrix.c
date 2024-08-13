@@ -34,6 +34,7 @@
 #include "pico/stdlib.h"
 // ---
 #include "FreeRTOS.h"
+#include "mag_pwm.h"
 #include "queue.h"
 #include "task.h"
 // ---
@@ -41,9 +42,6 @@
 
 #define LED_STATUS_PIN 25
 
-#define NB_ROWS 13
-#define NB_COLS 13
-#define NON		0xFF // This is put as index when it does not exist
 
 // ! TASKS
 typedef struct
@@ -51,261 +49,49 @@ typedef struct
 	int frequency; // Hz
 } task_arg;
 
-
 typedef struct
 {
-	uint8_t row, col;
-} coord_t;
-
-
-// This is a matrix representing the coil matrix
-// with the actual row and column to activate the coils
-// according to their indices
-coord_t coords[NB_COLS][NB_ROWS] = { // --
-	{
-	  // ! ROW 0
-	  { .row = 0, .col = 0 },  // 0, 0
-	  { .row = 0, .col = 1 },  // 0, 1
-	  { .row = 0, .col = 2 },  // 0, 2
-	  { .row = 0, .col = 3 },  // 0, 3
-	  { .row = 0, .col = 4 },  // 0, 4
-	  { .row = 0, .col = 5 },  // 0, 5
-	  { .row = 0, .col = 6 },  // 0, 6
-	  { .row = 0, .col = 7 },  // 0, 7
-	  { .row = 0, .col = 8 },  // 0, 8
-	  { .row = 0, .col = 9 },  // 0, 9
-	  { .row = 0, .col = 10 }, // 0, 10
-	  { .row = 0, .col = 11 }, // 0, 11
-	  { .row = 0, .col = 12 }, // 0, 12
-							   // --
-	},
-
-	{
-	  // ! ROW 1
-	  { .row = 1, .col = 0 },	  // 1, 0
-	  { .row = NON, .col = NON }, // 1, 1
-	  { .row = 1, .col = 2 },	  // 1, 2
-	  { .row = NON, .col = NON }, // 1, 3
-	  { .row = 1, .col = 4 },	  // 1, 4
-	  { .row = NON, .col = NON }, // 1, 5
-	  { .row = 1, .col = 6 },	  // 1, 6
-	  { .row = NON, .col = NON }, // 1, 7
-	  { .row = 1, .col = 8 },	  // 1, 8
-	  { .row = NON, .col = NON }, // 1, 9
-	  { .row = 1, .col = 10 },	  // 1, 10
-	  { .row = NON, .col = NON }, // 1, 11
-	  { .row = 1, .col = 12 },	  // 1, 12
-								  // --
-								  // --
-	},
-
-	{
-	  // ! ROW 2
-	  { .row = 2, .col = 0 },  // 2, 0
-	  { .row = 1, .col = 1 },  // 2, 1
-	  { .row = 2, .col = 2 },  // 2, 2
-	  { .row = 1, .col = 3 },  // 2, 3
-	  { .row = 2, .col = 4 },  // 2, 4
-	  { .row = 1, .col = 5 },  // 2, 5
-	  { .row = 2, .col = 6 },  // 2, 6
-	  { .row = 1, .col = 7 },  // 2, 7
-	  { .row = 2, .col = 8 },  // 2, 8
-	  { .row = 1, .col = 9 },  // 2, 9
-	  { .row = 2, .col = 10 }, // 2, 10
-	  { .row = 1, .col = 11 }, // 2, 11
-	  { .row = 2, .col = 12 }, // 2, 12
-							   // --
-	},
-
-	{
-	  // ! ROW 3
-	  { .row = 3, .col = 0 },	  // 3, 0
-	  { .row = NON, .col = NON }, // 3, 1
-	  { .row = 3, .col = 2 },	  // 3, 2
-	  { .row = NON, .col = NON }, // 3, 3
-	  { .row = 3, .col = 4 },	  // 3, 4
-	  { .row = NON, .col = NON }, // 3, 5
-	  { .row = 3, .col = 6 },	  // 3, 6
-	  { .row = NON, .col = NON }, // 3, 7
-	  { .row = 3, .col = 8 },	  // 3, 8
-	  { .row = NON, .col = NON }, // 3, 9
-	  { .row = 3, .col = 10 },	  // 3, 10
-	  { .row = NON, .col = NON }, // 3, 11
-	  { .row = 3, .col = 12 },	  // 3, 12
-								  // --
-	},
-
-	{
-	  // ! ROW 4
-	  { .row = 4, .col = 0 },  // 4, 0
-	  { .row = 2, .col = 1 },  // 4, 1
-	  { .row = 4, .col = 2 },  // 4, 2
-	  { .row = 2, .col = 3 },  // 4, 3
-	  { .row = 4, .col = 4 },  // 4, 4
-	  { .row = 2, .col = 5 },  // 4, 5
-	  { .row = 4, .col = 6 },  // 4, 6
-	  { .row = 2, .col = 7 },  // 4, 7
-	  { .row = 4, .col = 8 },  // 4, 8
-	  { .row = 2, .col = 9 },  // 4, 9
-	  { .row = 4, .col = 10 }, // 4, 10
-	  { .row = 2, .col = 11 }, // 4, 11
-	  { .row = 4, .col = 12 }, // 4, 12
-							   // --
-	},
-
-	{
-	  // ! ROW 5
-	  { .row = 5, .col = 0 },	  // 5, 0
-	  { .row = NON, .col = NON }, // 5, 1
-	  { .row = 5, .col = 2 },	  // 5, 2
-	  { .row = NON, .col = NON }, // 5, 3
-	  { .row = 5, .col = 4 },	  // 5, 4
-	  { .row = NON, .col = NON }, // 5, 5
-	  { .row = 5, .col = 6 },	  // 5, 6
-	  { .row = NON, .col = NON }, // 5, 7
-	  { .row = 5, .col = 8 },	  // 5, 8
-	  { .row = NON, .col = NON }, // 5, 9
-	  { .row = 5, .col = 10 },	  // 5, 10
-	  { .row = NON, .col = NON }, // 5, 11
-	  { .row = 5, .col = 12 },	  // 5, 12
-								  // --
-	},
-
-	{
-	  // ! ROW 6
-	  { .row = 6, .col = 0 },  // 6, 0
-	  { .row = 3, .col = 1 },  // 6, 1
-	  { .row = 6, .col = 2 },  // 6, 2
-	  { .row = 3, .col = 3 },  // 6, 3
-	  { .row = 6, .col = 4 },  // 6, 4
-	  { .row = 3, .col = 5 },  // 6, 5
-	  { .row = 6, .col = 6 },  // 6, 6
-	  { .row = 3, .col = 7 },  // 6, 7
-	  { .row = 6, .col = 8 },  // 6, 8
-	  { .row = 3, .col = 9 },  // 6, 9
-	  { .row = 6, .col = 10 }, // 6, 10
-	  { .row = 3, .col = 11 }, // 6, 11
-	  { .row = 6, .col = 12 }, // 6, 12
-							   // --
-	},
-
-	{
-	  // ! ROW 7
-	  { .row = 7, .col = 0 },	  // 7, 0
-	  { .row = NON, .col = NON }, // 7, 1
-	  { .row = 7, .col = 2 },	  // 7, 2
-	  { .row = NON, .col = NON }, // 7, 3
-	  { .row = 7, .col = 4 },	  // 7, 4
-	  { .row = NON, .col = NON }, // 7, 5
-	  { .row = 7, .col = 6 },	  // 7, 6
-	  { .row = NON, .col = NON }, // 7, 7
-	  { .row = 7, .col = 8 },	  // 7, 8
-	  { .row = NON, .col = NON }, // 7, 9
-	  { .row = 7, .col = 10 },	  // 7, 10
-	  { .row = NON, .col = NON }, // 7, 11
-	  { .row = 7, .col = 12 },	  // 7, 12
-								  // --
-	},
-
-	{
-	  // ! ROW 8
-	  { .row = 8, .col = 0 }, // 8, 0
-	  { .row = 4, .col = 1 }, // 8, 1
-	  { .row = 8, .col = 2 }, // 8, 2
-	  { .row = 4, .col = 3 }, // 8, 3
-	  { .row = 8, .col = 4 }, // 8, 4
-	  { .row = 4, .col = 5 }, // 8, 5
-	  { .row = 8, .col = 6 }, // 8, 6
-	  { .row = 4, .col = 7 }, // 8, 7
-	  { .row = 8, .col = 8 }, // 8, 8
-	  { .row = 4, .col = }
-	  // --
-
-	},
-
-	{
-	  // ! ROW 9
-	  { .row = 9, .col = 0 },	  // 9, 0
-	  { .row = NON, .col = NON }, // 9, 1
-	  { .row = 9, .col = 2 },	  // 9, 2
-	  { .row = NON, .col = NON }, // 9, 3
-	  { .row = 9, .col = 4 },	  // 9, 4
-	  { .row = NON, .col = NON }, // 9, 5
-	  { .row = 9, .col = 6 },	  // 9, 6
-	  { .row = NON, .col = NON }, // 9, 7
-	  { .row = 9, .col = 8 },	  // 9, 8
-	  { .row = NON, .col = NON }, // 9, 9
-	  { .row = 9, .col = 10 },	  // 9, 10
-	  { .row = NON, .col = NON }, // 9, 11
-	  { .row = 9, .col = 12 },	  // 9, 12
-	},
-
-	{
-	  // ! ROW 10
-	  { .row = 10, .col = 0 },	// 10, 0
-	  { .row = 5, .col = 1 },	// 10, 1
-	  { .row = 10, .col = 2 },	// 10, 2
-	  { .row = 5, .col = 3 },	// 10, 3
-	  { .row = 10, .col = 4 },	// 10, 4
-	  { .row = 5, .col = 5 },	// 10, 5
-	  { .row = 10, .col = 6 },	// 10, 6
-	  { .row = 5, .col = 7 },	// 10, 7
-	  { .row = 10, .col = 8 },	// 10, 8
-	  { .row = 5, .col = 9 },	// 10, 9
-	  { .row = 10, .col = 10 }, // 10, 10
-	  { .row = 5, .col = 11 },	// 10, 11
-	  { .row = 10, .col = 12 }, // 10, 12
-	},
-
-	{
-	  // ! ROW 11
-	  { .row = 11, .col = 0 },	  // 11, 0
-	  { .row = NON, .col = NON }, // 11, 1
-	  { .row = 11, .col = 2 },	  // 11, 2
-	  { .row = NON, .col = NON }, // 11, 3
-	  { .row = 11, .col = 4 },	  // 11, 4
-	  { .row = NON, .col = NON }, // 11, 5
-	  { .row = 11, .col = 6 },	  // 11, 6
-	  { .row = NON, .col = NON }, // 11, 7
-	  { .row = 11, .col = 8 },	  // 11, 8
-	  { .row = NON, .col = NON }, // 11, 9
-	  { .row = 11, .col = 10 },	  // 11, 10
-	  { .row = NON, .col = NON }, // 11, 11
-	  { .row = 11, .col = 12 },	  // 11, 12
-	},
-
-	{
-	  // ! ROW 12
-	  { .row = 12, .col = 0 },	// 12, 0
-	  { .row = 6, .col = 1 },	// 12, 1
-	  { .row = 12, .col = 2 },	// 12, 2
-	  { .row = 6, .col = 3 },	// 12, 3
-	  { .row = 12, .col = 4 },	// 12, 4
-	  { .row = 6, .col = 5 },	// 12, 5
-	  { .row = 12, .col = 6 },	// 12, 6
-	  { .row = 6, .col = 7 },	// 12, 7
-	  { .row = 12, .col = 8 },	// 12, 8
-	  { .row = 6, .col = 9 },	// 12, 9
-	  { .row = 12, .col = 10 }, // 12, 10
-	  { .row = 6, .col = 11 },	// 12, 11
-	  { .row = 12, .col = 12 }, // 12, 12
-	};
+	int		  frequency; // Hz
+	ws_pwm_t* led_pwm;
+} blilnk_args_t;
 
 
 void t_debug(void* p);
 void t_blink(void* p);
 
 // ! FUNCTIONS
-
+// ! PWM GENERATORS
+#define PWM_FREQ  25000 // 25 Khz prefered in datasheet
+#define NB_PWMS	  12
+#define BASE_DUTY 0.0
+typedef enum
+{
+	PWM_0  = 0,
+	PWM_1  = 1,
+	PWM_2  = 2,
+	PWM_3  = 3,
+	PWM_4  = 4,
+	PWM_5  = 5,
+	PWM_6  = 6,
+	PWM_7  = 7,
+	PWM_8  = 8,
+	PWM_9  = 9,
+	PWM_10 = 10,
+	PWM_11 = 11,
+	PWM_12 = 12,
+} PWM_PINS;
+const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3,	PWM_4,	PWM_5, PWM_6,
+									   PWM_7, PWM_8, PWM_9, PWM_10, PWM_11, PWM_12 };
+float		   g_duties[NB_PWMS]   = { 0.0 };
+ws_pwm_t	   g_pwms[NB_PWMS];
 
 int main()
 {
 	stdio_init_all();
 	sleep_ms(2000);
 
-	gpio_init(LED_STATUS_PIN);
-	gpio_set_dir(LED_STATUS_PIN, GPIO_OUT);
-	gpio_put(LED_STATUS_PIN, 0);
+	// Setup every pwm
+	ws_pwms_init_from_gpios(NB_PWMS, &g_pwms, (uint*)pwms_gpios, PWM_FREQ, 0);
 
 	TaskHandle_t debug_handle;
 	UBaseType_t	 spi_write_affinity_mask;
@@ -314,9 +100,9 @@ int main()
 	spi_write_affinity_mask = 0x01;
 	vTaskCoreAffinitySet(debug_handle, spi_write_affinity_mask);
 
-	TaskHandle_t blink_handle;
-	UBaseType_t	 blink_affinity_mask;
-	task_arg	 arg_blink = { .frequency = 50 };
+	TaskHandle_t  blink_handle;
+	UBaseType_t	  blink_affinity_mask;
+	blilnk_args_t arg_blink = { .frequency = 50, .led_pwm = &led_pwm };
 	xTaskCreate(t_blink, "BLINK", 1024, &arg_blink, 10, &blink_handle);
 	blink_affinity_mask = 0x02;
 	vTaskCoreAffinitySet(blink_handle, blink_affinity_mask);
@@ -362,14 +148,19 @@ void t_debug(void* p)
 
 void t_blink(void* p)
 {
-	task_arg* a		 = (task_arg*)p;
-	uint64_t  period = 1000 / a->frequency;
+	blilnk_args_t* a	   = (blilnk_args_t*)p;
+	uint64_t	   period  = 1000 / a->frequency;
+	ws_pwm_t*	   led_pwm = a->led_pwm;
+
+	// ! Setup PWM
+	ws_pwm_enable(led_pwm);
 
 	while (true)
 	{
-		gpio_put(LED_STATUS_PIN, 1);
+		ws_pwm_set_duty(led_pwm, 0.5);
 		vTaskDelay(period * portTICK_PERIOD_MS);
-		gpio_put(LED_STATUS_PIN, 0);
+		ws_pwm_set_duty(led_pwm, 0);
 		vTaskDelay(period * portTICK_PERIOD_MS);
+		printf("Hello from core %d\n", get_core_num());
 	}
 }
