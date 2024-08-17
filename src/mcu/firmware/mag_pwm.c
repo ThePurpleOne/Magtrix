@@ -48,7 +48,6 @@ void mag_pwm_init_from_gpio(mag_pwm_t* pwm, uint gpio, uint freq, float duty)
  * This will chose the best clock divider to get the desired frequency
  * and set the wrap value accordingly
  * while still having the maximum resolution for the duty cycle
- *
  */
 void mag_pwm_init(mag_pwm_t* pwm, uint slice, uint chan, uint32_t freq, float initial_duty)
 {

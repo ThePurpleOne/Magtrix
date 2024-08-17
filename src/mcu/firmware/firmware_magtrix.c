@@ -45,7 +45,7 @@
 
 // ! PWM GENERATORS
 #define PWM_FREQ  25000 // 25 Khz prefered in datasheet
-#define NB_PWMS	  12
+#define NB_PWMS	  13
 #define BASE_DUTY 0.0
 typedef enum
 {
@@ -61,10 +61,10 @@ typedef enum
 	PWM_9  = 9,
 	PWM_10 = 10,
 	PWM_11 = 11,
+	PWM_12 = 12,
 } PWM_PINS;
-const PWM_PINS pwms_gpios[NB_PWMS]
-  = { PWM_0, PWM_1, PWM_2, PWM_3, PWM_4, PWM_5, PWM_6, PWM_7, PWM_8, PWM_9, PWM_10, PWM_11 };
-
+const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3,	PWM_4,	PWM_5, PWM_6,
+									   PWM_7, PWM_8, PWM_9, PWM_10, PWM_11, PWM_12 };
 
 // ! SHIFT REGISTER
 #define SR_DATA_PIN	  19
@@ -188,7 +188,7 @@ void t_shift_register(void* p)
 {
 	sr_args_t* a	  = (sr_args_t*)p;
 	uint64_t   period = 1000 / a->frequency;
-	mag_sr_t*  sr	  = a->shift_register; 
+	mag_sr_t*  sr	  = a->shift_register;
 
 	while (true)
 	{
@@ -209,12 +209,14 @@ void t_blink(void* p)
 
 	while (true)
 	{
-		for (uint8_t i = 0; i < NB_PWMS; i++)
-			mag_pwm_set_duty(&pwms[i], 0.1 * (i + 1));
+		for (uint8_t i = 0; i < NB_PWMS; i += 2)
+			mag_pwm_set_duty(&pwms[i], 0.1);
 		vTaskDelay(period * portTICK_PERIOD_MS);
-		for (uint8_t i = 0; i < NB_PWMS; i++)
-			mag_pwm_set_duty(&pwms[i], 0.0);
+
+		// for (uint8_t i = 1; i < NB_PWMS; i++)
+		//	mag_pwm_set_duty(&pwms[i], 0.0);
 		vTaskDelay(period * portTICK_PERIOD_MS);
+
 		printf("t_blink : core %d\n", get_core_num());
 	}
 }
