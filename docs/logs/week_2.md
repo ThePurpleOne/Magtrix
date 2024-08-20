@@ -31,18 +31,18 @@ Date : 21/05/2024 - 24/05/2024
 # COIL GENERATION IN KICAD
 We can use a simple plugin integrated in Kicad to generate a coil with desired parameters. 
 
-![wizard_coils.png](../wizard_coils.png)
+![wizard_coils.png](wizard_coils.png)
 
-![../single_coil.png](../single_coil.png)
+![single_coil.png](single_coil.png)
 
 ## Simulation
 With the help of `kiutils` library, we can export the points forming the footprints of the coil.
 
 > Here's an image of a simple coil with only 1 turn.
-> ![Image of points](../coils_points.png)
+> ![Image of points](coils_points.png)
 
 
-![](../3d_plot_field.png)
+![](3d_plot_field.png)
 
 ## Helmholtz coils
 

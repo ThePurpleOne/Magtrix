@@ -12,12 +12,12 @@ I remade the schematics and mounted it on a breadboard to test the coils with on
 
 PMOS is the **IRF9Z34**. 
 
-![Schematics](../schematics_pmos.png)
+![Schematics](schematics_pmos.png)
 
 
 Pinout of the PMOS : 
 
-![](../IRF9Z34-Pinout.jpg)
+![](IRF9Z34-Pinout.jpg)
 
 The magnet is moving with a delay of 0.3 between each coil activation. On the small board from PEMi Tech.
 
@@ -55,7 +55,7 @@ When i crank the power up (10V and the coils draw about 1A), the magnet is movin
 
 From what i calculated, with 10V and 1A, the power dissipated by the transistors is 10W.
 
-![../](../junction_pmos.png)
+![](junction_pmos.png)
 
 With this transistor, with a junction to ambient resistance of about 60 °C/W, the temperature should get to more than 600°C lol   
 
@@ -74,14 +74,14 @@ In order to get a proper transistor that can handle the power, i need to know th
 
 I compute the lenght of the spiral with the archimedean spiral formula on a website [https://www.omnicalculator.com/math/spiral-length](https://www.omnicalculator.com/math/spiral-length):
 
-![../](../spiral_len.png)
+![](spiral_len.png)
 
 We have a lenght of `78.697` cm for the spiral.
 
 I can now compute the approximate resistance with an online calculator [https://www.allaboutcircuits.com/tools/trace-resistance-calculator/](https://www.allaboutcircuits.com/tools/trace-resistance-calculator/)
 
 
-![../](../spiral_res.png)
+![](spiral_res.png)
 
 
 The resistance is about `1.1 ohm`. Taking the via and traces coming to the coil into account, i can approximate the resistance to maximum `10 ohms` and minimum `1 ohm`.

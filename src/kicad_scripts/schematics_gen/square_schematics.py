@@ -287,9 +287,7 @@ class ComponentMatrixMaker:
 
 
 if __name__ == "__main__":
-    # schematics_filename = input("Path to a schematic with a LED in it (called DSOMETHING): ")
     in_file = out_file = "../test_project/test_project.kicad_sch"
-    # out_file = "test_project/test_project2.kicad_sch"
 
     cmm = ComponentMatrixMaker(
         schematics_filename=in_file,
@@ -298,4 +296,4 @@ if __name__ == "__main__":
         size=(16, 16),
     )
 
-    cmm.save_to_schematics(save_to=out_file)  # Save to original
+    cmm.save_to_schematics(save_to=out_file)

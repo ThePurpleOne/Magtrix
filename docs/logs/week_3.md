@@ -9,7 +9,7 @@ Date : 28/05/2024 - 31/05/2024
 
 I've made a simple schematics and mounted it on a breadboard to test the coils.
 
-![Schematics](../schematics.png)
+![Schematics](schematics.png)
 
 
 I mounted it with some 2N7000 Q1 N-Channel MOSFETs, controlled via a Raspberry Pi Pico.
@@ -68,7 +68,7 @@ I chose the MDD50N03D N-Channel MOSFETs:
 - 30 V drain-source voltage
 
 
-![alt text](../mosfet_current_vgs.png)
+![alt text](mosfet_current_vgs.png)
 
 With a VGS of 3.3V outputed by the, we can obtain around 20 Amps of current with 0 ohm resistance...
 

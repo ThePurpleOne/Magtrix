@@ -1,131 +1,179 @@
-%% Tex spellcheck = fr_FR
-\chapter{Chapter 3 : GPS Overview}
+%% Tex spellcheck
+% Maybe put this as Chapter 2
 
-In this chapter, we will explore the \gls{gps} system, its history, its architecture, the technologies involved, the signals it uses. We will explore the different frequency bands and codes used by the system. However the actual explanation of how the system actually works will be done in the next chapters.
+% Write in English.
+\chapter{Chapter 3 : Simulations}
 
-\section{Brief history}
+In this chapter, we will present the different simulations that were done to test the directivity and force of different coil shapes. There's is a wide variety diferrent software that can be used to simulate magnetic fields. I found Python scripting to be more versatile and easier to get the results I wanted.
 
-The \gls{gps} system was developed by the United States Department of Defense and became fully operational in 1995. It was created to provide a precise and continuous navigation system for the military. The system was opened to civilian use in the 1980s and has since become a global utility. It was the first \gls{gnss} to be developed and is still the most widely used and supported by the majority of devices.
+The goal of these simulations is to determine if one shape is better than an other and if the magnetic field is strong enough to move a magnet. The simulations only take into account a fixed current of 1A and a number of turns in a determined area. We only really want the magnetic field in the X and Y direction as we will only move the magnet in a 2D space. But we should keep in mind that the Z direction might add some friction.
 
-\section{System architecture}
+We'll do out calculations with a 6x6x6 cubic magnet with a magnetic field strength of 1.29T and a magnet weight of 1.6416 grams. We'll consider a friction coefficient of 0.2 for the magnet on the surface of the PCB.
 
-The \gls{gps} system consists of three segments:
+In order to calculate the force of the magnetic field on the magnet, we'll need to compute the magnetic moment of a specific magnet, we need to know the volume of the magnet and the residual magnetism.
+
 \begin{itemize}
-	\item The user segment
-	\item The space segment
-	\item The control segment
+	\item Residual magnetism: \( B_r = 1.29 \, \text{T} \)
+	\item Side length of the cubic magnet: \( 6 \, \text{mm} = 0.006 \, \text{m} \)
 \end{itemize}
 
+The volume \( V \) of the cubic magnet is calculated as:
+\[
+	V = (\text{Side length})^3 = (0.006 \, \text{m})^3 = 2.16 \times 10^{-7} \, \text{m}^3
+\]
 
-\subsection{User segment}
+The magnetic moment \( m \) is given by:
+\[
+	m = B_r \cdot V
+\]
+\[
+	m = 1.29 \, \text{T} \times 2.16 \times 10^{-7} \, \text{m}^3
+\]
+\[
+	m = 2.78 \times 10^{-7} \, \text{A} \cdot \text{m}^2
+\]
 
-The user segment is composed of the receivers that are used to determine the position, velocity and time. These receivers are used in a wide variety of applications, including aviation, agriculture, construction, maritime, mining, public safety, transportation, etc.
 
-\newpage
-
-\subsection{Control segment}
-
-The control segment \footcite{noauthor_gpsgov_nodate} is composed of a network of ground facilities that are used to monitor and control the \gls{gps} satellites. These facilities are used to track the satellites, upload updated navigation data, and ensure the overall health of the satellite constellation. They might
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\linewidth]{gps_control_segment.png}
-	\caption[GPS Control segment]{World map of ground facilities of the Control segment of GPS Source: www.gps.gov ref: URL04}
-	\label{fig:gps_control_segment}
-\end{figure}
-
-\subsection{Space segment}
-
-The Space segment \footcite{noauthor_gpsgov_nodate} is composed of a constellation of 31 operational sattelites as of 15 Auguest 2023 \footcite{noauthor_list_2024}. Each of these satellite (\gls{sv}) is in a \gls{meo} at an altitude of approximately 20,200 km. These satellites are arranged into six equally-spaced orbital planes, with an inclination of 55 degrees in relation to the equator.
+\section{Linear coil}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{gps_constellation.jpg}
-	\caption[GPS Satellite constellation]{GPS constellation Source:www.gps.gov ref: URL01}
-	\label{fig:gps_constellation}
+	\includegraphics[width=0.8\linewidth]{simu_linear_coil.png}
+	\caption[Simulation of a magnetic field in a simple wire]{Simulation of a simple wire in a 10mm x 10mm x 5mm zone, with a current of 1A}
+	\label{fig:simu_simple_wire}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{gps_planes.png}
-	\caption[GPS Orbital planes]{GPS Orbital planes Source:www.navcen.uscg.gov ref: URL02}
-	\label{fig:gps_planes}
-\end{figure}
+As we can observe, the magnetic field is weak and gets weaker as we move away from the wire. We'll take a middle value of 8 uT at around 3mm from the wire.
 
-Each of these \gls{sv} are placed in a Sub-Geostationary orbit, making them rotate two times a around earth each day. These \gls{sv} are placed in such a way that at any time, anywhere on Earth, there are at least \textbf{six} of them visible with an average of \textbf{nine} visible in the sky. Note that these numbers are acheived with the current constellation, but a minimum constellation of 24 sattelites is required for the system to work.
-
-There have been five main satellite models developed for the \gls{gps} system, each with different capabilities and improvements over the previous
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\linewidth]{gps_satellites.png}
-	\caption[GPS Satellites generations]{Current and Future Satellite Generations Source: www.gps.gov ref: URL03}
-	\label{fig:gps_satellites}
-\end{figure}
-
-\pagebreak
-
-\section{Basic GPS principle}
-
-The \gls{gps} constellation broadcasts signals constantly to the Earth. These signals are used by receivers to determine a position, velocity and time. Time is given as a direct value but position is computed using a process called \textbf{trilateration}. This process is based on the time it takes for the signals to travel from the satellites to the receiver and the known position of the satellites (Given in the broadcast messages). We'll explain things from a single bit data to the frames messages to the end user position.
-% TODO: CITE NEXT
-
-
-\section{Satellite hardware}
-
-Each \gls{gps} satellite is equipped with \textbf{four} atomic clocks, two rubidium and two cesium. These atomic clocks allow us to generate a \textbf{Fondamental Frequency} ($ F0 $) of 10.23 MHz. This frequency is then multiplied to generate the \textbf{L1}, \textbf{L2} and \textbf{L5} frequencies.
-
-
-\section{Signals and frequencies}
-
-\subsection{Frequency bands}
-
-As mentionned earlier, the \gls{gps} system broadcasts three signals, each on a different frequency band. These bands are \textbf{L1}, \textbf{L2} and \textbf{L5}.
-% List
+Given data:
 \begin{itemize}
-	\item The \textbf{L1} band, centered at \textbf{1575.42} MHz ($F = 154 \cdot F0 $).
-	\item The \textbf{L2} band, centered at \textbf{1227.60} MHz ($F = 120 \cdot F0 $).
-	\item The \textbf{L5} band, centered at \textbf{1176.45} MHz ($F = 115 \cdot F0 $).
+	\item Magnetic flux density of the external field: \( B = 8 \, \mu\text{T} = 8 \times 10^{-6} \text{ T} \)
+	\item Magnetic moment: \( m = 2.78 \times 10^{-7} \text{ A} \cdot \text{m}^2 \)
+	\item Magnet weight: \( m_{\text{weight}} = 1.6416 \text{ g} = 0.0016416 \text{ kg} \)
+	\item Coefficient of friction: \( \mu = 0.2 \)
+	\item Acceleration due to gravity: \( g = 9.81 \text{ m/s}^2 \)
+	\item Angle between magnetic moment and external field: \( \theta = 90^\circ \), so \( \sin(\theta) = 1 \)
 \end{itemize}
 
-\subsection{L1 Codes}
+Calculate the Magnetic Force
 
-Four different codes are sent on the \textbf{L1} band, two of them are used for civilian use, the \textbf{C/A} and \textbf{P(Y)} (Precision) codes.
-One of them is reserved for the military, the \textbf{M-code}.
-The last one is an evolution of the L1 signal : the \textbf{L1C}. This signal is designed to be interoperable with other \gls{gnss} systems like Galileo.
+\[
+	F_{\text{mag}} = m \cdot B \cdot \sin(\theta)
+\]
+
+\[
+	F_{\text{mag}} = 2.78 \times 10^{-7} \, \text{A} \cdot \text{m}^2 \times 8 \times 10^{-6} \, \text{T}
+\]
+
+\[
+	F_{\text{mag}} = 2.22 \times 10^{-12} \text{ N}
+\]
+
+Calculate the Friction Force
+
+\[
+	F_{\text{friction}} = \mu \cdot m_{\text{weight}} \cdot g
+\]
+
+\[
+	F_{\text{friction}} = 0.2 \times 0.0016416 \text{ kg} \times 9.81 \text{ m/s}^2
+\]
+
+\[
+	F_{\text{friction}} \approx 0.0032 \text{ N}
+\]
+
+Calculate the Total Force
+
+\[
+	F_{\text{total}} = F_{\text{mag}} - F_{\text{friction}}
+\]
+
+\[
+	F_{\text{total}} = 2.22 \times 10^{-12} \text{ N} - 0.0032 \text{ N}
+\]
+
+\[
+	F_{\text{total}} \approx -0.0032 \text{ N}
+\]
 
 
-\subsection{L2 Codes}
-
-The \textbf{L2} band is used to send two different code, the \textbf{L2 CM} and the \textbf{L2 CL} codes. These are mostly used for dual-frequency receivers to remove the ionospheric delay. This works by taking the difference between the two signals and by knowing the actual speed of each frequency in the same medium.
-
-\subsection{L5 Codes}
-
-The \textbf{L5} band is the third civilian signal \footcite{noauthor_gps_nodate}, it has been introduced to meet demanding requirements for safety-of-life transportation. It is provided as a future proof signal for aviation use. Combined with the \gls{ca} code, it provides accuracy and robustness via ionospheric correction and redundancy.
-
-This code is given as a new way for aviation to increase capacity and fuel efficiency within \gls{usa} airspace, railroads, highways and waterways.
 
 
-\section{PRN code generation}
-
-Each satellite sending gls{ca} code is allocated a unique \gls{prn} code, this code is used to identify the satellite and to allow the receiver to distinguish between the signals of different satellites. The \gls{prn} code is a \textbf{Gold code} that is generated by a \textbf{Linear Feedback Shift Register} (LFSR). This code is a pseudo-random sequence of 1023 bits that repeats every millisecond. This code is then modulated with the carrier frequency to generate the signal that is broadcasted by the satellite.
-
-Each \gls{sv} is assigned a unique identifier from which a \gls{prn} can be generated. As explained in \ref{fig:prn_generator} figure, each ID is correspond to a pair of "taps", these taps are the bit positions in the polynomial generator. There is 2 polynomial generator, used together to generate the \gls{prn} code.
-
-The generated codes are \textbf{Gold codes} or \textbf{Gold sequences} so they have a small cross-correlation between them. This means that the receiver can easily distinguish between the signals of different satellites.
+\section{Circular or spiral coil}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{prn_generator.png}
-	\caption[PRN code generators]{PRN code generators Source: https://i.stack.imgur.com ref: URL013}
-	\label{fig:prn_generator}
+	\includegraphics[width=0.8\linewidth]{simu_circular.png}
+	\caption[Simulation the magnetic field in a spiral coil]{Simulation the magnetic field in a spiral coil with 20 turns for a total of 10mm diameter, with a current of 1A}
+	\label{fig:simu_spiral}
 \end{figure}
 
+We'll take a middle value of 50 uT at around 3mm from the wire.
+
+Given data:
+\begin{itemize}
+	\item Magnetic flux density of the external field: \( B = 50 \, \mu\text{T} = 50 \times 10^{-6} \text{ T} \)
+	\item Magnetic moment: \( m = 2.78 \times 10^{-7} \text{ A} \cdot \text{m}^2 \)
+	\item Magnet weight: \( m_{\text{weight}} = 1.6416 \text{ g} = 0.0016416 \text{ kg} \)
+	\item Coefficient of friction: \( \mu = 0.2 \)
+	\item Acceleration due to gravity: \( g = 9.81 \text{ m/s}^2 \)
+	\item Angle between magnetic moment and external field: \( \theta = 90^\circ \), so \( \sin(\theta) = 1 \)
+\end{itemize}
+
+Calculate the Magnetic Force
+
+\[
+	F_{\text{mag}} = m \cdot B \cdot \sin(\theta)
+\]
+
+\[
+	F_{\text{mag}} = 2.78 \times 10^{-7} \, \text{A} \cdot \text{m}^2 \times 50 \times 10^{-6} \, \text{T}
+\]
+
+\[
+	F_{\text{mag}} = 1.39 \times 10^{-10} \text{ N}
+\]
+
+Calculate the Friction Force
+
+\[
+	F_{\text{friction}} = \mu \cdot m_{\text{weight}} \cdot g
+\]
+
+\[
+	F_{\text{friction}} = 0.2 \times 0.0016416 \text{ kg} \times 9.81 \text{ m/s}^2
+\]
+
+\[
+	F_{\text{friction}} \approx 0.0032 \text{ N}
+\]
+
+Calculate the Total Force
+
+\[
+	F_{\text{total}} = F_{\text{mag}} - F_{\text{friction}}
+\]
+
+\[
+	F_{\text{total}} = 1.39 \times 10^{-10} \text{ N} - 0.0032 \text{ N}
+\]
+
+\[
+	F_{\text{total}} \approx -0.0032 \text{ N}
+\]
+
+This means that the magnet is too heavy to move from the middle of the coil. We'll have to increase the magnetic field strength to move the magnet.
 
 
-%\begin{figure}[tbph!]
-%	\centering
-%	\includegraphics[width=0.7\linewidth]{chart}
-%	\caption[Diagramme Truc.]{Diagramme Truc. Source: rapport d'activité 2019 de MonEntrepriseDeStage.}
-%	\label{fig:chart3}
-%\end{figure}
+\section{rectangular coil}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{simu_square_xy.png}
+	\caption[Simulation of the magnetic field of a square coil]{Simulation of the magnetic field of a square coil with 15 turns for an area of 8mm x 8mm, with a current of 1A}
+	\label{fig:simu_square}
+\end{figure}
+
+The forces applied on the magnet seem really weak, i might have issues with my calculations or the friction coefficient. The simulation are not showing what i can really see in real life.

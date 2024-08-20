@@ -28,7 +28,7 @@ Multiple magnets in a 3d printed piece ? rom what
 
 
 # Some papers about 2d XY planar motors
-[Papers directory](../PAPERS/)
+[Papers directory](PAPERS/)
 
 # PCB Specifications
 
@@ -63,6 +63,6 @@ Multiple magnets in a 3d printed piece ? rom what
 
 
 With the `BUK6D120-40EX` transistor, rdson at 250 ohm:
-![RDS ON BUK6D120-40EX](../transistor_rdson.png)
+![RDS ON BUK6D120-40EX](transistor_rdson.png)
 
 
