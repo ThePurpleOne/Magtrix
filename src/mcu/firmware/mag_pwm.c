@@ -20,17 +20,17 @@
 #include "mag_pwm.h"
 
 
-void ws_pwms_init_from_gpios(uint8_t	nb_pwms,
-							 ws_pwm_t** pwms,
-							 uint*		gpios,
-							 uint		freq,
-							 uint		initial_duty)
+void mag_pwms_init_from_gpios(uint8_t	  nb_pwms,
+							  mag_pwm_t** pwms,
+							  uint*		  gpios,
+							  uint		  freq,
+							  uint		  initial_duty)
 {
 	for (int i = 0; i < nb_pwms; i++)
-		ws_pwm_init_from_gpio(pwms[i], gpios[i], freq, initial_duty);
+		mag_pwm_init_from_gpio(pwms[i], gpios[i], freq, initial_duty);
 }
 
-void ws_pwm_init_from_gpio(ws_pwm_t* pwm, uint gpio, uint freq, float duty)
+void mag_pwm_init_from_gpio(mag_pwm_t* pwm, uint gpio, uint freq, float duty)
 {
 	pwm->gpio = gpio;
 
@@ -38,7 +38,7 @@ void ws_pwm_init_from_gpio(ws_pwm_t* pwm, uint gpio, uint freq, float duty)
 	uint slice = pwm_gpio_to_slice_num(gpio);
 	uint chan  = pwm_gpio_to_channel(gpio);
 
-	ws_pwm_init(pwm, slice, chan, freq, duty);
+	mag_pwm_init(pwm, slice, chan, freq, duty);
 }
 
 
@@ -48,9 +48,8 @@ void ws_pwm_init_from_gpio(ws_pwm_t* pwm, uint gpio, uint freq, float duty)
  * This will chose the best clock divider to get the desired frequency
  * and set the wrap value accordingly
  * while still having the maximum resolution for the duty cycle
- *
  */
-void ws_pwm_init(ws_pwm_t* pwm, uint slice, uint chan, uint32_t freq, float initial_duty)
+void mag_pwm_init(mag_pwm_t* pwm, uint slice, uint chan, uint32_t freq, float initial_duty)
 {
 	pwm->slice = slice;
 	pwm->chan  = chan;
@@ -68,13 +67,13 @@ void ws_pwm_init(ws_pwm_t* pwm, uint slice, uint chan, uint32_t freq, float init
 
 	pwm_set_clkdiv_int_frac(slice, div_16 / 16, div_16 & 0x0F);
 	pwm_set_wrap(slice, wrap);
-	ws_pwm_set_duty(pwm, initial_duty);
+	mag_pwm_set_duty(pwm, initial_duty);
 }
 
 /**
  * Set the PWM duty cycle from a value between 0 and 1
  */
-void ws_pwm_set_duty(ws_pwm_t* pwm, float duty)
+void mag_pwm_set_duty(mag_pwm_t* pwm, float duty)
 {
 	if (duty > 1)
 		duty = 1.0;
@@ -89,13 +88,19 @@ void ws_pwm_set_duty(ws_pwm_t* pwm, float duty)
 }
 
 
-void ws_pwm_enable(ws_pwm_t* pwm)
+void mag_pwm_enable(mag_pwm_t* pwm)
 {
 	pwm_set_enabled(pwm->slice, true);
 }
 
-void ws_pwms_enable(uint8_t nb_pwms, ws_pwm_t** pwms)
+void mag_pwms_enable(uint8_t nb_pwms, mag_pwm_t** pwms)
 {
 	for (int i = 0; i < nb_pwms; i++)
-		ws_pwm_enable(pwms[i]);
+		mag_pwm_enable(pwms[i]);
+}
+
+
+void mag_pwm_power_col(mag_pwm_t* pwm)
+{
+	mag_pwm_set_duty(pwm, 1.0);
 }
