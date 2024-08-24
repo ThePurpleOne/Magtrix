@@ -19,8 +19,7 @@ set(TARGET_NAME firmware_magtrix)
 add_executable(${TARGET_NAME} 
 firmware_magtrix.c
 mag_pwm.c
-magtrix.c
-mag_sr.c)
+magtrix.c)
 
 target_include_directories(firmware_magtrix PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 

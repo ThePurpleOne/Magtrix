@@ -35,7 +35,6 @@
 // ---
 #include "FreeRTOS.h"
 #include "mag_pwm.h"
-#include "mag_sr.h"
 #include "queue.h"
 #include "task.h"
 // ---
@@ -66,11 +65,26 @@ typedef enum
 const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3,	PWM_4,	PWM_5, PWM_6,
 									   PWM_7, PWM_8, PWM_9, PWM_10, PWM_11, PWM_12 };
 
-// ! SHIFT REGISTER
-#define SR_DATA_PIN	  19
-#define SR_CLOCK_PIN  18
-#define SR_LATCH_PIN  17
-#define SR_ENABLE_PIN 21
+
+#define NB_ROWS 12
+typedef enum
+{
+	ROW_0  = 16,
+	ROW_1  = 17,
+	ROW_2  = 24,
+	ROW_3  = 25,
+	ROW_4  = 26,
+	ROW_5  = 27,
+	ROW_6  = 28,
+	ROW_7  = 29,
+	ROW_8  = 18,
+	ROW_9  = 19,
+	ROW_10 = 21,
+	ROW_11 = 23
+} col_pins_t;
+col_pins_t rows_gpios[NB_ROWS]
+  = { ROW_0, ROW_1, ROW_2, ROW_3, ROW_4, ROW_5, ROW_6, ROW_7, ROW_8, ROW_9, ROW_10, ROW_11 };
+
 
 // ! TASKS
 typedef struct
@@ -78,22 +92,20 @@ typedef struct
 	int frequency; // Hz
 } task_arg;
 
-typedef struct
-{
-	int		  frequency; // Hz
-	mag_sr_t* shift_register;
-} sr_args_t;
 
 typedef struct
 {
-	int		   frequency; // Hz
-	mag_pwm_t* pwms;
-} blink_args_t;
+	int			frequency; // Hz
+	mag_pwm_t*	pwms;
+	col_pins_t* rows_gpios;
+} coils_args_t;
 
 
 void t_debug(void* p);
-void t_blink(void* p);
-void t_shift_register(void* p);
+void t_coils(void* p);
+
+static void od_gpio_down(uint gpio);
+static void od_gpio_up(uint gpio);
 
 // ! FUNCTIONS
 // ! PWM
@@ -110,18 +122,17 @@ int main()
 		mag_pwm_enable(&pwms[i]);
 	}
 
-	// ! SHIFT REGISTER (ROWS)
-	mag_sr_t sr;
-	bool	 ret;
-	ret = mag_sr_init(&sr, SR_DATA_PIN, SR_CLOCK_PIN, SR_LATCH_PIN, SR_ENABLE_PIN);
-	if (!ret)
-	{
-		while (1)
-		{
-			printf("Error initializing shift register\n");
-			sleep_ms(1000);
-		}
-	}
+	// ! SET GPIOS HIGH (transistors disabled)
+	for (uint8_t i = 0; i < NB_ROWS; i++)
+		od_gpio_up(rows_gpios[i]);
+
+
+	TaskHandle_t coils_handle;
+	UBaseType_t	 coils_affinity_mask;
+	coils_args_t arg_coils = { .frequency = 1, .pwms = pwms, .rows_gpios = rows_gpios };
+	xTaskCreate(t_coils, "COILS", 1024, &arg_coils, 10, &coils_handle);
+	coils_affinity_mask = 0x02;
+	vTaskCoreAffinitySet(coils_handle, coils_affinity_mask);
 
 
 	TaskHandle_t debug_handle;
@@ -131,20 +142,6 @@ int main()
 	spi_write_affinity_mask = 0x01;
 	vTaskCoreAffinitySet(debug_handle, spi_write_affinity_mask);
 
-
-	TaskHandle_t sr_handle;
-	UBaseType_t	 sr_affinity_mask;
-	sr_args_t	 arg_sr = { .frequency = 1, .shift_register = &sr };
-	xTaskCreate(t_shift_register, "SHIFT", 512, &arg_sr, 5, &sr_handle);
-	sr_affinity_mask = 0x01;
-	vTaskCoreAffinitySet(sr_handle, sr_affinity_mask);
-
-	TaskHandle_t blink_handle;
-	UBaseType_t	 blink_affinity_mask;
-	blink_args_t arg_blink = { .frequency = 5, .pwms = pwms };
-	xTaskCreate(t_blink, "BLINK", 1024, &arg_blink, 10, &blink_handle);
-	blink_affinity_mask = 0x02;
-	vTaskCoreAffinitySet(blink_handle, blink_affinity_mask);
 
 	vTaskStartScheduler();
 
@@ -184,39 +181,68 @@ void t_debug(void* p)
 	}
 }
 
-void t_shift_register(void* p)
+void t_coils(void* p)
 {
-	sr_args_t* a	  = (sr_args_t*)p;
-	uint64_t   period = 1000 / a->frequency;
-	mag_sr_t*  sr	  = a->shift_register;
+	coils_args_t* a			 = (coils_args_t*)p;
+	uint64_t	  period	 = 1000 / a->frequency;
+	mag_pwm_t*	  pwms		 = a->pwms;
+	col_pins_t*	  rows_gpios = a->rows_gpios;
+	uint8_t		  index_col	 = 0;
+	uint8_t		  index_row	 = 0;
+
 
 	while (true)
 	{
-		mag_sr_write(sr, 0x5555);
-		printf("t_shift_register : core %d\n", get_core_num());
+		// ! Power the row
+		// for (uint8_t i = 0; i < NB_ROWS; i++)
+		//	od_gpio_up(rows_gpios[i]);
+
+		od_gpio_down(rows_gpios[0]);
+
+		// Turn off every coils
+		for (uint8_t i = 0; i < NB_PWMS; i++)
+			mag_pwm_set_duty(&pwms[i], 0.0);
+
+		// ! Power the coil
+		mag_pwm_set_duty(&pwms[1], 0.1);
+
+
+		if (index_col >= NB_PWMS - 1)
+			index_col = 0;
+		else
+			index_col++;
+
+		if (index_row >= NB_ROWS - 1)
+			index_row = 0;
+		else
+			index_row++;
+
 		vTaskDelay(period * portTICK_PERIOD_MS);
+
+		printf("t_coils : core %d\n", get_core_num());
 	}
 }
 
-void t_blink(void* p)
+
+static void od_gpio_down(uint gpio)
 {
-	blink_args_t* a		 = (blink_args_t*)p;
-	uint64_t	  period = 1000 / a->frequency;
-	mag_pwm_t*	  pwms	 = a->pwms;
+	// Set the GPIO as output
+	gpio_init(gpio);
+	gpio_set_dir(gpio, GPIO_OUT);
+	gpio_put(gpio, 0);
+}
 
-	// ! Setup PWM
-	mag_pwm_enable(pwms);
+/**
+ * There is no open drain mode
+ * on the RP2040 so we just set the GPIO as input
+ * to simulate the open drain mode
+ */
+static void od_gpio_up(uint gpio)
+{
+	// ? Set the GPIO as input
+	gpio_init(gpio);
+	gpio_set_dir(gpio, GPIO_IN);
 
-	while (true)
-	{
-		for (uint8_t i = 0; i < NB_PWMS; i += 2)
-			mag_pwm_set_duty(&pwms[i], 0.1);
-		vTaskDelay(period * portTICK_PERIOD_MS);
-
-		// for (uint8_t i = 1; i < NB_PWMS; i++)
-		//	mag_pwm_set_duty(&pwms[i], 0.0);
-		vTaskDelay(period * portTICK_PERIOD_MS);
-
-		printf("t_blink : core %d\n", get_core_num());
-	}
+	// ? disable the pulls
+	gpio_set_pulls(gpio, false, false);
 }

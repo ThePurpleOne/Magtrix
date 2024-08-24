@@ -10,7 +10,6 @@
 #include "magtrix.h"
 
 #include "mag_pwm.h"
-#include "mag_sr.h"
 
 // This is a matrix representing the coil matrix
 // with the actual row and column to activate the coils
@@ -280,18 +279,18 @@ static coord_t get_coil(uint8_t x, uint8_t y)
 	return coord;
 }
 
-bool power_a_coil(mag_sr_t* sr, mag_pwm_t* pwms, uint8_t x, uint8_t y)
-{
-	coord_t coord = get_coil(x, y);
+// bool power_a_coil(mag_sr_t* sr, mag_pwm_t* pwms, uint8_t x, uint8_t y)
+//{
+//	coord_t coord = get_coil(x, y);
 
-	if (coord.err != OK)
-		return false;
+//	if (coord.err != OK)
+//		return false;
 
-	// ! Power the row with the shift register
-	mag_sr_power_row(sr, coord.row);
+//	// ! Power the row with the shift register
+//	mag_sr_power_row(sr, coord.row);
 
-	// ! Power the column with the pwm
-	mag_pwm_set_duty(&pwms[coord.col], 1.0);
+//	// ! Power the column with the pwm
+//	mag_pwm_set_duty(&pwms[coord.col], 1.0);
 
-	return true;
-}
+//	return true;
+//}

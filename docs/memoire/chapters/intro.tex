@@ -9,12 +9,12 @@ Our initial project concept was to design and implement a \gls{pcb}-based chessb
 
 Tic-Tac-Toe is a simple game played on a 3x3 grid, where two players take turns placing their pieces on the board. The objective is to be the first to align three pieces in a row, column, or diagonal. Our implementation of this game eliminates the need for physical interaction with the board. The pieces, embedded with magnets, are moved by electromagnets that are etched onto the \gls{pcb}.
 
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.5\linewidth]{tic_tac_toe.png}
-%	\caption[Magnetic field]{Magnetic field}
-%	\label{fig:tictactoe_game}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{tic_tac_toe.png}
+	\caption[Tic Tac Toe example]{Tic Tac Toe example}
+	\label{fig:tictactoe_game}
+\end{figure}
 
 Players interact solely through a web application, which displays the game board and enables them to make their moves. This application communicates with a backend, which in turn connects to a microcontroller responsible for controlling the electromagnets. The microcontroller activates the coils in a specific sequence to move the pieces on the board.
 
