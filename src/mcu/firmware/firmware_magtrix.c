@@ -43,8 +43,9 @@
 #define LED_STATUS_PIN 25
 
 // ! PWM GENERATORS
-#define PWM_FREQ  25000 // 25 Khz prefered in datasheet
-#define NB_PWMS	  13
+#define PWM_FREQ 25000 // 25 Khz prefered in datasheet
+// #define NB_PWMS	  13
+#define NB_PWMS	  6
 #define BASE_DUTY 0.0
 typedef enum
 {
@@ -62,8 +63,9 @@ typedef enum
 	PWM_11 = 11,
 	PWM_12 = 12,
 } PWM_PINS;
-const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3,	PWM_4,	PWM_5, PWM_6,
-									   PWM_7, PWM_8, PWM_9, PWM_10, PWM_11, PWM_12 };
+// const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3,	PWM_4,	PWM_5, PWM_6,
+//									   PWM_7, PWM_8, PWM_9, PWM_10, PWM_11, PWM_12 };
+const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3, PWM_4, PWM_5 };
 
 
 #define NB_ROWS 12
@@ -130,17 +132,17 @@ int main()
 	TaskHandle_t coils_handle;
 	UBaseType_t	 coils_affinity_mask;
 	coils_args_t arg_coils = { .frequency = 1, .pwms = pwms, .rows_gpios = rows_gpios };
-	xTaskCreate(t_coils, "COILS", 1024, &arg_coils, 10, &coils_handle);
+	xTaskCreate(t_coils, "COILS", 1024 * 10, &arg_coils, 10, &coils_handle);
 	coils_affinity_mask = 0x02;
 	vTaskCoreAffinitySet(coils_handle, coils_affinity_mask);
 
 
-	TaskHandle_t debug_handle;
-	UBaseType_t	 spi_write_affinity_mask;
-	task_arg	 arg_debug = { .frequency = 50 };
-	xTaskCreate(t_debug, "DEBUG", 512, &arg_debug, 1, &debug_handle);
-	spi_write_affinity_mask = 0x01;
-	vTaskCoreAffinitySet(debug_handle, spi_write_affinity_mask);
+	// TaskHandle_t debug_handle;
+	// UBaseType_t	 spi_write_affinity_mask;
+	// task_arg	 arg_debug = { .frequency = 50 };
+	// xTaskCreate(t_debug, "DEBUG", 512, &arg_debug, 1, &debug_handle);
+	// spi_write_affinity_mask = 0x01;
+	// vTaskCoreAffinitySet(debug_handle, spi_write_affinity_mask);
 
 
 	vTaskStartScheduler();
@@ -154,32 +156,16 @@ void vApplicationStackOverflowHook(TaskHandle_t xTask, char* pcTaskName)
 {
 	(void)xTask;
 	(void)pcTaskName;
-
-	gpio_put(LED_STATUS_PIN, 1);
-	configASSERT(0);
+	printf("Stack overflow in task %s\n", pcTaskName);
 }
 
 // Malloc failed hook
 void vApplicationMallocFailedHook(void)
 {
 	gpio_put(LED_STATUS_PIN, 1);
-	configASSERT(0);
+	printf("Malloc failed\n");
 }
 
-/**
- * @brief Just printing some debugging informations
- */
-void t_debug(void* p)
-{
-	task_arg* a		 = (task_arg*)p;
-	uint64_t  period = 1000 / a->frequency;
-
-	while (true)
-	{
-		printf("t_debug : core %d\n", get_core_num());
-		vTaskDelay(period * portTICK_PERIOD_MS);
-	}
-}
 
 void t_coils(void* p)
 {
@@ -197,29 +183,28 @@ void t_coils(void* p)
 		// for (uint8_t i = 0; i < NB_ROWS; i++)
 		//	od_gpio_up(rows_gpios[i]);
 
-		od_gpio_down(rows_gpios[0]);
+		// od_gpio_down(rows_gpios[0]);
 
 		// Turn off every coils
 		for (uint8_t i = 0; i < NB_PWMS; i++)
 			mag_pwm_set_duty(&pwms[i], 0.0);
 
 		// ! Power the coil
-		mag_pwm_set_duty(&pwms[1], 0.1);
-
+		mag_pwm_set_duty(&pwms[0], 0.2);
 
 		if (index_col >= NB_PWMS - 1)
 			index_col = 0;
 		else
 			index_col++;
 
-		if (index_row >= NB_ROWS - 1)
-			index_row = 0;
-		else
-			index_row++;
+		// if (index_row >= NB_ROWS - 1)
+		//	index_row = 0;
+		// else
+		//	index_row++;
 
 		vTaskDelay(period * portTICK_PERIOD_MS);
 
-		printf("t_coils : core %d\n", get_core_num());
+		// printf("t_coils : core %d\n", get_core_num());
 	}
 }
 
