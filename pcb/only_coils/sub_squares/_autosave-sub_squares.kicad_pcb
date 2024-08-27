@@ -7009,7 +7009,7 @@
 	(footprint "sub_coils:top_coil"
 		(layer "F.Cu")
 		(uuid "91a16e06-e1fb-4b6b-889e-64735b60c874")
-		(at 86.285025 47.471317 -90)
+		(at 40 87.75 -90)
 		(descr "Top Coil")
 		(property "Reference" "L5"
 			(at 0 -2 90)
@@ -11504,7 +11504,7 @@
 			(xy 141.46934 84.305632) (xy 141.46934 34.305632)
 		)
 		(height 4)
-		(gr_text "50,0000 mm"
+		(gr_text "1968,5039 mils"
 			(at 144.31934 59.305632 90)
 			(layer "Cmts.User")
 			(uuid "26de97b8-e94a-46e6-bdf4-5669eb2412d5")
@@ -11537,7 +11537,7 @@
 			(xy 141.46934 84.305632) (xy 71.46934 84.305632)
 		)
 		(height -4)
-		(gr_text "70,0000 mm"
+		(gr_text "2755,9055 mils"
 			(at 106.46934 87.155632 0)
 			(layer "Cmts.User")
 			(uuid "c403dda6-8421-4eff-a222-f3fac667aef7")
