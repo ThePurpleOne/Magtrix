@@ -59,10 +59,10 @@ const Board = () => {
 	const handle_click = (index) => {
 
 		// If waiting for ACK
-		if (is_waiting === true) {
-			console.log("Waiting for ACK");
-			return;
-		}
+		//if (is_waiting === true) {
+		//	console.log("Waiting for ACK");
+		//	return;
+		//}
 
 		// If game already finished
 		if(game_state !== GAME_STATES.X_TURN && game_state !== GAME_STATES.O_TURN){
