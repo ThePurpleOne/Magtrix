@@ -43,9 +43,8 @@
 #define LED_STATUS_PIN 25
 
 // ! PWM GENERATORS
-#define PWM_FREQ 25000 // 25 Khz prefered in datasheet
-// #define NB_PWMS	  13
-#define NB_PWMS	  6
+#define PWM_FREQ  25000 // 25 Khz prefered in datasheet
+#define NB_PWMS	  13
 #define BASE_DUTY 0.0
 typedef enum
 {
@@ -63,10 +62,8 @@ typedef enum
 	PWM_11 = 11,
 	PWM_12 = 12,
 } PWM_PINS;
-// const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3,	PWM_4,	PWM_5, PWM_6,
-//									   PWM_7, PWM_8, PWM_9, PWM_10, PWM_11, PWM_12 };
-const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3, PWM_4, PWM_5 };
-
+const PWM_PINS pwms_gpios[NB_PWMS] = { PWM_0, PWM_1, PWM_2, PWM_3,	PWM_4,	PWM_5, PWM_6,
+									   PWM_7, PWM_8, PWM_9, PWM_10, PWM_11, PWM_12 };
 
 #define NB_ROWS 12
 typedef enum
@@ -87,7 +84,6 @@ typedef enum
 col_pins_t rows_gpios[NB_ROWS]
   = { ROW_0, ROW_1, ROW_2, ROW_3, ROW_4, ROW_5, ROW_6, ROW_7, ROW_8, ROW_9, ROW_10, ROW_11 };
 
-
 // ! TASKS
 typedef struct
 {
@@ -102,12 +98,24 @@ typedef struct
 	col_pins_t* rows_gpios;
 } coils_args_t;
 
+typedef struct
+{
+	uint8_t x;
+	uint8_t y;
+} coords_t;
 
-void t_debug(void* p);
 void t_coils(void* p);
+void t_serial(void* p);
 
 static void od_gpio_down(uint gpio);
 static void od_gpio_up(uint gpio);
+uint8_t		read_char(void);
+
+TaskHandle_t g_handle_serial_task_to_notify;
+
+
+// ! GLOBALS
+QueueHandle_t coils_queue;
 
 // ! FUNCTIONS
 // ! PWM
@@ -115,6 +123,9 @@ int main()
 {
 	stdio_init_all();
 	sleep_ms(2000);
+
+	// Allocate the queue
+	coils_queue = xQueueCreate(2, sizeof(coords_t));
 
 	// ! PWM (COLS)
 	mag_pwm_t pwms[NB_PWMS];
@@ -124,9 +135,9 @@ int main()
 		mag_pwm_enable(&pwms[i]);
 	}
 
-	// ! SET GPIOS HIGH (transistors disabled)
-	for (uint8_t i = 0; i < NB_ROWS; i++)
-		od_gpio_up(rows_gpios[i]);
+	//// ! SET GPIOS HIGH (transistors disabled)
+	// for (uint8_t i = 0; i < NB_ROWS; i++)
+	//	od_gpio_up(rows_gpios[i]);
 
 
 	TaskHandle_t coils_handle;
@@ -137,13 +148,15 @@ int main()
 	vTaskCoreAffinitySet(coils_handle, coils_affinity_mask);
 
 
-	// TaskHandle_t debug_handle;
-	// UBaseType_t	 spi_write_affinity_mask;
-	// task_arg	 arg_debug = { .frequency = 50 };
-	// xTaskCreate(t_debug, "DEBUG", 512, &arg_debug, 1, &debug_handle);
-	// spi_write_affinity_mask = 0x01;
-	// vTaskCoreAffinitySet(debug_handle, spi_write_affinity_mask);
+	TaskHandle_t serial_handle;
+	UBaseType_t	 spi_write_affinity_mask;
+	task_arg	 arg_serial = { .frequency = 50 };
+	xTaskCreate(t_serial, "SERIAL", 1024 * 10, &arg_serial, 1, &serial_handle);
+	spi_write_affinity_mask = 0x01;
+	vTaskCoreAffinitySet(serial_handle, spi_write_affinity_mask);
 
+
+	g_handle_serial_task_to_notify = xTaskGetHandle("SERIAL");
 
 	vTaskStartScheduler();
 
@@ -167,6 +180,60 @@ void vApplicationMallocFailedHook(void)
 }
 
 
+/**
+ * Start byte : 0x02
+ * X coordinate : 0 to 2 in ASCII
+ * Y coordinate : 0 to 2 in ASCII
+ * Stop byte : 0x03
+ */
+void t_serial(void* p)
+{
+	uint8_t start_byte = 0x02;
+	uint8_t stop_byte  = 0x03;
+	uint8_t x, y;
+
+	printf("STARTED SERIAL TASK\n");
+	bool	start = false;
+	uint8_t c;
+	while (true)
+	{
+		// ! Wait for the start byte
+		while (!start)
+		{
+			c = read_char();
+			if (c == start_byte)
+				start = true;
+		}
+		start = false; // for the next iteration
+
+		x = read_char() - 0x30;
+		y = read_char() - 0x30;
+
+		// ! Read the stop byte
+		read_char();
+
+		// Now we need to generate the actual coordinates we'll go through
+		// In order to get to the right values
+		// So we'll need to get determine the best path (going through the buses)
+
+		// ! Send the coordinates to the coils task
+		coords_t coords = { .x = x, .y = y };
+
+		xQueueSend(coils_queue, &coords, portMAX_DELAY);
+
+		uint32_t success;
+
+		success = ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
+		// If = 0 -> Timed out the notification take
+		while (success == 0) // Notified by task
+		{
+			success = ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+			printf("Coil task finished and told serial task\n");
+		}
+	}
+}
+
 void t_coils(void* p)
 {
 	coils_args_t* a			 = (coils_args_t*)p;
@@ -175,25 +242,38 @@ void t_coils(void* p)
 	col_pins_t*	  rows_gpios = a->rows_gpios;
 	uint8_t		  index_col	 = 0;
 	uint8_t		  index_row	 = 0;
-
+	uint8_t		  x			 = 0;
+	uint8_t		  y			 = 0;
+	coords_t	  coords;
 
 	while (true)
 	{
-		// ! Power the row
-		// for (uint8_t i = 0; i < NB_ROWS; i++)
-		//	od_gpio_up(rows_gpios[i]);
+		xQueueReceive(coils_queue, &coords, portMAX_DELAY);
 
-		// od_gpio_down(rows_gpios[0]);
+		printf("Received coords x: %d y: %d\n", coords.x, coords.y);
+
+
+		// 1. Find the closest bus (horizontal hard coded), closest to the goal column
+		// 2. Go to closest row while still being on the bus
+		// 3. Go to the goal column
+		// 4. Go to goal row
+
+
+		// ! Power the row
+		for (uint8_t i = 0; i < NB_ROWS; i++)
+			od_gpio_up(rows_gpios[i]);
+
+		od_gpio_down(rows_gpios[coords.y]);
 
 		// Turn off every coils
 		for (uint8_t i = 0; i < NB_PWMS; i++)
 			mag_pwm_set_duty(&pwms[i], 0.0);
 
 		// ! Power the coil
-		mag_pwm_set_duty(&pwms[0], 0.2);
+		mag_pwm_set_duty(&pwms[coords.x], 0.9);
 
 		if (index_col >= NB_PWMS - 1)
-			index_col = 0;
+			index_col = NB_PWMS - 2;
 		else
 			index_col++;
 
@@ -202,9 +282,9 @@ void t_coils(void* p)
 		// else
 		//	index_row++;
 
-		vTaskDelay(period * portTICK_PERIOD_MS);
+		xTaskNotifyGive(g_handle_serial_task_to_notify);
 
-		// printf("t_coils : core %d\n", get_core_num());
+		vTaskDelay(period * portTICK_PERIOD_MS);
 	}
 }
 
@@ -230,4 +310,20 @@ static void od_gpio_up(uint gpio)
 
 	// ? disable the pulls
 	gpio_set_pulls(gpio, false, false);
+}
+
+
+uint8_t read_char(void)
+{
+	while (1)
+	{
+		uint8_t	 buf[1];
+		uint32_t count = tud_cdc_read(buf, sizeof(buf));
+		if (count)
+			return buf[0];
+		// ! This seems to be necessary in order to have the USB CDC working
+		// ! It's normally sent from a timer setup by the SDK
+		// ! In case it's stuck and the timer is low priority, send it by hand
+		tud_task();
+	}
 }
