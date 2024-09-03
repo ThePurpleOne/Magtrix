@@ -8,14 +8,14 @@ def main():
 
 	START_BYTE = 0x02
 	STOP_BYTE = 0x03
-	x = 1
-	y = 2
+	x = '1'
+	y = '2'
 
-	for i in range(10):
-		print("Sending data")
-		data = [START_BYTE, x + i, y + i, STOP_BYTE]
-		ser.write(data)
-		print("Data sent")
+	#for i in range(10):
+	print("Sending data")
+	data = [START_BYTE, ord(x), ord(y), STOP_BYTE]
+	ser.write(data)
+	print("Data sent")
 
 
 	ser.close()

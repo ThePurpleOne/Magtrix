@@ -104,6 +104,7 @@ typedef struct
 	uint8_t y;
 } coords_t;
 
+
 void t_coils(void* p);
 void t_serial(void* p);
 
@@ -115,7 +116,29 @@ TaskHandle_t g_handle_serial_task_to_notify;
 
 
 // ! GLOBALS
-QueueHandle_t coils_queue;
+QueueHandle_t coils_queue; // Send from serial to coils task
+
+#define PLAYER_1 true
+#define PLAYER_2 false
+
+// These are the cells at which to take the player coins
+// These are hardcoded
+coords_t g_starting_cells_p1[] = {
+	{ 0, 0 },
+	{ 0, 4 },
+	{ 0, 8 },
+	{ 0, 12 },
+};
+uint8_t index_start_p1 = 0;
+
+coords_t g_starting_cells_p2[] = {
+	{ 4, 12 },
+	{ 8, 12 },
+	{ 12, 12 },
+};
+uint8_t index_start_p2 = 0;
+
+bool g_player_turn = PLAYER_1;
 
 // ! FUNCTIONS
 // ! PWM
@@ -218,6 +241,7 @@ void t_serial(void* p)
 
 		// ! Send the coordinates to the coils task
 		coords_t coords = { .x = x, .y = y };
+		// coords_t coords = { .x = 1, .y = 1 };
 
 		xQueueSend(coils_queue, &coords, portMAX_DELAY);
 
@@ -229,8 +253,10 @@ void t_serial(void* p)
 		while (success == 0) // Notified by task
 		{
 			success = ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-			printf("Coil task finished and told serial task\n");
+			// printf("Coil task finished and told serial task\n");
 		}
+
+		printf("Coil move is over, taking hand again\n");
 	}
 }
 
@@ -244,13 +270,35 @@ void t_coils(void* p)
 	uint8_t		  index_row	 = 0;
 	uint8_t		  x			 = 0;
 	uint8_t		  y			 = 0;
-	coords_t	  coords;
+	coords_t	  goal_coords;
+
+	coords_t path_coords[20]; // Max 20 steps
+	uint8_t	 nb_steps = 0;
 
 	while (true)
 	{
-		xQueueReceive(coils_queue, &coords, portMAX_DELAY);
+		xQueueReceive(coils_queue, &goal_coords, portMAX_DELAY);
 
-		printf("Received coords x: %d y: %d\n", coords.x, coords.y);
+		printf("Received goal_coords x: %d y: %d\n", goal_coords.x, goal_coords.y);
+
+		// ! Process the x and y, to be final coil and not actual index
+		// ! Because there is buses
+		uint8_t x = (goal_coords.x * 4) + 4;
+		uint8_t y = (goal_coords.y * 4) + 4;
+
+		// ! Turn on the corresponding LEDs for the end goal
+
+		// ? X
+		for (uint8_t i = 0; i < NB_PWMS; i++)
+			mag_pwm_set_duty(&pwms[i], 0.0);
+
+		mag_pwm_set_duty(&pwms[x], 0.3);
+
+		// ? Y
+		for (uint8_t i = 0; i < NB_ROWS; i++)
+			od_gpio_up(rows_gpios[i]);
+
+		od_gpio_down(rows_gpios[y]);
 
 
 		// 1. Find the closest bus (horizontal hard coded), closest to the goal column
@@ -258,24 +306,119 @@ void t_coils(void* p)
 		// 3. Go to the goal column
 		// 4. Go to goal row
 
+		//// Create a path from start to goal
+		//// ! And fill the path_coords array
+		// if (g_player_turn == PLAYER_1)
+		//{
+		//	// ! Go to the closest bus
+		//	if (x < goal_coords.x)
+		//	{
+		//		// ! Go to the right
+		//		for (uint8_t i = x; i < goal_coords.x; i++)
+		//		{
+		//			path_coords[nb_steps].x = i;
+		//			path_coords[nb_steps].y = y;
+		//			nb_steps++;
+		//		}
+		//	}
+		//	else
+		//	{
+		//		// ! Go to the left
+		//		for (uint8_t i = x; i > goal_coords.x; i--)
+		//		{
+		//			path_coords[nb_steps].x = i;
+		//			path_coords[nb_steps].y = y;
+		//			nb_steps++;
+		//		}
+		//	}
 
-		// ! Power the row
-		for (uint8_t i = 0; i < NB_ROWS; i++)
-			od_gpio_up(rows_gpios[i]);
+		//	// ! Go to the closest row
+		//	if (y < goal_coords.y)
+		//	{
+		//		// ! Go down
+		//		for (uint8_t i = y; i < goal_coords.y; i++)
+		//		{
+		//			path_coords[nb_steps].x = goal_coords.x;
+		//			path_coords[nb_steps].y = i;
+		//			nb_steps++;
+		//		}
+		//	}
+		//	else
+		//	{
+		//		// ! Go up
+		//		for (uint8_t i = y; i > goal_coords.y; i--)
+		//		{
+		//			path_coords[nb_steps].x = goal_coords.x;
+		//			path_coords[nb_steps].y = i;
+		//			nb_steps++;
+		//		}
+		//	}
+		//}
+		// else
+		//{
+		//	// ! Go to the closest bus
+		//	if (x < goal_coords.x)
+		//	{
+		//		// ! Go to the right
+		//		for (uint8_t i = x; i < goal_coords.x; i++)
+		//		{
+		//			path_coords[nb_steps].x = i;
+		//			path_coords[nb_steps].y = y;
+		//			nb_steps++;
+		//		}
+		//	}
+		//	else
+		//	{
+		//		// ! Go to the left
+		//		for (uint8_t i = x; i > goal_coords.x; i--)
+		//		{
+		//			path_coords[nb_steps].x = i;
+		//			path_coords[nb_steps].y = y;
+		//			nb_steps++;
+		//		}
+		//	}
 
-		od_gpio_down(rows_gpios[coords.y]);
+		//	// ! Go to the closest row
+		//	if (y < goal_coords.y)
+		//	{
+		//		// ! Go down (up)
+		//		for (uint8_t i = y; i < goal_coords.y; i++)
+		//		{
+		//			path_coords[nb_steps].x = goal_coords.x;
+		//			path_coords[nb_steps].y = i;
+		//			nb_steps++;
+		//		}
+		//	}
+		//	else
+		//	{
+		//		// ! Go up (down)
+		//		for (uint8_t i = y; i > goal_coords.y; i--)
+		//		{
+		//			path_coords[nb_steps].x = goal_coords.x;
+		//			path_coords[nb_steps].y = i;
+		//			nb_steps++;
+		//		}
+		//	}
+		//}
 
-		// Turn off every coils
-		for (uint8_t i = 0; i < NB_PWMS; i++)
-			mag_pwm_set_duty(&pwms[i], 0.0);
 
-		// ! Power the coil
-		mag_pwm_set_duty(&pwms[coords.x], 0.9);
+		//// ! Power the row
+		// for (uint8_t i = 0; i < NB_ROWS; i++)
+		//	od_gpio_up(rows_gpios[i]);
 
-		if (index_col >= NB_PWMS - 1)
-			index_col = NB_PWMS - 2;
-		else
-			index_col++;
+		// od_gpio_down(rows_gpios[coords.y]);
+
+		//// Turn off every coils
+		// for (uint8_t i = 0; i < NB_PWMS; i++)
+		//	mag_pwm_set_duty(&pwms[i], 0.0);
+
+		//// ! Power the coil
+		// mag_pwm_set_duty(&pwms[coords.x], 0.9);
+
+		// if (index_col >= NB_PWMS - 1)
+		//	index_col = NB_PWMS - 2;
+		// else
+		//	index_col++;
 
 		// if (index_row >= NB_ROWS - 1)
 		//	index_row = 0;
@@ -284,7 +427,7 @@ void t_coils(void* p)
 
 		xTaskNotifyGive(g_handle_serial_task_to_notify);
 
-		vTaskDelay(period * portTICK_PERIOD_MS);
+		// vTaskDelay(period * portTICK_PERIOD_MS);
 	}
 }
 
