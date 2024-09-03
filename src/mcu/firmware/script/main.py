@@ -4,7 +4,7 @@ import serial
 
 
 def main():
-	ser = serial.Serial('/dev/ttyACM0', 115200)
+	ser = serial.Serial('/dev/ttyACM1', 115200)
 
 	START_BYTE = 0x02
 	STOP_BYTE = 0x03

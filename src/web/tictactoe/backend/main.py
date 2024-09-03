@@ -8,136 +8,83 @@ import serial
 import asyncio
 import websockets
 
-async def simple_server(websocket, path):
-    print("Client connected")
-    ser = serial.Serial('/dev/ttyACM0', 115200)
-
+async def handle_client(websocket, ser):
     try:
         async for message in websocket:
             message = json.loads(message)
             print(f"Received message: {message}")
             index = message.get('index')
+            action = message.get('action')
 
             # Transform into x, y coordinates
-            x = index % 3
-            y = index // 3
+            if index is not None:
+                x = index % 3
+                y = index // 3
+                # Transform into ASCII characters
+                x = chr(x + ord('0'))
+                y = chr(y + ord('0'))
+            else:
+                x = chr(3 + ord('0'))
+                y = chr(3 + ord('0'))
 
-            # Transform into ASCII characters
-            x = chr(x + ord('0'))
-            y = chr(y + ord('0'))
+            if action == 'reset':
+                x = chr(3 + ord('0'))
+                y = chr(3 + ord('0'))
 
             START_BYTE = 0x02
             STOP_BYTE = 0x03
-            #x = '1'
-            #y = '2'
 
             print("Sending data")
             data = [START_BYTE, ord(x), ord(y), STOP_BYTE]
             ser.write(data)
-            #print(f"Data sent {data}")
 
-            time.sleep(2)
+            #time.sleep(2)
+            response = ser.readline().decode('utf-8').strip()
+            print(f"Received response: {response}")
             await websocket.send("ACK")
     except Exception as e:
         print(f"Connection error: {e}")
     finally:
         print("Client disconnected")
 
-start_server = websockets.serve(simple_server, "localhost", 6789)
+async def simple_server():
+    while True:
+        try:
+            print("Starting WebSocket server")
+            async with websockets.serve(handle_client_with_serial, "localhost", 6789):
+                print("WebSocket server running on ws://localhost:6789")
+                await asyncio.Future()  # Run forever
+        except Exception as e:
+            print(f"Server error: {e}. Restarting in 5 seconds...")
+            time.sleep(5)
 
-asyncio.get_event_loop().run_until_complete(start_server)
-print("Simple WebSocket server running on ws://localhost:6789")
-asyncio.get_event_loop().run_forever()
+async def handle_client_with_serial(websocket, path):
+    while True:
+        try:
+            import serial.tools.list_ports
+            ports = serial.tools.list_ports.comports()
 
+            for port, desc, hwid in sorted(ports):
+                ser = serial.Serial(port, 115200)
+                print("{}: {} [{}]".format(port, desc, hwid))
 
-#def handler_receive():
-#    websocket_url = "ws://localhost:6789"
-#    ws = None
-
-#    while ws is None:
-#        try:
-#            print(f"Attempting to connect to {websocket_url}...")
-#            ws = create_connection(websocket_url)
-#            print("WebSocket connected")
-#        except ConnectionRefusedError as e:
-#            print(f"Connection refused: {e}, retrying in 2 seconds...")
-#            time.sleep(2)
-#        except Exception as e:
-#            print(f"An unexpected error occurred: {e}")
-#            time.sleep(2)
-
-#    try:
-#        while True:
-#            try:
-#                result = ws.recv()
-#                print(f"Received message: {result}")
-
-#                parsed = json.loads(result)
-#                print(f"Received message: {parsed}")
-
-#                # Random time to simulate processing
-#                time.sleep(random.randint(1, 3))
-
-#                ws.send("ACK")
-#                print("Sent ACK")
-            
-#            except WebSocketConnectionClosedException:
-#                print("Connection closed, attempting to reconnect...")
-#                ws = None
-#                while ws is None:
-#                    try:
-#                        ws = create_connection(websocket_url)
-#                        print("WebSocket reconnected")
-#                    except ConnectionRefusedError as e:
-#                        print(f"Connection refused: {e}, retrying in 2 seconds...")
-#                        time.sleep(2)
-#                    except Exception as e:
-#                        print(f"An unexpected error occurred: {e}")
-#                        time.sleep(2)
-
-#    except KeyboardInterrupt:
-#        print("Closing WebSocket connection")
-#        if ws:
-#            ws.close()
-
-#handler_receive()
+        #ser = serial.Serial('/dev/ttyACM0', 115200)
 
 
+            print("Serial port connected")
+            await handle_client(websocket, ser)
+        except serial.SerialException as e:
+            print(f"Serial port error: {e}. Reconnecting in 5 seconds...")
+            time.sleep(5)
+        except Exception as e:
+            print(f"Unexpected error: {e}. Restarting in 5 seconds...")
+            time.sleep(5)
+        finally:
+            if ser and ser.is_open:
+                ser.close()
 
-#def handler_receive():
-#    ws = create_connection("ws://localhost:6789")
-
-#    while True:
-#        result = ws.recv()
-#        print(f"Received message: {result}")
-
-#        parsed = json.loads(result)
-#        print(f"Received message: {parsed}")
-
-#        # Random time to simulate processing
-#        time.sleep(random.randint(1, 3))
-
-#        ws.send("ACK")
-#        print("Sent ACK")
-
-#handler_receive()
-
-
-#async def handler_receive(websocket, path):
-#    async for message in websocket:
-#        print(f"Received message: {message}")
-
-#        parsed = json.loads(message)
-
-#        print(f"Received message: {parsed}")
-        
-#        # Random time to simulate processing
-#        await asyncio.sleep(random.randint(1, 3))
-
-#        await websocket.send(f"ACK")
-#        print("Sent ACK")
-
-#start_server = websockets.serve(handler_receive, "localhost", 6789)
-
-#asyncio.get_event_loop().run_until_complete(start_server)
-#asyncio.get_event_loop().run_forever()
+if __name__ == "__main__":
+    try:
+        asyncio.get_event_loop().run_until_complete(simple_server())
+    except KeyboardInterrupt:
+        print("Server shutdown")
